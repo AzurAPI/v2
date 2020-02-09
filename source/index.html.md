@@ -12,12 +12,14 @@ toc_footers:
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - ship
+  - equipment
   - support
-  
+
 search: true
 ---
 
 # Introduction
 Welcome to AzurAPI!
 
-This Page is Edit In Progress, do not refer to this page untill further notice
+This Page is Edit In Progress, do not refer to this page until further notice
