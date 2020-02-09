@@ -12,7 +12,8 @@ toc_footers:
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
- - Support
+  - support
+  
 search: true
 ---
 
