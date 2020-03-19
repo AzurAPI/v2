@@ -10,6 +10,11 @@ import { getShipByName } from '@azurapi/azurapi' //ES6
 console.log(getShipByName('z23'))
 ```
 ###Type: Single Language###
+```javascript
+import { getShipsByEnglishName } from '@azurapi/azurapi' //ES6
+//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5
+console.log(getShipsByEnglishName('z23'))
+```
 This Table allows you to configure the type of language as a point of reference in name detection
 
 | Language | Method in JS          | Alternative JS Method |
@@ -19,11 +24,7 @@ This Table allows you to configure the type of language as a point of reference 
 | Chinese  | getShipByChineseName  | getShipByNameJp       |
 | Korean   | getShipByKoreanName   | getShipByNameCn       |
 
-```javascript
-import { getShipsByEnglishName } from '@azurapi/azurapi' //ES6
-//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5
-console.log(getShipsByEnglishName('z23'))
-```
+
 ## Query By ID
 
 ```javascript
