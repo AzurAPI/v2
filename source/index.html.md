@@ -54,5 +54,11 @@ dependencies {
 pip install azurlane
 ```
 Welcome to AzurAPI!
-
+<aside class="notice">
 This Page is Edit In Progress, do not refer to this page until further notice
+</aside>
+
+This Project is made by a community of enthusiast for developers by developers who wants to make Azur Lane Database free for everyone including Web designers, Bot Programmers and even mobile based applications.
+
+This Document states all the functions that we can do to support your development and we hope that we can help you get started on this database.
+For Starters, this database is JSON Based Local Database so it is important that you run an update once in a while to keep up to date with our latest information.
