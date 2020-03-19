@@ -293,7 +293,9 @@
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipByName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
-</code></pre><h3 id='type-single-language'>Type: Single Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+</code></pre>
+<p>By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.</p>
+<h3 id='type-single-language'>Type: Single Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre>
@@ -333,7 +335,9 @@
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipById } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">))</span>
-</code></pre><h1 id='equipment-information'>Equipment Information</h1>
+</code></pre>
+<p>There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships</p>
+<h1 id='equipment-information'>Equipment Information</h1>
 <p>Work in Progress</p>
 <h1 id='sorting-information'>Sorting Information</h1><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
