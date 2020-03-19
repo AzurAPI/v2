@@ -288,53 +288,45 @@
 <p>This Page is Edit In Progress, do not refer to this page until further notice</p>
 <h1 id='updating-the-database'>Updating the Database</h1><h1 id='ship-information'>Ship Information</h1>
 <p>Work in Progress</p>
-<h2 id='query-by-name'>Query By Name</h2><h3 id='type-multilingual'>Type: Multilingual</h3><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
+<h2 id='query-by-name'>Query By Name</h2><h3 id='type-multilingual'>Type: Multilingual</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
 <span class="c1">//or</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipByName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane</span> <span class="kn">import</span> <span class="n">AzurApi</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">AzurApi</span><span class="p">()</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">get_ship</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
+<span class="c"># or</span>
+<span class="n">api</span><span class="o">.</span><span class="n">get_ship_by_name</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
 </code></pre>
 <p>By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.</p>
 <h3 id='type-single-language'>Type: Single Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre>
-<p>This Table allows you to configure the type of language as a point of reference in name detection</p>
-
-<table><thead>
-<tr>
-<th>Language</th>
-<th>Method in JS</th>
-<th>Alternative JS Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>English</td>
-<td>getShipByEnglishName</td>
-<td>getShipByNameEn</td>
-</tr>
-<tr>
-<td>Japanese</td>
-<td>getShipByJapaneseName</td>
-<td>getShipByNameKr</td>
-</tr>
-<tr>
-<td>Chinese</td>
-<td>getShipByChineseName</td>
-<td>getShipByNameJp</td>
-</tr>
-<tr>
-<td>Korean</td>
-<td>getShipByKoreanName</td>
-<td>getShipByNameCn</td>
-</tr>
-</tbody></table>
+<p>(For JS Referance)
+This Table allows you to configure the type of language as a point of reference in name detection
+| Language | Method in JS          | Alternative JS Method |
+| -------- | --------------------- | --------------------- |
+| English  | getShipByEnglishName  | getShipByNameEn       |
+| Japanese | getShipByJapaneseName | getShipByNameKr       |
+| Chinese  | getShipByChineseName  | getShipByNameJp       |
+| Korean   | getShipByKoreanName   | getShipByNameCn       |</p>
 <h2 id='query-by-id'>Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
 <span class="c1">//Method: Partial Function Import</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipById } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">))</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">get_ship</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">get_ship</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
+<span class="c"># or</span>
+
+<span class="c"># sid stands for "ship id" since id is a reserved function name in Python</span>
+<span class="n">api</span><span class="o">.</span><span class="n">get_ship_by_id</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">get_ship_by_id</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
 </code></pre>
 <p>There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships</p>
 <h1 id='equipment-information'>Equipment Information</h1>
