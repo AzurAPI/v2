@@ -50,6 +50,9 @@ dependencies {
     implementation("com.github.AzurAPI:AzurApi-Kotlin:Tag")
 }
 ```
+```python
+pip install azurlane
+```
 Welcome to AzurAPI!
 
 This Page is Edit In Progress, do not refer to this page until further notice
