@@ -294,20 +294,43 @@
 <span class="c1">//const { getShipByName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre><h3 id='type-single-language'>Type: Single Language</h3>
-<p>This Table allows you to configure the type of language as a point of reference in name detection
-| Language | Method in JS          | Alternative JS Method |
-| -------- | --------------------- | --------------------- |
-| English  | getShipByEnglishName  | getShipByNameEn       |
-| Japanese | getShipByJapaneseName | getShipByNameKr       |
-| Chinese  | getShipByChineseName  | getShipByNameJp       |
-| Korean   | getShipByKoreanName   | getShipByNameCn       |
-<code>javascript
-import { getShipsByEnglishName } from &#39;@azurapi/azurapi&#39; //ES6
-//const { getShipsByEnglishName } = require(&#39;@azurapi/azurapi&#39;) ES5
-console.log(getShipsByEnglishName(&#39;z23&#39;))
-</code></p>
-<h2 id='query-by-id'>Query By ID</h2><h3 id='method-direct-library-import'>Method: Direct Library Import</h3><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
-</code></pre><h3 id='method-partial-function-import'>Method: Partial Function Import</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<p>This Table allows you to configure the type of language as a point of reference in name detection</p>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>Method in JS</th>
+<th>Alternative JS Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>English</td>
+<td>getShipByEnglishName</td>
+<td>getShipByNameEn</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>getShipByJapaneseName</td>
+<td>getShipByNameKr</td>
+</tr>
+<tr>
+<td>Chinese</td>
+<td>getShipByChineseName</td>
+<td>getShipByNameJp</td>
+</tr>
+<tr>
+<td>Korean</td>
+<td>getShipByKoreanName</td>
+<td>getShipByNameCn</td>
+</tr>
+</tbody></table>
+<pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+</code></pre><h2 id='query-by-id'>Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
+<span class="c1">//Method: Partial Function Import</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipById } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">))</span>
 </code></pre><h1 id='equipment-information'>Equipment Information</h1>
