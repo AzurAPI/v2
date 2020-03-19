@@ -27,6 +27,7 @@ console.log(getShipsByEnglishName('z23'))
 ```
 (For JS Referance)
 This Table allows you to configure the type of language as a point of reference in name detection
+
 | Language | Method in JS          | Alternative JS Method |
 | -------- | --------------------- | --------------------- |
 | English  | getShipByEnglishName  | getShipByNameEn       |
