@@ -1,5 +1,5 @@
 # Updating the Database
-```Python
+```python
 from azurlane import AzurApi
 api = AzurApi()
 
