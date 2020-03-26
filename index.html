@@ -293,8 +293,14 @@ This Page is Edit In Progress, do not refer to this page until further notice
 
 <p>This Document states all the functions that we can do to support your development and we hope that we can help you get started on this database.
 For Starters, this database is JSON Based Local Database so it is important that you run an update once in a while to keep up to date with our latest information.</p>
-<h1 id='updating-the-database'>Updating the Database</h1>
-<p>Work in Progress</p>
+<h1 id='updating-the-database'>Updating the Database</h1><pre class="highlight plaintext"><code>from azurlane import AzurApi
+api = AzurApi()
+
+api.updater.update_check()
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">updateShipsData</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span>
+<span class="nx">updateShipsData</span><span class="p">()</span>
+</code></pre>
+<p>From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as &amp; when needed and restart the system to reflect the changes</p>
 <h1 id='ship-information'>Ship Information</h1>
 <p>Work in Progress</p>
 <h2 id='query-by-name'>Query By Name</h2><h3 id='type-multilingual'>Type: Multilingual</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
@@ -303,10 +309,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipByName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane</span> <span class="kn">import</span> <span class="n">AzurApi</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">AzurApi</span><span class="p">()</span>
-
-<span class="n">api</span><span class="o">.</span><span class="n">get_ship</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">get_ship</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
 <span class="c"># or</span>
 <span class="n">api</span><span class="o">.</span><span class="n">get_ship_by_name</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
 </code></pre>
