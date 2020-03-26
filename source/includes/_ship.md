@@ -3,52 +3,34 @@
 
 ```json
 {
-  "wikiUrl": String,
-  "id": String,
-  "names": { "en": String, "code": String, "cn": String, "jp": String, "kr": String },
-  "class": String,
-  "nationality": String,
-  "hullType": String,
-  "thumbnail": String,
-  "rarity": String,
-  "stars": { "stars": String, "value": Number },
+  "wikiUrl": "String",
+  "id": "String",
+  "names": { "en": "String", "code": "String", "cn": "String", "jp": "String", "kr": "String" },
+  "class": "String",
+  "nationality": "String",
+  "hullType": "String",
+  "thumbnail": "String",
+  "rarity": "String",
+  "stars": { "stars": "String", "value": "Number" },
   "stats": {
     "level120": {
-      "health": String,
-      "armor": String,
-      "reload": String,
-      "luck": String,
-      "firepower": String,
-      "torpedo": String,
-      "evasion": String,
-      "speed": String,
-      "antiair": String,
-      "aviation": String,
-      "oilConsumption": String,
-      "accuracy": String,
-      "antisubmarineWarfare": String
+      "health": "String", "armor": "String", "reload": "String", "luck": "String",
+      "firepower": "String", "torpedo": "String", "evasion": "String", "speed": "String",
+      "antiair": "String", "aviation": "String", "oilConsumption": "String", "accuracy": "String",
+      "antisubmarineWarfare": "String"
     },
-    "level100": {
-      /* Follow Level120 format */
-    },
-    "baseStats": {
-    /* Follow Level120 format */
-    }
+    "level100": { /* Follow Level120 format */ },
+    "baseStats": { /* Follow Level120 format */ }
   },
   "slots": {
-    '1': { "type": String, "minEfficiency": Number, "maxEfficiency": Number },
-    '2': /* Follow Slot 1 */,
-    '3': /* Follow Slot 1 */
+    '1': { "type": "String", "minEfficiency": "Number", "maxEfficiency": "Number" },
+    '2': { /* Follow Slot 1 */ },
+    '3': { /* Follow Slot 1 */ }
   },
-  "enhanceValue": { "firepower": Number, "torpedo": Number, "aviation": Number, "reload": Number },
-  "scrapValue": { "coin": Number, "oil": Number, "medal": Number },
+  "enhanceValue": { "firepower": "Number", "torpedo": "Number", "aviation": "Number", "reload": "Number" },
+  "scrapValue": { "coin": "Number", "oil": "Number", "medal": "Number" },
   "skills": [
-    {
-      icon: String,
-      names: [Object],
-      description: String,
-      color: String
-    }
+    { "icon": "String", "names": [Object], "description": "String", "color": "String" }
     /* Same Format for the Rest of the Skills */
   ],
 
@@ -70,41 +52,23 @@
     "techPoints": { "collection": 14, "maxLimitBreak": 28, "maxLevel": 21, "total": 63 }
   },
   "construction": {
-    "constructionTime": String,
-    "availableIn": {
-      "light": Boolean,
-      "heavy": Boolean,
-      "aviation": Boolean,
-      "limited": Boolean,
-      "exchange": Boolean
-    }
+    "constructionTime": "String",
+    "availableIn": { "light": "Boolean", "heavy": "Boolean", "aviation": "Boolean", "limited": "Boolean", "exchange": "Boolean" }
   },
   "gallery": [
     /* Array of Gallery Images in the following Format */
-    {
-      "description": String,
-      "url": String
-    }
+    { "description": "String", "url": "String" }
   ],
   "misc": {
-    "artist": String,
-    "web": { "name": String, "url": String },
-    "pixiv": { "name": String, "url": String }
-,
-    "twitter": { "name": String, "url": String },
-    "voice": {
-      "name": String,
-      "url": String
-    }
+    "artist": "String",
+    "web": { "name": "String", "url": "String" },
+    "pixiv": { "name": "String", "url": "String" },
+    "twitter": { "name": "String", "url": "String" },
+    "voice": { "name": "String", "url": "String" }
   },
   "skins": [
-    {
-      name: String,
-      image: String,
-      background: String,
-      chibi: String,
-      info: [Object]
-    }
+    { "name": "String", "image": "String", "background": "String", "chibi": "String", "info": [Object] }
+    /* Same Format for the rest of the skins */
   ]
 }
 ```
