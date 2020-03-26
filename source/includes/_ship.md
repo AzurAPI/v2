@@ -11,9 +11,6 @@ import { getShipByName } from '@azurapi/azurapi' //ES6
 console.log(getShipByName('z23'))
 ```
 ```python
-from azurlane import AzurApi
-api = AzurApi()
-
 api.get_ship(ship="Enterprise")
 # or
 api.get_ship_by_name(name="Enterprise")
