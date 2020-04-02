@@ -22,7 +22,7 @@ search: true
 ---
 
 # Introduction
-> To install, use this code:
+> To install, type this in your console:
 
 ```javascript
 npm install @azurapi/azurapi
