@@ -243,6 +243,17 @@
           </li>
           <li>
             <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#sort-by-id" class="toc-h2 toc-link" data-title="Sort by ID">Sort by ID</a>
+                  </li>
+                  <li>
+                    <a href="#sort-by-names-in-different-languages" class="toc-h2 toc-link" data-title="Sort by Names in different languages">Sort by Names in different languages</a>
+                  </li>
+                  <li>
+                    <a href="#filter-by-faction-nationality" class="toc-h2 toc-link" data-title="Filter by Faction/Nationality">Filter by Faction/Nationality</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#support-server" class="toc-h1 toc-link" data-title="Support Server">Support Server</a>
@@ -452,10 +463,52 @@ This Table allows you to configure the type of language as a point of reference 
 <p>The functions below returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="err">/*</span><span class="w"> </span><span class="err">same</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">getting</span><span class="w"> </span><span class="err">ships</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">*/</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Work in Progress</p>
-<h1 id='support-server'>Support Server</h1>
+<h2 id='sort-by-id'>Sort by ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsById</span><span class="p">()</span>
+<span class="c1">//or</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsById</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsById</span><span class="p">())</span>
+</code></pre><h2 id='sort-by-names-in-different-languages'>Sort by Names in different languages</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsByEnglishName</span><span class="p">())</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Languages</th>
+<th>JS</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>English</td>
+<td>getAllShipsByEnglishName</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>getAllShipsByJapaneseName</td>
+</tr>
+<tr>
+<td>Chinese</td>
+<td>getAllShipsByChineseName</td>
+</tr>
+<tr>
+<td>Korean</td>
+<td>getAllShipsByKoreanName</td>
+</tr>
+</tbody></table>
+<h2 id='filter-by-faction-nationality'>Filter by Faction/Nationality</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">();</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">();</span>
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">();</span>
+<span class="c1">//or</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsFromNation</span><span class="p">,</span> <span class="nx">getAllShipsFromNationality</span><span class="p">,</span> <span class="nx">getAllShipsFromFaction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNation</span><span class="p">())</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNationality</span><span class="p">())</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromFaction</span><span class="p">())</span>
+</code></pre><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For Support and Contribution, Do chat with us in our Discord Server at the link below
 </aside>
