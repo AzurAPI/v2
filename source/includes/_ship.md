@@ -76,7 +76,7 @@ Work in Progress
 
 This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics
 
-## Query By Name
+## Ship Query By Name
 ###Type: Ship(Multilingual)###
 ```javascript
 const azurlane = require('@azurapi/azurapi')
@@ -109,7 +109,7 @@ This Table allows you to configure the type of language as a point of reference 
 | Korean   | getShipByKoreanName   | getShipByNameCn       |
 
 
-## Query By ID
+## Ship Query By ID
 
 ```javascript
 //Method: Direct Library Import

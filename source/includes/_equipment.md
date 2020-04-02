@@ -6,7 +6,7 @@
 }
 ```
 Work in Progress
-## Query By Name
+## Equipment Query By Name
 ###Type: Equipment(Multilingual)###
 ```javascript
 const azurlane = require('@azurapi/azurapi')
