@@ -7,7 +7,7 @@
 ```
 Work in Progress
 ## Query By Name
-###Type: Multilingual###
+###Type: Equipment(Multilingual)###
 ```javascript
 const azurlane = require('@azurapi/azurapi')
 azurlane.getEquipment('z23')
@@ -16,7 +16,7 @@ import { getEquipmentByName  } from '@azurapi/azurapi' //ES6
 //const { getEquipmentByName  } = require('@azurapi/azurapi') ES5
 console.log(getEquipmentByName('z23'))
 ```
-###Type: Single Language###
+###Type: Equipment(Single Language)###
 ```javascript
 import { getEquipmentByEnglishName  } from '@azurapi/azurapi' //ES6
 //const { getEquipmentByEnglishName  } = require('@azurapi/azurapi') ES5

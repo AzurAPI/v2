@@ -77,7 +77,7 @@ Work in Progress
 This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics
 
 ## Query By Name
-###Type: Multilingual###
+###Type: Ship(Multilingual)###
 ```javascript
 const azurlane = require('@azurapi/azurapi')
 azurlane.getShip('z23')
@@ -92,7 +92,7 @@ api.get_ship(ship="Enterprise")
 api.get_ship_by_name(name="Enterprise")
 ```
 By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.
-###Type: Single Language###
+###Type: Ship(Single Language)###
 ```javascript
 import { getShipsByEnglishName } from '@azurapi/azurapi' //ES6
 //const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5
