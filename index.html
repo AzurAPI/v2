@@ -231,10 +231,10 @@
             <a href="#ship-information" class="toc-h1 toc-link" data-title="Ship Information">Ship Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#query-by-name" class="toc-h2 toc-link" data-title="Query By Name">Query By Name</a>
+                    <a href="#ship-query-by-name" class="toc-h2 toc-link" data-title="Ship Query By Name">Ship Query By Name</a>
                   </li>
                   <li>
-                    <a href="#query-by-id" class="toc-h2 toc-link" data-title="Query By ID">Query By ID</a>
+                    <a href="#ship-query-by-id" class="toc-h2 toc-link" data-title="Ship Query By ID">Ship Query By ID</a>
                   </li>
               </ul>
           </li>
@@ -242,7 +242,7 @@
             <a href="#equipment-information" class="toc-h1 toc-link" data-title="Equipment Information">Equipment Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#query-by-name" class="toc-h2 toc-link" data-title="Query By Name">Query By Name</a>
+                    <a href="#equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
                   </li>
               </ul>
           </li>
@@ -394,7 +394,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <p>Work in Progress</p>
 
 <p>This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
-<h2 id='query-by-name'>Query By Name</h2><h3 id='type-ship-multilingual'>Type: Ship(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h2 id='ship-query-by-name'>Ship Query By Name</h2><h3 id='type-ship-multilingual'>Type: Ship(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
 <span class="c1">//or</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
@@ -440,7 +440,7 @@ This Table allows you to configure the type of language as a point of reference 
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='query-by-id'>Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
+<h2 id='ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
 <span class="c1">//Method: Partial Function Import</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
@@ -463,7 +463,7 @@ This Table allows you to configure the type of language as a point of reference 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Work in Progress</p>
-<h2 id='query-by-name'>Query By Name</h2><h3 id='type-equipment-multilingual'>Type: Equipment(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h2 id='equipment-query-by-name'>Equipment Query By Name</h2><h3 id='type-equipment-multilingual'>Type: Equipment(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
 <span class="c1">//or</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
