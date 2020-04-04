@@ -7,7 +7,8 @@
 }
 ```
 Work in Progress
-## Sort by ID
+## Sorting Ships
+### Sort ships by ID
 ```javascript
 const azurlane = require('@azurapi/azurapi')
 azurlane.getAllShipsById()
@@ -16,7 +17,7 @@ import { getAllShipsById  } from '@azurapi/azurapi'
 console.log(getAllShipsById())
 ```
 
-## Sort by Names in different languages
+### Sort ships by Names in different languages
 ```javascript
 import { getAllShipsByEnglishName  } from '@azurapi/azurapi' //ES6
 //const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5
@@ -25,12 +26,13 @@ console.log(getAllShipsByEnglishName())
 
 | Languages | JS                        |
 |-----------|---------------------------|
+| Unfiltered| getAllShips               |
 | English   | getAllShipsByEnglishName  |
 | Japanese  | getAllShipsByJapaneseName |
 | Chinese   | getAllShipsByChineseName  |
 | Korean    | getAllShipsByKoreanName   |
 
-## Filter by Faction/Nationality
+### Filter ships by Faction/Nationality
 ```javascript
 const azurlane = require('@azurapi/azurapi')
 azurlane.getAllShipsFromNation();
@@ -42,3 +44,6 @@ console.log(getAllShipsFromNation())
 console.log(getAllShipsFromNationality())
 console.log(getAllShipsFromFaction())
 ```
+## Sorting Equipment
+
+###Sort Equipment by Name
