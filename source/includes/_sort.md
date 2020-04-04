@@ -7,7 +7,7 @@
 }
 ```
 
-This Section contains all the ships being sorted in an array according to the relevant functions indicated by the developers.
+This Section contains all the Ships/Equipment being sorted in an array according to the relevant functions indicated by the developers.
 
 ## Sorting Ships
 ### Sort ships by ID
@@ -25,6 +25,7 @@ import { getAllShipsByEnglishName  } from '@azurapi/azurapi' //ES6
 //const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5
 console.log(getAllShipsByEnglishName())
 ```
+(For JS Reference Only)
 
 | Languages | JS                        |
 |-----------|---------------------------|
@@ -46,6 +47,13 @@ console.log(getAllShipsFromNation())
 console.log(getAllShipsFromNationality())
 console.log(getAllShipsFromFaction())
 ```
+
+| Type        | JS                        |
+|-------------|---------------------------|
+| Nation      | getAllShipsFromNation     |
+| Nationality | getAllShipsFromNationality|
+| Faction     | getAllShipsFromFaction    |
+
 ## Sorting Equipment
 
 ###Sort Equipment by Name
