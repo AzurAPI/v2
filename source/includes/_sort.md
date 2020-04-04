@@ -6,7 +6,9 @@
   /* same as getting ships in array */
 }
 ```
-Work in Progress
+
+This Section contains all the ships being sorted in an array according to the relevant functions indicated by the developers.
+
 ## Sorting Ships
 ### Sort ships by ID
 ```javascript
@@ -47,3 +49,13 @@ console.log(getAllShipsFromFaction())
 ## Sorting Equipment
 
 ###Sort Equipment by Name
+```javascript
+import { getAllEquipments  } from '@azurapi/azurapi' //ES6
+//const { getAllEquipments  } = require('@azurapi/azurapi') ES5
+console.log(getAllEquipments())
+```
+
+| Languages | JS                        |
+|-----------|---------------------------|
+| Unfiltered| getAllEquipments          |
+| Official  | getEquipmentByOfficialName|
