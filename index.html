@@ -250,13 +250,10 @@
             <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#sort-by-id" class="toc-h2 toc-link" data-title="Sort by ID">Sort by ID</a>
+                    <a href="#sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
                   </li>
                   <li>
-                    <a href="#sort-by-names-in-different-languages" class="toc-h2 toc-link" data-title="Sort by Names in different languages">Sort by Names in different languages</a>
-                  </li>
-                  <li>
-                    <a href="#filter-by-faction-nationality" class="toc-h2 toc-link" data-title="Filter by Faction/Nationality">Filter by Faction/Nationality</a>
+                    <a href="#sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
                   </li>
               </ul>
           </li>
@@ -510,12 +507,12 @@ This Table allows you to configure the type of language as a point of reference 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Work in Progress</p>
-<h2 id='sort-by-id'>Sort by ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sort-ships-by-id'>Sort ships by ID</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsById</span><span class="p">()</span>
 <span class="c1">//or</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsById</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsById</span><span class="p">())</span>
-</code></pre><h2 id='sort-by-names-in-different-languages'>Sort by Names in different languages</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+</code></pre><h3 id='sort-ships-by-names-in-different-languages'>Sort ships by Names in different languages</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsByEnglishName</span><span class="p">())</span>
 </code></pre>
@@ -525,6 +522,10 @@ This Table allows you to configure the type of language as a point of reference 
 <th>JS</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>Unfiltered</td>
+<td>getAllShips</td>
+</tr>
 <tr>
 <td>English</td>
 <td>getAllShipsByEnglishName</td>
@@ -542,7 +543,7 @@ This Table allows you to configure the type of language as a point of reference 
 <td>getAllShipsByKoreanName</td>
 </tr>
 </tbody></table>
-<h2 id='filter-by-faction-nationality'>Filter by Faction/Nationality</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h3 id='filter-ships-by-faction-nationality'>Filter ships by Faction/Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">();</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">();</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">();</span>
@@ -551,7 +552,7 @@ This Table allows you to configure the type of language as a point of reference 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNation</span><span class="p">())</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNationality</span><span class="p">())</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromFaction</span><span class="p">())</span>
-</code></pre><h1 id='support-server'>Support Server</h1>
+</code></pre><h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For Support and Contribution, Do chat with us in our Discord Server at the link below
 </aside>
