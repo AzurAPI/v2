@@ -388,8 +388,6 @@ For Starters, this database is JSON Based Local Database so it is important that
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Work in Progress</p>
-
 <p>This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
 <h2 id='ship-query-by-name'>Ship Query By Name</h2><h3 id='type-ship-multilingual'>Type: Ship(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
@@ -459,17 +457,22 @@ This Table allows you to configure the type of language as a point of reference 
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Work in Progress</p>
+<p>Same as Ships, this section contains all the stats for Equipment and resultant JSON is provided on the right. As usual, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
 <h2 id='equipment-query-by-name'>Equipment Query By Name</h2><h3 id='type-equipment-multilingual'>Type: Equipment(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
 <span class="c1">//or</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getEquipmentByName  } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipmentByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
-</code></pre><h3 id='type-equipment-single-language'>Type: Equipment(Single Language)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+</code></pre>
+<p>By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.</p>
+<h3 id='type-equipment-single-language'>Type: Equipment(Single Language)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getEquipmentByEnglishName  } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipmentByEnglishName</span><span class="p">())</span>
 </code></pre>
+<p>(For JS Referance)
+This Table allows you to configure the type of language as a point of reference in name detection</p>
+
 <table><thead>
 <tr>
 <th>Languages</th>
@@ -506,7 +509,7 @@ This Table allows you to configure the type of language as a point of reference 
   </span><span class="err">/*</span><span class="w"> </span><span class="err">same</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">getting</span><span class="w"> </span><span class="err">ships</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">*/</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Work in Progress</p>
+<p>This Section contains all the ships being sorted in an array according to the relevant functions indicated by the developers.</p>
 <h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sort-ships-by-id'>Sort ships by ID</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsById</span><span class="p">()</span>
 <span class="c1">//or</span>
@@ -552,7 +555,26 @@ This Table allows you to configure the type of language as a point of reference 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNation</span><span class="p">())</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNationality</span><span class="p">())</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromFaction</span><span class="p">())</span>
-</code></pre><h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><h1 id='support-server'>Support Server</h1>
+</code></pre><h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getAllEquipments  } = require('@azurapi/azurapi') ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllEquipments</span><span class="p">())</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Languages</th>
+<th>JS</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Unfiltered</td>
+<td>getAllEquipments</td>
+</tr>
+<tr>
+<td>Official</td>
+<td>getEquipmentByOfficialName</td>
+</tr>
+</tbody></table>
+<h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For Support and Contribution, Do chat with us in our Discord Server at the link below
 </aside>
