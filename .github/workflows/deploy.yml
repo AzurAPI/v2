@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run:
+        run: |
           ./deploy.sh
-        shell: cmd
+        uses: setup
