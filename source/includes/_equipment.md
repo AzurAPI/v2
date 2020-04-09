@@ -3,6 +3,41 @@
 
 ```json
 {
+  "wikiUrl": "String",
+  "category": "String",
+  "names": {
+    "en": "String",
+    "cn": "String",
+    "jp": "String",
+    "kr": "String"
+  },
+  "type": { "focus": "String", "name": "String" },
+
+  "nationality": "String",
+  "image": "String",
+  "fits": {
+    "destroyer": "String",
+    "lightCruiser": "String",
+    "heavyCruiser": "String",
+    "monitor": "String",
+    "largeCruiser": "String",
+    "battleship": "String",
+    "battlecruiser": "String",
+    "aviationBattleship": null,
+    "aircraftCarrier": null,
+    "lightCarrier": null,
+    "repairShip": null,
+    "submarine": "String",
+    "submarineCarrier": null
+  },
+  "misc": {
+    "obtainedFrom": "String",
+    "notes": "String",
+    "animation": "String"
+  },
+  "tiers": {
+    "T0": { "tier": "String", "rarity": "String", "stars": [Object], "stats": [Object] }
+  }
 }
 ```
 

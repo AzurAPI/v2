@@ -5,7 +5,7 @@
 {
   "wikiUrl": "String",
   "id": "String",
-  "names": { "en": "String", "code": "String", "cn": "String", "jp": "String", "kr": "String" },
+  "names": { "code": "String","en": "String", "code": "String", "cn": "String", "jp": "String", "kr": "String" },
   "class": "String",
   "nationality": "String",
   "hullType": "String",
@@ -13,39 +13,27 @@
   "rarity": "String",
   "stars": { "stars": "String", "value": "Number" },
   "stats": {
-    "level120": {
-      "health": "String", "armor": "String", "reload": "String", "luck": "String",
-      "firepower": "String", "torpedo": "String", "evasion": "String", "speed": "String",
-      "antiair": "String", "aviation": "String", "oilConsumption": "String", "accuracy": "String",
-      "antisubmarineWarfare": "String"
-    },
-    "level100": { /* Follow Level120 format */ },
-    "baseStats": { /* Follow Level120 format */ }
+    "level120": "Refer to Stats Table",
+    "level100": "Refer to Stats Table",
+    "baseStats": "Refer to Stats Table",
+    "level100Retrofit": "Refer to Stats Table",
+    "level120Retrofit": "Refer to Stats Table"
   },
   "slots": {
-    '1': { "type": "String", "minEfficiency": "Number", "maxEfficiency": "Number" },
-    '2': { /* Follow Slot 1 */ },
-    '3': { /* Follow Slot 1 */ }
+    1: "Refer to Slot Table",
+    2: "Refer to Slot Table",
+    3: "Refer to Slot Table"
   },
   "enhanceValue": { "firepower": "Number", "torpedo": "Number", "aviation": "Number", "reload": "Number" },
   "scrapValue": { "coin": "Number", "oil": "Number", "medal": "Number" },
   "skills": [
-    { "icon": "String", "names": [Object], "description": "String", "color": "String" }
+    "Refer to Skill Table"
     /* Same Format for the Rest of the Skills */
   ],
 
   "limitBreaks": [
-    /* Each Limit Break will have an array of upgrade stats, Example is below*/
-    [
-      'Number of Torpedo Bombers +1',
-      'Torpedo Bombers Efficiency +5%'
-    ],
-    [
-      'Hangar Capacity +1',
-      'Number of Fighters +1',
-      'Torpedo Bombers Efficiency +10%'
-    ],
-    [ 'Number of All Planes +1', 'Torpedo Bombers Efficiency +15%' ]
+    /* Each Limit Break will have an array of upgrade stats,
+    first layer = breaks, second layer = bonus */
   ],
   "fleetTech": {
     "statsBonus": { "collection": [Object], "maxLevel": [Object] },
@@ -61,10 +49,10 @@
   ],
   "misc": {
     "artist": "String",
-    "web": { "name": "String", "url": "String" },
-    "pixiv": { "name": "String", "url": "String" },
-    "twitter": { "name": "String", "url": "String" },
-    "voice": { "name": "String", "url": "String" }
+    "web": "Refer to Artist Table",
+    "pixiv": "Refer to Artist Table",
+    "twitter": "Refer to Artist Table",
+    "voice": "Refer to Artist Table"
   },
   "skins": [
     { "name": "String", "image": "String", "background": "String", "chibi": "String", "info": [Object] }
@@ -74,6 +62,40 @@
 ```
 
 This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics
+
+Object Format for Artist
+
+| **Artist** |            |         |            |
+|------------|:----------:|---------|------------|
+| **name**   | String     | **url** | String     |
+
+Object Format for Slot
+
+| **Slot** |            |                      |            |                      |            |
+|----------|:----------:|----------------------|------------|----------------------|------------|
+| **type** | String     | **minEfficiency(%)** | Number     | **maxEfficiency(%)** | Number     |
+
+Object Format for Stats
+
+| **Stats**                |        |                    |        |                  |        |
+|--------------------------|:------:|--------------------|--------|------------------|--------|
+| **health**               | string | **armor**          | string | **reload**       | string |
+| **luck**                 | string | **firepower**      | string | **torpedo**      | string |
+| **evasion**              | string | **speed**          | string | **antiair**      | string |
+| **aviation**             | string | **oilConsumption** | string | **accuracy**     | string |
+| **antisubmarineWarfare** | string |                    |        |                  |        |
+|                          |        |                    |        |                  |        |
+| **For Submarines**       |        |                    |        |                  |        |
+| **oxygen**               | string | **ammunition**     | string | **huntingRange** | string |
+
+Object Format for Skill
+
+| **Skill**       |                                                 |
+|-----------------|:-----------------------------------------------:|
+| **icon**        | string                                          |
+| **names**       | { en: string cn: string jp: string kr: string } |
+| **description** | string                                          |
+| **color**       | string                                          |
 
 ## Ship Query By Name
 ###Type: Ship(Multilingual)###
