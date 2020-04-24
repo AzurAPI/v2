@@ -25,9 +25,12 @@ import { getAllShipsByEnglishName  } from '@azurapi/azurapi' //ES6
 //const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5
 console.log(getAllShipsByEnglishName())
 ```
-(For JS Reference Only)
+```python
+api.getAllShips()
+```
+Reference Table for All Languages
 
-| Languages | JS                        |
+| Languages | Method                    |
 |-----------|---------------------------|
 | Unfiltered| getAllShips               |
 | English   | getAllShipsByEnglishName  |
@@ -48,7 +51,7 @@ console.log(getAllShipsFromNationality())
 console.log(getAllShipsFromFaction())
 ```
 
-| Type        | JS                        |
+| Type        | Method                    |
 |-------------|---------------------------|
 | Nation      | getAllShipsFromNation     |
 | Nationality | getAllShipsFromNationality|
@@ -62,8 +65,10 @@ import { getAllEquipments  } from '@azurapi/azurapi' //ES6
 //const { getAllEquipments  } = require('@azurapi/azurapi') ES5
 console.log(getAllEquipments())
 ```
-
-| Languages | JS                        |
+```python
+api.getAllEquipments()
+```
+| Languages | Method                    |
 |-----------|---------------------------|
 | Unfiltered| getAllEquipments          |
 | Official  | getEquipmentByOfficialName|

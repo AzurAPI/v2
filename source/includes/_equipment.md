@@ -60,10 +60,14 @@ import { getEquipmentByEnglishName  } from '@azurapi/azurapi' //ES6
 //const { getEquipmentByEnglishName  } = require('@azurapi/azurapi') ES5
 console.log(getEquipmentByEnglishName())
 ```
+```Python
+api.getEquipmentByNameEn()
+```
+
 (For JS Referance)
 This Table allows you to configure the type of language as a point of reference in name detection
 
-| Languages | JS                         | Alternative JS       |
+| Languages | Method                     | Alternative Method   |
 |-----------|----------------------------|----------------------|
 | English   | getEquipmentByEnglishName  | getEquipmentByNameEn |
 | Japanese  | getEquipmentByJapaneseName | getEquipmentByNameJp |
