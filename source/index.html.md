@@ -16,8 +16,9 @@ includes:
   - ship
   - equipment
   - sort
+  - Voicelines
   - support
-
+  
 search: true
 ---
 

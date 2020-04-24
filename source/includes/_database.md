@@ -1,9 +1,9 @@
 # Updating the Database
 ```python
-from azurlane import AzurApi
-api = AzurApi()
+from azurlane.azurapi import AzurAPI
+api = AzurAPI()
 
-api.updater.update_check()
+api.updater.update()
 ```
 ```javascript
 const checkForNewUpdate = require("@azurapi/azurapi")
