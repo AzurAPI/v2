@@ -258,6 +258,9 @@
               </ul>
           </li>
           <li>
+            <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
+          </li>
+          <li>
             <a href="#support-server" class="toc-h1 toc-link" data-title="Support Server">Support Server</a>
           </li>
       </ul>
@@ -306,10 +309,10 @@ This Page is Edit In Progress, do not refer to this page until further notice
 
 <p>This Document states all the functions that we can do to support your development and we hope that we can help you get started on this database.
 For Starters, this database is JSON Based Local Database so it is important that you run an update once in a while to keep up to date with our latest information.</p>
-<h1 id='updating-the-database'>Updating the Database</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane</span> <span class="kn">import</span> <span class="n">AzurApi</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">AzurApi</span><span class="p">()</span>
+<h1 id='updating-the-database'>Updating the Database</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">AzurAPI</span><span class="p">()</span>
 
-<span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update_check</span><span class="p">()</span>
+<span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">checkForNewUpdate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span>
 <span class="nx">checkForNewUpdate</span><span class="p">()</span>
 </code></pre>
@@ -764,6 +767,40 @@ This Table allows you to configure the type of language as a point of reference 
 <tr>
 <td>Official</td>
 <td>getEquipmentByOfficialName</td>
+</tr>
+</tbody></table>
+<h1 id='sorting-information'>Sorting Information</h1>
+<blockquote>
+<p>The functions below returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Line Table(Each Line in Array)"</span><span class="err">;</span><span class="w">
+    </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Line Table(Each Line in Array)"</span><span class="err">;</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Line</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event</td>
+<td>Event (touch etc) name</td>
+</tr>
+<tr>
+<td>en?</td>
+<td>Line in english</td>
+</tr>
+<tr>
+<td>zh?</td>
+<td>Line in chinese</td>
+</tr>
+<tr>
+<td>jp?</td>
+<td>Line in japanese</td>
+</tr>
+<tr>
+<td>audio?</td>
+<td>Audio url, file type = &quot;audio/ogg&quot;</td>
 </tr>
 </tbody></table>
 <h1 id='support-server'>Support Server</h1>
