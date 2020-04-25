@@ -76,6 +76,16 @@ html, body {
     display: block;
     max-width: 100%;
     margin-bottom: $logo-margin;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .extra {
+    position:fixed;
+    bottom:0em;
+    left:0em;
+    z-index:999;
+    max-width: 250px;
+  max-height: 250px;
   }
 
   &>.search {
