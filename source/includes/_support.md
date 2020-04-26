@@ -6,3 +6,6 @@ For Support and Contribution, Do chat with us in our Discord Server at the link 
 
 
 Discord Link: https://discord.gg/aAEdys8
+
+## Credits
+Data is obtained from the official [Azur Lane Wiki](https://azurlane.koumakan.jp/) with prior consultation before collecting data
