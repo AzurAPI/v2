@@ -197,7 +197,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-1f6ed933.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-d651fee7.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
@@ -319,6 +319,8 @@ For Starters, this database is JSON Based Local Database so it is important that
 </code></pre>
 <p>From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as &amp; when needed and restart the system to reflect the changes</p>
 <h1 id='ship-information'>Ship Information</h1>
+<aside class="warning">We are getting reports of Discord Bots getting warnings for NSFW skins. Please take the necessary precaution to avoid getting severe consequences both to you and your bot</aside>
+
 <blockquote>
 <p>The functions below returns JSON structured like this:</p>
 </blockquote>
@@ -774,9 +776,11 @@ This Table allows you to configure the type of language as a point of reference 
 <blockquote>
 <p>The functions below returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Line Table(Each Line in Array)"</span><span class="err">;</span><span class="w">
-    </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Line Table(Each Line in Array)"</span><span class="err">;</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Table"</span><span class="err">;</span><span class="w">
+  </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Table"</span><span class="err">;</span><span class="w">
 </span></code></pre>
+<p>Table for information of a particular Voiceline</p>
+
 <table><thead>
 <tr>
 <th>Line</th>
