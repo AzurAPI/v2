@@ -49,7 +49,10 @@ html, body {
 
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
-
+  background-image: url('../images/MainDayBG.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -79,14 +82,24 @@ html, body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (max-width:629px) {
+    .extra {
+      display: none;
+    }
+  }
+  @media (min-width:628px) {
+    .extra {
+      display: block;
+    }
+  }
   .extra {
-    display: block;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     bottom:0px;
     max-width: 250px;
-  max-height: 250px;
+    max-height: 250px;
   }
 
   &>.search {
@@ -108,7 +121,7 @@ html, body {
     &:before {
       position: absolute;
       top: 17px;
-      left: $nav-padding;
+      left: 20px;
       color: $nav-text;
       @extend %icon-search;
     }
@@ -274,6 +287,10 @@ html, body {
   // half of the content always this background color.
   .dark-box {
     width: $examples-width;
+    background-image: url('../images/MainDayBG.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: $examples-bg;
     position: absolute;
     right: 0;

@@ -1,4 +1,5 @@
 # Ship Information
+<aside class="warning">We are getting reports of Discord Bots getting warnings for NSFW skins. Please take the necessary precaution to avoid getting severe consequences both to you and your bot</aside>
 > The functions below returns JSON structured like this:
 
 ```json

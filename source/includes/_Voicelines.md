@@ -2,9 +2,11 @@
 > The functions below returns JSON structured like this:
 
 ```json
-"Default": "Check Line Table(Each Line in Array)";
-    "[Skin Name]": "Check Line Table(Each Line in Array)";
+  "Default": "Check Table";
+  "[Skin Name]": "Check Table";
 ```
+
+Table for information of a particular Voiceline
 
 | Line   | Description                          |
 |--------|--------------------------------------|
