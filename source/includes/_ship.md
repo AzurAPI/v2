@@ -1,5 +1,5 @@
 # Ship Information
-<aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how commands should be implemented before designing</aside>
+<aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how the command should be implemented before designing</aside>
 > The functions below returns JSON structured like this:
 
 ```json
