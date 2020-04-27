@@ -1,5 +1,5 @@
 # Ship Information
-<aside class="notice">Some Discord servers may consider certain Azur Lane skins NSFW. If you are developing a bot for a specific server, you should discuss how this functionality should be implemented prior to designing a final implementation</aside>
+<aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how commands should be implemented before designing</aside>
 > The functions below returns JSON structured like this:
 
 ```json

@@ -515,9 +515,13 @@ html, body {
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
-
+    
     &.warning {
       background-color: $aside-warning-bg;
+    }
+
+    &.precaution{
+      background-color: $aside-precaution-bg;
     }
 
     &.success {
@@ -536,6 +540,10 @@ html, body {
   }
 
   aside.warning:before {
+    @extend %icon-exclamation-sign;
+  }
+
+  aside.precaution:before {
     @extend %icon-exclamation-sign;
   }
 
