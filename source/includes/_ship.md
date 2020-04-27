@@ -1,5 +1,5 @@
 # Ship Information
-<aside class="warning">We are getting reports of Discord Bots getting warnings for NSFW skins. Please take the necessary precaution to avoid getting severe consequences both to you and your bot</aside>
+<aside class="warning">Some Discord servers may consider certain Azur Lane skins NSFW. Please use this feature in compliance with the rules of the server where you are executing the commands</aside>
 > The functions below returns JSON structured like this:
 
 ```json
