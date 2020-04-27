@@ -18,7 +18,7 @@ includes:
   - sort
   - Voicelines
   - support
-  
+
 search: true
 ---
 
@@ -63,3 +63,7 @@ This Project is made by a community of enthusiast for developers by developers w
 
 This Document states all the functions that we can do to support your development and we hope that we can help you get started on this database.
 For Starters, this database is JSON Based Local Database so it is important that you run an update once in a while to keep up to date with our latest information.
+
+[![NPM](https://nodei.co/npm/@azurapi/azurapi.png?mini=true)](https://nodei.co/npm/@azurapi/azurapi/)
+[![PyPI version](https://badge.fury.io/py/azurlane.svg)](https://badge.fury.io/py/azurlane)
+[![Kotlin Version](https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square)](https://jitpack.io/#AzurAPI/AzurApi-Kotlin)
