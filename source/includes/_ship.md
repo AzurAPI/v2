@@ -123,6 +123,10 @@ console.log(getShipsByEnglishName('z23'))
 ```python
 api.getShipByNameEn(ship="Enterprise")
 ```
+```kotlin
+/* Use methods from Atago class */
+Atago.getShipByName("atago")
+```
 This Table allows you to configure the type of language as a point of reference in name detection
 
 | Language | Main Method           | Alternative  Method   |
@@ -152,5 +156,8 @@ api.getShip(ship="115")
 api.getShipById(sid=115)
 api.getShipById(sid="115")
 ```
-
+```kotlin
+/* Use methods from Atago class */
+Atago.getShipById("atago")
+```
 There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships
