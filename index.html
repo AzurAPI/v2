@@ -325,6 +325,9 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">checkForNewUpdate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span>
 <span class="nx">checkForNewUpdate</span><span class="p">()</span>
+</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">oldDate</span> <span class="p">=</span> <span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span>
+<span class="n">Atago</span><span class="p">.</span><span class="n">reloadDatabase</span><span class="p">()</span>
+<span class="n">expect</span><span class="p">(</span><span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span> <span class="p">&gt;</span> <span class="n">oldDate</span><span class="p">).</span><span class="n">toBe</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </code></pre>
 <p>From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as &amp; when needed and restart the system to reflect the changes</p>
 <h1 id='ship-information'>Ship Information</h1>
@@ -551,6 +554,8 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
+</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
+<span class="n">Atago</span><span class="p">.</span><span class="n">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
 </code></pre>
 <p>This Table allows you to configure the type of language as a point of reference in name detection</p>
 
@@ -595,6 +600,8 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="c"># sid stands for "ship id" since id is a reserved function name in Python</span>
 <span class="n">api</span><span class="o">.</span><span class="n">getShipById</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">getShipById</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
+</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
+<span class="n">Atago</span><span class="p">.</span><span class="n">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
 </code></pre>
 <p>There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships</p>
 <h1 id='equipment-information'>Equipment Information</h1>
