@@ -15,3 +15,5 @@ Atago.reloadDatabase()
 expect(Atago.getVersion().lastUpdatedApi > oldDate).toBe(true)
 ```
 From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as & when needed and restart the system to reflect the changes
+
+Alternatively, you can Download the file from here: https://github.com/AzurAPI/azurapi-js-setup/blob/master/ships.json to access the database directly if you do not need the functions included below
