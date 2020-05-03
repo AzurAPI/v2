@@ -49,7 +49,14 @@ html, body {
 
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
-  background-image: url('../images/MainDayBG.png');
+  background-image:
+        /* top, transparent black, faked with gradient */
+        linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        ),
+        /* bottom, image */
+        url('../images/MainDayBG.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -291,7 +298,14 @@ html, body {
   // half of the content always this background color.
   .dark-box {
     width: $examples-width;
-    background-image: url('../images/MainDayBG.png');
+    background-image:
+          /* top, transparent black, faked with gradient */
+          linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          /* bottom, image */
+          url('../images/MainDayBG.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
