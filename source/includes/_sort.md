@@ -1,5 +1,5 @@
 # Sorting Information
-> The functions below returns JSON structured like this:
+> The Resultant JSON is structured like this:
 
 ```json
 {
@@ -10,29 +10,21 @@
 This Section contains all the Ships/Equipment being sorted in an array according to the relevant functions indicated by the developers.
 
 ## Sorting Ships
-### Sort ships by ID
-```javascript
-const azurlane = require('@azurapi/azurapi')
-azurlane.getAllShipsById()
-//or
-import { getAllShipsById  } from '@azurapi/azurapi'
-console.log(getAllShipsById())
-```
 
-### Sort ships by Names in different languages
+### Sorting Ship information
 ```javascript
-import { getAllShipsByEnglishName  } from '@azurapi/azurapi' //ES6
-//const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5
-console.log(getAllShipsByEnglishName())
+import { getAllShips } from '@azurapi/azurapi' //ES6
+//const { getAllShips } = require('@azurapi/azurapi') ES5
+console.log(getAllShips())
 ```
 ```python
 api.getAllShips()
 ```
-Reference Table for All Languages
 
-| Languages | Method                    |
+| Type      | Method                    |
 |-----------|---------------------------|
 | Unfiltered| getAllShips               |
+| ID        | getAllShipsById           |
 | English   | getAllShipsByEnglishName  |
 | Japanese  | getAllShipsByJapaneseName |
 | Chinese   | getAllShipsByChineseName  |

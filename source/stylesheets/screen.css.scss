@@ -515,7 +515,7 @@ html, body {
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
-    
+
     &.warning {
       background-color: $aside-warning-bg;
     }
@@ -667,4 +667,24 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.content {
+  .center-column + pre {
+    position: static;
+    float: none;
+    clear: none;
+    margin: 0 0px;
+    left: 0;
+  }
+}
+
+.center-column {
+    float: left !important;
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    clear: none !important;
+    // margin-right: $examples-width !important;
+    // width: 50% !important;     // May need to adjust this
+    // text-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 }
