@@ -197,7 +197,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-facf0280.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-3b7ff7f2.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-c78a035f.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
@@ -231,10 +231,13 @@
             <a href="#ship-information" class="toc-h1 toc-link" data-title="Ship Information">Ship Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#ship-query-by-name" class="toc-h2 toc-link" data-title="Ship Query By Name">Ship Query By Name</a>
+                    <a href="#ship-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
                   </li>
                   <li>
-                    <a href="#ship-query-by-id" class="toc-h2 toc-link" data-title="Ship Query By ID">Ship Query By ID</a>
+                    <a href="#ship-information-ship-query-by-name" class="toc-h2 toc-link" data-title="Ship Query By Name">Ship Query By Name</a>
+                  </li>
+                  <li>
+                    <a href="#ship-information-ship-query-by-id" class="toc-h2 toc-link" data-title="Ship Query By ID">Ship Query By ID</a>
                   </li>
               </ul>
           </li>
@@ -242,7 +245,10 @@
             <a href="#equipment-information" class="toc-h1 toc-link" data-title="Equipment Information">Equipment Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
+                    <a href="#equipment-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                  </li>
+                  <li>
+                    <a href="#equipment-information-equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
                   </li>
               </ul>
           </li>
@@ -250,21 +256,26 @@
             <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
+                    <a href="#sorting-information-sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
                   </li>
                   <li>
-                    <a href="#sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
+                    <a href="#sorting-information-sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#voiceline-information" class="toc-h1 toc-link" data-title="Voiceline Information">Voiceline Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#voiceline-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#support-server" class="toc-h1 toc-link" data-title="Support Server">Support Server</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#credits" class="toc-h2 toc-link" data-title="Credits">Credits</a>
+                    <a href="#support-server-credits" class="toc-h2 toc-link" data-title="Credits">Credits</a>
                   </li>
               </ul>
           </li>
@@ -335,8 +346,10 @@ For Starters, this database is JSON Based Local Database so it is important that
 <h1 id='ship-information'>Ship Information</h1>
 <aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how the command should be implemented before designing</aside>
 
+<p>This section contain the Functions and Results developers should get when calling a ship related function. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
+<h2 id='ship-information-resulting-information'>Resulting Information</h2>
 <blockquote>
-<p>The functions below returns JSON structured like this:</p>
+<p>The Resultant JSON is structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -349,11 +362,11 @@ For Starters, this database is JSON Based Local Database so it is important that
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
   </span><span class="s2">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"level120"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Stats Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level100"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Stats Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"baseStats"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Stats Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level100Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Stats Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level120Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Stats Table"</span><span class="w">
+    </span><span class="s2">"level120"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level100"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"baseStats"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level100Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level120Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="p">,</span><span class="w">
@@ -363,7 +376,7 @@ For Starters, this database is JSON Based Local Database so it is important that
   </span><span class="s2">"enhanceValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
   </span><span class="s2">"scrapValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"medal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
   </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"Refer to Skill Table"</span><span class="w">
+    </span><span class="s2">"Refer to object format for Skill"</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Same</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Rest</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Skills</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">],</span><span class="w">
 
@@ -385,174 +398,67 @@ For Starters, this database is JSON Based Local Database so it is important that
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"misc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Artist Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"pixiv"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Artist Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Artist Table"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"voice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Artist Table"</span><span class="w">
+    </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pixiv"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"voice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"skins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"background"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"chibi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Same</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">rest</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">skins</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This section contain the methods that Developers are able to use to call a ships stat. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
+</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-artist'>Object Format for Artist</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-slot'>Object Format for Slot</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"maxEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-stats'>Object Format for Stats</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"health"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"armor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"luck"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"evasion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"speed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"antiair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oilConsumption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accuracy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"antisubmarineWarfare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
 
-<p>Object Format for Artist</p>
-
-<table><thead>
-<tr>
-<th><strong>Artist</strong></th>
-<th style="text-align: center"></th>
-<th></th>
-<th></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>name</strong></td>
-<td style="text-align: center">String</td>
-<td><strong>url</strong></td>
-<td>String</td>
-</tr>
-</tbody></table>
-
-<p>Object Format for Slot</p>
-
-<table><thead>
-<tr>
-<th><strong>Slot</strong></th>
-<th style="text-align: center"></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>type</strong></td>
-<td style="text-align: center">String</td>
-<td><strong>minEfficiency(%)</strong></td>
-<td>Number</td>
-<td><strong>maxEfficiency(%)</strong></td>
-<td>Number</td>
-</tr>
-</tbody></table>
-
-<p>Object Format for Stats</p>
-
-<table><thead>
-<tr>
-<th><strong>Stats</strong></th>
-<th style="text-align: center"></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>health</strong></td>
-<td style="text-align: center">string</td>
-<td><strong>armor</strong></td>
-<td>string</td>
-<td><strong>reload</strong></td>
-<td>string</td>
-</tr>
-<tr>
-<td><strong>luck</strong></td>
-<td style="text-align: center">string</td>
-<td><strong>firepower</strong></td>
-<td>string</td>
-<td><strong>torpedo</strong></td>
-<td>string</td>
-</tr>
-<tr>
-<td><strong>evasion</strong></td>
-<td style="text-align: center">string</td>
-<td><strong>speed</strong></td>
-<td>string</td>
-<td><strong>antiair</strong></td>
-<td>string</td>
-</tr>
-<tr>
-<td><strong>aviation</strong></td>
-<td style="text-align: center">string</td>
-<td><strong>oilConsumption</strong></td>
-<td>string</td>
-<td><strong>accuracy</strong></td>
-<td>string</td>
-</tr>
-<tr>
-<td><strong>antisubmarineWarfare</strong></td>
-<td style="text-align: center">string</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td style="text-align: center"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>For Submarines</strong></td>
-<td style="text-align: center"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>oxygen</strong></td>
-<td style="text-align: center">string</td>
-<td><strong>ammunition</strong></td>
-<td>string</td>
-<td><strong>huntingRange</strong></td>
-<td>string</td>
-</tr>
-</tbody></table>
-
-<p>Object Format for Skill</p>
-
-<table><thead>
-<tr>
-<th><strong>Skill</strong></th>
-<th style="text-align: center"></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>icon</strong></td>
-<td style="text-align: center">string</td>
-</tr>
-<tr>
-<td><strong>names</strong></td>
-<td style="text-align: center">{ en: string cn: string jp: string kr: string }</td>
-</tr>
-<tr>
-<td><strong>description</strong></td>
-<td style="text-align: center">string</td>
-</tr>
-<tr>
-<td><strong>color</strong></td>
-<td style="text-align: center">string</td>
-</tr>
-</tbody></table>
-<h2 id='ship-query-by-name'>Ship Query By Name</h2><h3 id='type-ship-multilingual'>Type: Ship(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
-<span class="c1">//or</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getShipByName } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
-<span class="c"># or</span>
-<span class="n">api</span><span class="o">.</span><span class="n">getShipByName</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
-</code></pre>
+    </span><span class="err">&lt;!--</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">Submarines</span><span class="w"> </span><span class="err">--&gt;</span><span class="w">
+    </span><span class="s2">"oxygen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ammunition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"huntingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-skill'>Object Format for Skill</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='ship-information-ship-query-by-name'>Ship Query By Name</h2>
 <p>By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.</p>
-<h3 id='type-ship-single-language'>Type: Ship(Single Language)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
@@ -563,11 +469,16 @@ For Starters, this database is JSON Based Local Database so it is important that
 
 <table><thead>
 <tr>
-<th>Language</th>
+<th>Type</th>
 <th>Main Method</th>
 <th>Alternative  Method</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>Multilingual</td>
+<td>getShip</td>
+<td>getShipByName</td>
+</tr>
 <tr>
 <td>English</td>
 <td>getShipByEnglishName</td>
@@ -589,7 +500,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
+<h2 id='ship-information-ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//Method: Direct Library Import</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
 <span class="c1">//Method: Partial Function Import</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
@@ -607,8 +518,10 @@ For Starters, this database is JSON Based Local Database so it is important that
 </code></pre>
 <p>There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships</p>
 <h1 id='equipment-information'>Equipment Information</h1>
+<p>Same as Ships, this section contains all the Functions and Results developers should get for Equipment and resultant JSON is provided on the right. As usual, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
+<h2 id='equipment-information-resulting-information'>Resulting Information</h2>
 <blockquote>
-<p>The functions below returns JSON structured like this:</p>
+<p>The Resultant JSON is structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -647,23 +560,14 @@ For Starters, this database is JSON Based Local Database so it is important that
     </span><span class="s2">"T0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w"> </span><span class="s2">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>Same as Ships, this section contains all the stats for Equipment and resultant JSON is provided on the right. As usual, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
-<h2 id='equipment-query-by-name'>Equipment Query By Name</h2><h3 id='type-equipment-multilingual'>Type: Equipment(Multilingual)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
-<span class="c1">//or</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getEquipmentByName  } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipmentByName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
-</code></pre>
+</span></code></pre><h2 id='equipment-information-equipment-query-by-name'>Equipment Query By Name</h2>
 <p>By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.</p>
-<h3 id='type-equipment-single-language'>Type: Equipment(Single Language)</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipmentByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getEquipmentByEnglishName  } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipmentByEnglishName</span><span class="p">())</span>
-</code></pre><pre class="highlight plaintext"><code>api.getEquipmentByNameEn()
+<pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipment</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getEquipment  } = require('@azurapi/azurapi') ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getEquipment</span><span class="p">(</span><span class="s">'z23'</span><span class="p">)</span>
 </code></pre>
-<p>(For JS Referance)
-This Table allows you to configure the type of language as a point of reference in name detection</p>
+<p>This Table allows you to configure the type of language as a point of reference in name detection</p>
 
 <table><thead>
 <tr>
@@ -672,6 +576,11 @@ This Table allows you to configure the type of language as a point of reference 
 <th>Alternative Method</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>Multilingual</td>
+<td>getEquipment</td>
+<td>getEquipmentByName</td>
+</tr>
 <tr>
 <td>English</td>
 <td>getEquipmentByEnglishName</td>
@@ -695,34 +604,31 @@ This Table allows you to configure the type of language as a point of reference 
 </tbody></table>
 <h1 id='sorting-information'>Sorting Information</h1>
 <blockquote>
-<p>The functions below returns JSON structured like this:</p>
+<p>The Resultant JSON is structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="err">/*</span><span class="w"> </span><span class="err">same</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">getting</span><span class="w"> </span><span class="err">ships</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">*/</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This Section contains all the Ships/Equipment being sorted in an array according to the relevant functions indicated by the developers.</p>
-<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sort-ships-by-id'>Sort ships by ID</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsById</span><span class="p">()</span>
-<span class="c1">//or</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsById</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsById</span><span class="p">())</span>
-</code></pre><h3 id='sort-ships-by-names-in-different-languages'>Sort ships by Names in different languages</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsByEnglishName</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getAllShipsByEnglishName  } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsByEnglishName</span><span class="p">())</span>
+<h2 id='sorting-information-sorting-ships'>Sorting Ships</h2><h3 id='sorting-information-sorting-ships-sorting-ship-information'>Sorting Ship information</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getAllShips } = require('@azurapi/azurapi') ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShips</span><span class="p">())</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getAllShips</span><span class="p">()</span>
 </code></pre>
-<p>Reference Table for All Languages</p>
-
 <table><thead>
 <tr>
-<th>Languages</th>
+<th>Type</th>
 <th>Method</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Unfiltered</td>
 <td>getAllShips</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>getAllShipsById</td>
 </tr>
 <tr>
 <td>English</td>
@@ -741,7 +647,7 @@ This Table allows you to configure the type of language as a point of reference 
 <td>getAllShipsByKoreanName</td>
 </tr>
 </tbody></table>
-<h3 id='filter-ships-by-faction-nationality'>Filter ships by Faction/Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h3 id='sorting-information-sorting-ships-filter-ships-by-faction-nationality'>Filter ships by Faction/Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">();</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">();</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">();</span>
@@ -770,7 +676,7 @@ This Table allows you to configure the type of language as a point of reference 
 <td>getAllShipsFromFaction</td>
 </tr>
 </tbody></table>
-<h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<h2 id='sorting-information-sorting-equipment'>Sorting Equipment</h2><h3 id='sorting-information-sorting-equipment-sort-equipment-by-name'>Sort Equipment by Name</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getAllEquipments  } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllEquipments</span><span class="p">())</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getAllEquipments</span><span class="p">()</span>
@@ -790,43 +696,22 @@ This Table allows you to configure the type of language as a point of reference 
 <td>getEquipmentByOfficialName</td>
 </tr>
 </tbody></table>
-<h1 id='voiceline-information'>Voiceline Information</h1>
+<h1 id='voiceline-information'>Voiceline Information</h1><h2 id='voiceline-information-resulting-information'>Resulting Information</h2>
 <blockquote>
-<p>The functions below returns JSON structured like this:</p>
+<p>The Resultant JSON is structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">  </span><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Table"</span><span class="err">;</span><span class="w">
-  </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Table"</span><span class="err">;</span><span class="w">
-</span></code></pre>
-<p>Table for information of a particular Voiceline</p>
-
-<table><thead>
-<tr>
-<th>Line</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>event</td>
-<td>Event (touch etc) name</td>
-</tr>
-<tr>
-<td>en?</td>
-<td>Line in english</td>
-</tr>
-<tr>
-<td>zh?</td>
-<td>Line in chinese</td>
-</tr>
-<tr>
-<td>jp?</td>
-<td>Line in japanese</td>
-</tr>
-<tr>
-<td>audio?</td>
-<td>Audio url, file type = &quot;audio/ogg&quot;</td>
-</tr>
-</tbody></table>
-<h1 id='support-server'>Support Server</h1>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
+  </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
+</span></code></pre><h3 id='voiceline-information-resulting-information-voiceline-information'>Voiceline Information</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event (touch etc) name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in english"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zh?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in chinese"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jp?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in japanese"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio url, file type = audio/ogg"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For Support and Contribution, Do chat with us in our Discord Server at the link below
 </aside>
@@ -834,7 +719,7 @@ For Support and Contribution, Do chat with us in our Discord Server at the link 
 <p><a href="https://discord.gg/aAEdys8"><img src="https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2" alt="Widget" /></a></p>
 
 <p>Discord Link: https://discord.gg/aAEdys8</p>
-<h2 id='credits'>Credits</h2>
+<h2 id='support-server-credits'>Credits</h2>
 <p>Data is obtained from the official <a href="https://azurlane.koumakan.jp/">Azur Lane Wiki</a> with prior consultation before collecting data</p>
 
       </div>
