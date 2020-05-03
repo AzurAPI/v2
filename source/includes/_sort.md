@@ -3,7 +3,7 @@
 
 ```json
 {
-  /* same as getting ships in array */
+  "Same format as the result in ship information but placed in an Array"
 }
 ```
 
@@ -11,7 +11,7 @@ This Section contains all the Ships/Equipment being sorted in an array according
 
 ## Sorting Ships
 
-### Sorting Ship information
+### Sorting Ships By ID/Language
 ```javascript
 import { getAllShips } from '@azurapi/azurapi' //ES6
 //const { getAllShips } = require('@azurapi/azurapi') ES5

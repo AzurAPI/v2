@@ -134,7 +134,6 @@ This section contain the Functions and Results developers should get when callin
 ```
 
 ## Ship Query By Name
-By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.
 
 ```javascript
 import { getShipsByEnglishName } from '@azurapi/azurapi' //ES6
@@ -149,10 +148,12 @@ api.getShipByNameEn(ship="Enterprise")
 Atago.getShipByName("atago")
 ```
 This Table allows you to configure the type of language as a point of reference in name detection
+<aside class="notice">Note that only Multifunction can support Both Query by ID and Multilingual Functions</aside>
 
 | Type          | Main Method           | Alternative  Method   |
 | ------------- | --------------------- | --------------------- |
-| Multilingual  | getShip               | getShipByName         |
+| Multifunction | getShip               |                       |
+| Multilingual  | getShipByName         |                       |
 | English       | getShipByEnglishName  | getShipByNameEn       |
 | Japanese      | getShipByJapaneseName | getShipByNameKr       |
 | Chinese       | getShipByChineseName  | getShipByNameJp       |
@@ -162,9 +163,6 @@ This Table allows you to configure the type of language as a point of reference 
 ## Ship Query By ID
 
 ```javascript
-//Method: Direct Library Import
-azurlane.getShip('001')
-//Method: Partial Function Import
 import { getShipById } from '@azurapi/azurapi' //ES6
 //const { getShipById } = require('@azurapi/azurapi') ES5
 console.log(getShipById('001'))
@@ -173,7 +171,6 @@ console.log(getShipById('001'))
 api.getShip(ship=115)
 api.getShip(ship="115")
 # or
-
 # sid stands for "ship id" since id is a reserved function name in Python
 api.getShipById(sid=115)
 api.getShipById(sid="115")
@@ -182,4 +179,10 @@ api.getShipById(sid="115")
 /* Use methods from Atago class */
 Atago.getShipById("atago")
 ```
-There are 2 ways to quary by the ships id. The default settings to use is the direct library method, not only it is able to detect by the ship name, the ID of the ships can be used to collect the information of the ships
+There are 2 Options avaliable for querying By ID
+<aside class="notice">Note that only Multifunction can support Both Query by ID and Multilingual Functions</aside>
+
+| Type          | Methods               |
+| ------------- | --------------------- |
+| Multifunction | getShip               |
+| ID Only       | getShipById           |

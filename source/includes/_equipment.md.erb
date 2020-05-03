@@ -43,7 +43,8 @@ Same as Ships, this section contains all the Functions and Results developers sh
 }
 ```
 ## Equipment Query By Name
-By Default, it is recommended to use the Multilingual Language to detect and display information provided by the users, it will automatically detect by its language and quary its result.
+This Table allows you to configure the type of language as a point of reference in name detection
+<aside class="notice">Note that only Multilingual can support Auto query by whatever language it has been assigned</aside>
 
 ```javascript
 import { getEquipment  } from '@azurapi/azurapi' //ES6
@@ -53,8 +54,6 @@ console.log(getEquipment('z23'))
 ```python
 api.getEquipment('z23')
 ```
-
-This Table allows you to configure the type of language as a point of reference in name detection
 
 | Languages      | Method                     | Alternative Method   |
 |----------------|----------------------------|----------------------|
