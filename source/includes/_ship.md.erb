@@ -136,9 +136,18 @@ This section contain the Functions and Results developers should get when callin
 ## Ship Query By Name
 
 ```javascript
-import { getShipsByEnglishName } from '@azurapi/azurapi' //ES6
-//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5
-console.log(getShipsByEnglishName('z23'))
+//ONLY FOR getShip
+import { getShip } from '@azurapi/azurapi' //ES6
+//const { getShip } = require('@azurapi/azurapi') //ES5
+console.log(getShip('z23'))
+
+//Others
+import { getShipByEnglishName } from '@azurapi/azurapi'
+getShipByEnglishName('z23')
+
+//Others(ES5)
+const azurlane = require('@azurapi/azurapi')
+console.log(azurlane.getShipByEnglishName('z23'))
 ```
 ```python
 api.getShipByNameEn(ship="Enterprise")
@@ -163,9 +172,19 @@ This Table allows you to configure the type of language as a point of reference 
 ## Ship Query By ID
 
 ```javascript
-import { getShipById } from '@azurapi/azurapi' //ES6
-//const { getShipById } = require('@azurapi/azurapi') ES5
-console.log(getShipById('001'))
+//ONLY FOR getShip
+import { getShip } from '@azurapi/azurapi' //ES6
+//const { getShip } = require('@azurapi/azurapi') //ES5
+console.log(getShip('z23'))
+
+//getShipById
+import { getShipById } from '@azurapi/azurapi'
+getShipById('001')
+
+//getShipById(ES5)
+const azurlane = require('@azurapi/azurapi')
+console.log(azurlane.getShipById('001'))
+
 ```
 ```python
 api.getShip(ship=115)

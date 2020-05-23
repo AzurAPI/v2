@@ -56,7 +56,7 @@ pip install azurlane
 ```
 Welcome to AzurAPI!
 <aside class="notice">
-This Page is Edit In Progress, do not refer to this page until further notice
+This Page is updated according to our packages, do refer to this page to keep up to date with the latest version
 </aside>
 
 This Project is made by a community of enthusiast for developers by developers who wants to make Azur Lane Database free for everyone including Web designers, Bot Programmers and even mobile based applications.

@@ -6,7 +6,7 @@ api = AzurAPI()
 api.updater.update()
 ```
 ```javascript
-const checkForNewUpdate = require("@azurapi/azurapi")
+const { checkForNewUpdate } = require("@azurapi/azurapi") //es5
 checkForNewUpdate()
 ```
 ```kotlin
