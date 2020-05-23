@@ -47,12 +47,17 @@ This Table allows you to configure the type of language as a point of reference 
 <aside class="notice">Note that only Multilingual can support Auto query by whatever language it has been assigned</aside>
 
 ```javascript
-import { getEquipment  } from '@azurapi/azurapi' //ES6
-//const { getEquipment  } = require('@azurapi/azurapi') ES5
-console.log(getEquipment('z23'))
+import { getEquipment } from '@azurapi/azurapi' //ES6
+//const { getEquipment } = require('@azurapi/azurapi') ES5
+console.log(getEquipment('Quadruple 130mm (Mle 1932)'))
+
+//Alternative
+const azurlane = require('@azurapi/azurapi') //ES5
+console.log(azurlane.getEquipmentByEnglishName('Quadruple 130mm (Mle 1932)'))
+
 ```
 ```python
-api.getEquipment('z23')
+api.getEquipment('Quadruple 130mm (Mle 1932)')
 ```
 
 | Languages      | Method                     | Alternative Method   |

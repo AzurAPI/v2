@@ -17,6 +17,7 @@ includes:
   - equipment
   - sort
   - Voicelines
+  - Chapter
   - support
 
 search: true

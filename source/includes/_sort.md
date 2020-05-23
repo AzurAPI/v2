@@ -16,6 +16,10 @@ This Section contains all the Ships/Equipment being sorted in an array according
 import { getAllShips } from '@azurapi/azurapi' //ES6
 //const { getAllShips } = require('@azurapi/azurapi') ES5
 console.log(getAllShips())
+
+//Alternative
+const azurlane = require('@azurapi/azurapi') //ES5
+console.log(azurlane.getAllShips())
 ```
 ```python
 api.getAllShips()
@@ -56,6 +60,10 @@ console.log(getAllShipsFromFaction())
 import { getAllEquipments  } from '@azurapi/azurapi' //ES6
 //const { getAllEquipments  } = require('@azurapi/azurapi') ES5
 console.log(getAllEquipments())
+
+//Alternative
+const azurlane = require('@azurapi/azurapi') //ES5
+console.log(azurlane.getAllEquipments())
 ```
 ```python
 api.getAllEquipments()
