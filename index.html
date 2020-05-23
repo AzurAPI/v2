@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <link href="images/50px-Ruby.ico" rel="icon" type="image/ico" />
+    <link href="images/50px-Ruby-9dedf8d3.ico" rel="icon" type="image/ico" />
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -151,9 +151,6 @@
 .highlight .nn {
   color: #ffffff;
 }
-.highlight .nl {
-  color: #ffffff;
-}
 .highlight .ni {
   color: #ffffff;
 }
@@ -178,6 +175,9 @@
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
 }
+.highlight .nl {
+  color: #f92672;
+}
 .highlight .ow {
   color: #f92672;
 }
@@ -197,8 +197,8 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-ffb8ff14.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-c78a035f.css" rel="stylesheet" media="print" />
+    <link href="stylesheets/screen-a0b4c94a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-44fdfbe8.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
@@ -319,7 +319,7 @@
 </code></pre>
 <p>Welcome to AzurAPI!
 <aside class="notice">
-This Page is Edit In Progress, do not refer to this page until further notice
+This Page is updated according to our packages, do refer to this page to keep up to date with the latest version
 </aside></p>
 
 <p>This Project is made by a community of enthusiast for developers by developers who wants to make Azur Lane Database free for everyone including Web designers, Bot Programmers and even mobile based applications.</p>
@@ -334,7 +334,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="n">api</span> <span class="o">=</span> <span class="n">AzurAPI</span><span class="p">()</span>
 
 <span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">checkForNewUpdate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="p">{</span> <span class="nx">checkForNewUpdate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span> <span class="c1">//es5</span>
 <span class="nx">checkForNewUpdate</span><span class="p">()</span>
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">oldDate</span> <span class="p">=</span> <span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span>
 <span class="n">Atago</span><span class="p">.</span><span class="n">reloadDatabase</span><span class="p">()</span>
@@ -456,9 +456,18 @@ For Starters, this database is JSON Based Local Database so it is important that
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='ship-information-ship-query-by-name'>Ship Query By Name</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipsByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getShipsByEnglishName } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipsByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+</span></code></pre><h2 id='ship-information-ship-query-by-name'>Ship Query By Name</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//ONLY FOR getShip</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getShip } = require('@azurapi/azurapi') //ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+
+<span class="c1">//Others</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipByEnglishName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
+<span class="nx">getShipByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">)</span>
+
+<span class="c1">//Others(ES5)</span>
+<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipByEnglishName</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
 <span class="n">Atago</span><span class="p">.</span><span class="n">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
@@ -504,9 +513,19 @@ For Starters, this database is JSON Based Local Database so it is important that
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='ship-information-ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getShipById } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">))</span>
+<h2 id='ship-information-ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">//ONLY FOR getShip</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<span class="c1">//const { getShip } = require('@azurapi/azurapi') //ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'z23'</span><span class="p">))</span>
+
+<span class="c1">//getShipById</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getShipById</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
+<span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">)</span>
+
+<span class="c1">//getShipById(ES5)</span>
+<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'001'</span><span class="p">))</span>
+
 </code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
 <span class="c"># or</span>
