@@ -15,11 +15,11 @@ This Section contains all the Ships/Equipment being sorted in an array according
 ```javascript
 import { getAllShips } from '@azurapi/azurapi' //ES6
 //const { getAllShips } = require('@azurapi/azurapi') ES5
-console.log(getAllShips())
+console.log(getAllShips)
 
 //Alternative
 const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getAllShips())
+console.log(azurlane.getAllShips)
 ```
 ```python
 api.getAllShips()
