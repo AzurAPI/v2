@@ -37,14 +37,14 @@ api.getAllShips()
 ### Filter ships by Faction/Nationality
 ```javascript
 const azurlane = require('@azurapi/azurapi')
-azurlane.getAllShipsFromNation();
-azurlane.getAllShipsFromNationality();
-azurlane.getAllShipsFromFaction();
+azurlane.getAllShipsFromNation;
+azurlane.getAllShipsFromNationality;
+azurlane.getAllShipsFromFaction;
 //or
 import { getAllShipsFromNation, getAllShipsFromNationality, getAllShipsFromFaction } from '@azurapi/azurapi'
-console.log(getAllShipsFromNation())
-console.log(getAllShipsFromNationality())
-console.log(getAllShipsFromFaction())
+console.log(getAllShipsFromNation)
+console.log(getAllShipsFromNationality)
+console.log(getAllShipsFromFaction)
 ```
 
 | Type        | Method                    |
@@ -59,14 +59,14 @@ console.log(getAllShipsFromFaction())
 ```javascript
 import { getAllEquipments  } from '@azurapi/azurapi' //ES6
 //const { getAllEquipments  } = require('@azurapi/azurapi') ES5
-console.log(getAllEquipments())
+console.log(getAllEquipments)
 
 //Alternative
 const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getAllEquipments())
+console.log(azurlane.getAllEquipments)
 ```
 ```python
-api.getAllEquipments()
+api.getAllEquipments
 ```
 | Languages | Method                    |
 |-----------|---------------------------|
