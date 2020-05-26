@@ -167,18 +167,10 @@ This Table allows you to configure the type of language as a point of reference 
 ## Ship Query By ID
 
 ```javascript
-import { getShip } from '@azurapi/azurapi' //ES6
-//const { getShip } = require('@azurapi/azurapi') //ES5
-console.log(getShip('115'))
-
-//Alternative
 const azurlane = require('@azurapi/azurapi') //ES5
 console.log(azurlane.getShipById('115'))
 ```
 ```python
-api.getShip(ship=115)
-api.getShip(ship="115")
-# or
 # sid stands for "ship id" since id is a reserved function name in Python
 api.getShipById(sid=115)
 api.getShipById(sid="115")
@@ -187,10 +179,12 @@ api.getShipById(sid="115")
 /* Use methods from Atago class */
 Atago.getShipById("atago")
 ```
-There are 2 Options avaliable for querying By ID
-<aside class="notice">Note that only Multifunction can support Both Query by ID and Multilingual Functions</aside>
+<aside class="warning">Note that only getShips will remove support for IDs. Reason: there is different types of ID to cater and previously we relied on just 3 digit ID for all Ships colliding with names will have a bigger conflict of results</aside>
+Theres are different types of IDs avaliable to the users to select, please have a look at the table and allow your bot to handles these types for IDs
 
-| Type          | Methods               |
-| ------------- | --------------------- |
-| Multifunction | getShip               |
-| ID Only       | getShipById           |
+| Types                        | Examples    |
+|------------------------------|-------------|
+| Normal                       | "001"       |
+| Unreleased/Retrofitted Ships | "3005"      |
+| Research Ships               | "Plan001"   |
+| Collabouration Ships         | "Collab001" |
