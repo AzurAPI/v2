@@ -2,9 +2,9 @@
 
 ### Wrappers
 
-- [NodeJS Wrapper](https://www.npmjs.com/package/@azurapi/azurapi)
-- [Python Wrapper](https://github.com/AzurAPI/azurapi-py)
-- [Kotlin Wrapper](https://github.com/AzurAPI/AzurApi-Kotlin)
+- [NodeJS Library](https://www.npmjs.com/package/@azurapi/azurapi)
+- [Python Library](https://github.com/AzurAPI/azurapi-py)
+- [Kotlin Library](https://github.com/AzurAPI/AzurApi-Kotlin)
 
 ### Concept
 
