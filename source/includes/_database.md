@@ -1,4 +1,4 @@
-# Updating the Database
+# Updating the database
 ```python
 from azurlane.azurapi import AzurAPI
 api = AzurAPI()
@@ -14,6 +14,7 @@ val oldDate = Atago.getVersion().lastUpdatedApi
 Atago.reloadDatabase()
 expect(Atago.getVersion().lastUpdatedApi > oldDate).toBe(true)
 ```
-From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as & when needed and restart the system to reflect the changes
 
-Alternatively, you can Download the file from here: https://github.com/AzurAPI/azurapi-js-setup/blob/master/ships.json to access the database directly if you do not need the functions included below
+We'll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.
+
+Alternatively, you can host your own service by downloading the file that we've extracted [here](https://github.com/AzurAPI/azurapi-js-setup/blob/master/ships.json) to access the database if you don't need to use the functions below.

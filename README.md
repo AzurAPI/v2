@@ -18,7 +18,8 @@
 
 ### Support or Error Report
 
-> e.g. There are typos / errors in the doc?
+> example: Any typos or grammar errors in the documentation?
 
-Join our [support discord server](http://discord.gg/aAEdys8) or create an issue here on GitHub!<br>
+Join our [Discord Server](http://discord.gg/aAEdys8) or create an issue here on GitHub!<br>
+
 ![AzurAPI Support Discord](https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2)

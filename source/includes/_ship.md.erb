@@ -1,9 +1,10 @@
 # Ship Information
-<aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how the command should be implemented before designing</aside>
-This section contain the Functions and Results developers should get when calling a ship related function. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics
+<aside class="precaution">Some servers may consider some skins as NSFW content, if you are delivering a bot for a specific Discord server, please discuss how this should be implemented before designing</aside>
 
-## Resulting Information
-> The Resultant JSON is structured like this:
+This section contains the results and functions developers need to use for fetching ship information. The name of the ship is implemented in game are provided in the payload returned on the right. But, developers should be able to provide their own error handling for misspelt names.
+
+## Return Value
+> The return value when fetched:
 
 ```json
 {
@@ -65,7 +66,7 @@ This section contain the Functions and Results developers should get when callin
 }
 ```
 
-###Object Format for Artist
+### Artist Data
 
 <div class="center-column"></div>
 
@@ -77,7 +78,7 @@ This section contain the Functions and Results developers should get when callin
 ```
 
 
-###Object Format for Slot
+### Slot Data
 
 <div class="center-column"></div>
 
@@ -89,7 +90,7 @@ This section contain the Functions and Results developers should get when callin
 }
 ```
 
-###Object Format for Stats
+### Ship Statistics
 
 <div class="center-column"></div>
 
@@ -115,7 +116,7 @@ This section contain the Functions and Results developers should get when callin
     "huntingRange": "String"
 }
 ```
-###Object Format for Skill
+### Skill Data
 
 <div class="center-column"></div>
 
@@ -133,7 +134,7 @@ This section contain the Functions and Results developers should get when callin
 }
 ```
 
-## Ship Query By Name
+## Query by name
 
 ```javascript
 import { getShip } from '@azurapi/azurapi' //ES6
@@ -151,8 +152,9 @@ api.getShipByNameEn(ship="Enterprise")
 /* Use methods from Atago class */
 Atago.getShipByName("atago")
 ```
-This Table allows you to configure the type of language as a point of reference in name detection
-<aside class="notice">Note that only Multifunction can support Both Query by ID and Multilingual Functions</aside>
+The table below allows you to configure the type of language as pointed of reference in name detection.
+
+<aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
 | Type          | Main Method           | Alternative  Method   |
 | ------------- | --------------------- | --------------------- |
@@ -164,7 +166,7 @@ This Table allows you to configure the type of language as a point of reference 
 | Korean        | getShipByKoreanName   | getShipByNameCn       |
 
 
-## Ship Query By ID
+## Query by ID
 
 ```javascript
 const azurlane = require('@azurapi/azurapi') //ES5
@@ -179,8 +181,10 @@ api.getShipById(sid="115")
 /* Use methods from Atago class */
 Atago.getShipById("atago")
 ```
-<aside class="warning">Note that only getShips will remove support for IDs. Reason: there is different types of ID to cater and previously we relied on just 3 digit ID for all Ships colliding with names will have a bigger conflict of results</aside>
-Theres are different types of IDs avaliable to the users to select, please have a look at the table and allow your bot to handles these types for IDs
+
+<aside class="warning">Note that the function "getShips" will remove support for ship ids because there are different type of IDs to cater and previously, we relied on the 3 digit aspect of the ID but made it so it was colliding with names and have a bigger impact when fetching results.</aside>
+
+This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.
 
 | Types                        | Examples    |
 |------------------------------|-------------|

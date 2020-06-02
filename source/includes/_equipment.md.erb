@@ -1,7 +1,8 @@
 # Equipment Information
-Same as Ships, this section contains all the Functions and Results developers should get for Equipment and resultant JSON is provided on the right. As usual, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics
-## Resulting Information
-> The Resultant JSON is structured like this:
+Same with the ships API, this sections contains all the functions and results that developers should use for fetching Equipment.
+
+## Return Value
+> The body when fetching the result returns:
 
 ```json
 {
@@ -43,8 +44,9 @@ Same as Ships, this section contains all the Functions and Results developers sh
 }
 ```
 ## Equipment Query By Name
-This Table allows you to configure the type of language as a point of reference in name detection
-<aside class="notice">Note that only Multilingual can support Auto query by whatever language it has been assigned</aside>
+The table below allows you to configure the type of language as pointed of reference in name detection.
+
+<aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
 ```javascript
 import { getEquipment } from '@azurapi/azurapi' //ES6
@@ -60,7 +62,7 @@ console.log(azurlane.getEquipmentByEnglishName('Quadruple 130mm (Mle 1932)'))
 api.getEquipment('Quadruple 130mm (Mle 1932)')
 ```
 
-| Languages      | Method                     | Alternative Method   |
+| Language       | Method                     | Alternative Method   |
 |----------------|----------------------------|----------------------|
 | Multilingual   | getEquipment               | getEquipmentByName   |
 | English        | getEquipmentByEnglishName  | getEquipmentByNameEn |
