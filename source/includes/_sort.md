@@ -1,5 +1,5 @@
-# Sorting Information
-> The Resultant JSON is structured like this:
+# Return Value
+> The payload when fetching results:
 
 ```json
 {
@@ -7,11 +7,11 @@
 }
 ```
 
-This Section contains all the Ships/Equipment being sorted in an array according to the relevant functions indicated by the developers.
+This section contains all the ships and equipment being sorted into an Array according to the functions indicated by the libraries.
 
 ## Sorting Ships
 
-### Sorting Ships By ID/Language
+### Sorting Ships By ID or Language
 ```javascript
 import { getAllShips } from '@azurapi/azurapi' //ES6
 //const { getAllShips } = require('@azurapi/azurapi') ES5
@@ -34,7 +34,7 @@ api.getAllShips()
 | Chinese   | getAllShipsByChineseName  |
 | Korean    | getAllShipsByKoreanName   |
 
-### Filter ships by Faction/Nationality
+### Filter ships by Faction or Nationality
 ```javascript
 const azurlane = require('@azurapi/azurapi')
 azurlane.getAllShipsFromNation;
@@ -55,7 +55,7 @@ console.log(getAllShipsFromFaction)
 
 ## Sorting Equipment
 
-###Sort Equipment by Name
+### Sort Equipment by Name
 ```javascript
 import { getAllEquipments  } from '@azurapi/azurapi' //ES6
 //const { getAllEquipments  } = require('@azurapi/azurapi') ES5

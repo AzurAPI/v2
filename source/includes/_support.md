@@ -1,11 +1,10 @@
 # Support Server
 <aside class="notice">
-For Support and Contribution, Do chat with us in our Discord Server at the link below
+For contributions, questions, or supports of our libraries: please join our Discord server and ask away!
 </aside>
 [![](https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2)](https://discord.gg/aAEdys8)
-
 
 Discord Link: https://discord.gg/aAEdys8
 
 ## Credits
-Data is obtained from the official [Azur Lane Wiki](https://azurlane.koumakan.jp/) with prior consultation before collecting data
+Data is being obtained by the official [wiki](https://azurlane.koumakan.jp/) with prior permission before fetching data.

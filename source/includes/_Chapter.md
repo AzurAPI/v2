@@ -1,9 +1,9 @@
 # Chapter Information
 <aside class="notice">
-This Section is Work In Progress, do not refer to this page until further notice
+This section is currently undergoing construction.
 </aside>
-## Resulting Information
-> The Resultant JSON is structured like this:
+## Return Value
+> The payload of the information is structured as:
 
 ```json
 
