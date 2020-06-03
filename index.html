@@ -225,19 +225,19 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#updating-the-database" class="toc-h1 toc-link" data-title="Updating the Database">Updating the Database</a>
+            <a href="#updating-the-database" class="toc-h1 toc-link" data-title="Updating the database">Updating the database</a>
           </li>
           <li>
             <a href="#ship-information" class="toc-h1 toc-link" data-title="Ship Information">Ship Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#ship-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                    <a href="#ship-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                   </li>
                   <li>
-                    <a href="#ship-information-ship-query-by-name" class="toc-h2 toc-link" data-title="Ship Query By Name">Ship Query By Name</a>
+                    <a href="#ship-information-query-by-name" class="toc-h2 toc-link" data-title="Query by name">Query by name</a>
                   </li>
                   <li>
-                    <a href="#ship-information-ship-query-by-id" class="toc-h2 toc-link" data-title="Ship Query By ID">Ship Query By ID</a>
+                    <a href="#ship-information-query-by-id" class="toc-h2 toc-link" data-title="Query by ID">Query by ID</a>
                   </li>
               </ul>
           </li>
@@ -245,7 +245,7 @@
             <a href="#equipment-information" class="toc-h1 toc-link" data-title="Equipment Information">Equipment Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#equipment-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                    <a href="#equipment-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                   </li>
                   <li>
                     <a href="#equipment-information-equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
@@ -255,6 +255,9 @@
           <li>
             <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#sorting-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                  </li>
                   <li>
                     <a href="#sorting-information-sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
                   </li>
@@ -267,7 +270,7 @@
             <a href="#voiceline-information" class="toc-h1 toc-link" data-title="Voiceline Information">Voiceline Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#voiceline-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                    <a href="#voiceline-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                   </li>
               </ul>
           </li>
@@ -275,7 +278,7 @@
             <a href="#chapter-information" class="toc-h1 toc-link" data-title="Chapter Information">Chapter Information</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#chapter-information-resulting-information" class="toc-h2 toc-link" data-title="Resulting Information">Resulting Information</a>
+                    <a href="#chapter-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                   </li>
               </ul>
           </li>
@@ -289,8 +292,8 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='https://github.com/AzurAPI'>Our Organisation Repo</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/AzurAPI'>GitHub Organisation</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Powered by Slate</a></li>
           <img src="images/9c2-8536c5e9.gif" class="extra" alt="9c2" />
         </ul>
     </div>
@@ -299,7 +302,7 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <blockquote>
-<p>To install, type this in your console:</p>
+<p>To install a library, please open your project in a terminal and use the following commands:</p>
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="p">@</span><span class="nd">azurapi</span><span class="sr">/azurap</span><span class="err">i
 </span><span class="c1">//or</span>
@@ -327,18 +330,17 @@
 </code></pre>
 <p>Welcome to AzurAPI!
 <aside class="notice">
-This Page is updated according to our packages, do refer to this page to keep up to date with the latest version
+This page is updated frequently according of our packages, please refer to this page to be keep up to date with the latest version of the libraries we&#39;ve made.
 </aside></p>
 
-<p>This Project is made by a community of enthusiast for developers by developers who wants to make Azur Lane Database free for everyone including Web designers, Bot Programmers and even mobile based applications.</p>
+<p>This project was made by a community of developers by developers who wanted to make a free database accessable to everyone for fetching any kind of data from Azur Lane&#39;s wiki. It can curate to web designers, bot developers, or mobile-based applications.</p>
 
-<p>This Document states all the functions that we can do to support your development and we hope that we can help you get started on this database.
-For Starters, this database is JSON Based Local Database so it is important that you run an update once in a while to keep up to date with our latest information.</p>
+<p>The documentation here states all functions avaliable to support you in development of the product you&#39;re trying to create. For starters, when fetching data, it returns a payload that is structured in JSON format, so keep that in mind of what library you&#39;re using. It&#39;s important to update the cache every once a while due to breaking changes of the API.</p>
 
 <p><a href="https://nodei.co/npm/@azurapi/azurapi/"><img src="https://nodei.co/npm/@azurapi/azurapi.png?mini=true" alt="NPM" /></a>
 <a href="https://badge.fury.io/py/azurlane"><img src="https://badge.fury.io/py/azurlane.svg" alt="PyPI version" /></a>
 <a href="https://jitpack.io/#AzurAPI/AzurApi-Kotlin"><img src="https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square" alt="Kotlin Version" /></a></p>
-<h1 id='updating-the-database'>Updating the Database</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
+<h1 id='updating-the-database'>Updating the database</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">AzurAPI</span><span class="p">()</span>
 
 <span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -348,16 +350,16 @@ For Starters, this database is JSON Based Local Database so it is important that
 <span class="n">Atago</span><span class="p">.</span><span class="n">reloadDatabase</span><span class="p">()</span>
 <span class="n">expect</span><span class="p">(</span><span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span> <span class="p">&gt;</span> <span class="n">oldDate</span><span class="p">).</span><span class="n">toBe</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </code></pre>
-<p>From time to time, We will release updates according to the time when Azur Lane wiki is updated. Do include the function to update the database as &amp; when needed and restart the system to reflect the changes</p>
+<p>We&#39;ll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.</p>
 
-<p>Alternatively, you can Download the file from here: https://github.com/AzurAPI/azurapi-js-setup/blob/master/ships.json to access the database directly if you do not need the functions included below</p>
+<p>Alternatively, you can host your own service by downloading the file that we&#39;ve extracted <a href="https://github.com/AzurAPI/azurapi-js-setup/blob/master/ships.json">here</a> to access the database if you don&#39;t need to use the functions below.</p>
 <h1 id='ship-information'>Ship Information</h1>
-<aside class="precaution">Some Discord servers may consider certain skins as NSFW. If you are developing a bot for a specific server, Do discuss how the command should be implemented before designing</aside>
+<aside class="precaution">Some servers may consider some skins as NSFW content, if you are delivering a bot for a specific Discord server, please discuss how this should be implemented before designing</aside>
 
-<p>This section contain the Functions and Results developers should get when calling a ship related function. The names of the relevant ships implemented in game are provided in the resultant JSON on the right. But, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
-<h2 id='ship-information-resulting-information'>Resulting Information</h2>
+<p>This section contains the results and functions developers need to use for fetching ship information. The name of the ship is implemented in game are provided in the payload returned on the right. But, developers should be able to provide their own error handling for misspelt names.</p>
+<h2 id='ship-information-return-value'>Return Value</h2>
 <blockquote>
-<p>The Resultant JSON is structured like this:</p>
+<p>The return value when fetched:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -416,20 +418,20 @@ For Starters, this database is JSON Based Local Database so it is important that
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Same</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">rest</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">skins</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-artist'>Object Format for Artist</h3>
+</span></code></pre><h3 id='ship-information-return-value-artist-data'>Artist Data</h3>
 <div class="center-column"></div>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-slot'>Object Format for Slot</h3>
+</span></code></pre><h3 id='ship-information-return-value-slot-data'>Slot Data</h3>
 <div class="center-column"></div>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"maxEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-stats'>Object Format for Stats</h3>
+</span></code></pre><h3 id='ship-information-return-value-ship-statistics'>Ship Statistics</h3>
 <div class="center-column"></div>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"health"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -451,7 +453,7 @@ For Starters, this database is JSON Based Local Database so it is important that
     </span><span class="s2">"ammunition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"huntingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-resulting-information-object-format-for-skill'>Object Format for Skill</h3>
+</span></code></pre><h3 id='ship-information-return-value-skill-data'>Skill Data</h3>
 <div class="center-column"></div>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -464,7 +466,7 @@ For Starters, this database is JSON Based Local Database so it is important that
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='ship-information-ship-query-by-name'>Ship Query By Name</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+</span></code></pre><h2 id='ship-information-query-by-name'>Query by name</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShip } = require('@azurapi/azurapi') //ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'Z23'</span><span class="p">))</span>
 
@@ -475,8 +477,9 @@ For Starters, this database is JSON Based Local Database so it is important that
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
 <span class="n">Atago</span><span class="p">.</span><span class="n">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
 </code></pre>
-<p>This Table allows you to configure the type of language as a point of reference in name detection
-<aside class="notice">Note that only Multifunction can support Both Query by ID and Multilingual Functions</aside></p>
+<p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
+
+<aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
 <table><thead>
 <tr>
@@ -516,7 +519,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='ship-information-ship-query-by-id'>Ship Query By ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<h2 id='ship-information-query-by-id'>Query by ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'115'</span><span class="p">))</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="c"># sid stands for "ship id" since id is a reserved function name in Python</span>
 <span class="n">api</span><span class="o">.</span><span class="n">getShipById</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
@@ -524,9 +527,9 @@ For Starters, this database is JSON Based Local Database so it is important that
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
 <span class="n">Atago</span><span class="p">.</span><span class="n">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
 </code></pre>
-<aside class="warning">Note that only getShips will remove support for IDs. Reason: there is different types of ID to cater and previously we relied on just 3 digit ID for all Ships colliding with names will have a bigger conflict of results</aside>
+<aside class="warning">Note that the function "getShips" will remove support for ship ids because there are different type of IDs to cater and previously, we relied on the 3 digit aspect of the ID but made it so it was colliding with names and have a bigger impact when fetching results.</aside>
 
-<p>Theres are different types of IDs avaliable to the users to select, please have a look at the table and allow your bot to handles these types for IDs</p>
+<p>This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.</p>
 
 <table><thead>
 <tr>
@@ -552,10 +555,10 @@ For Starters, this database is JSON Based Local Database so it is important that
 </tr>
 </tbody></table>
 <h1 id='equipment-information'>Equipment Information</h1>
-<p>Same as Ships, this section contains all the Functions and Results developers should get for Equipment and resultant JSON is provided on the right. As usual, Developers should able to provide their own error checking for misspelt names and other user centric input checks prior to checking the library for the statistics</p>
-<h2 id='equipment-information-resulting-information'>Resulting Information</h2>
+<p>Same with the ships API, this sections contains all the functions and results that developers should use for fetching Equipment.</p>
+<h2 id='equipment-information-return-value'>Return Value</h2>
 <blockquote>
-<p>The Resultant JSON is structured like this:</p>
+<p>The body when fetching the result returns:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
@@ -595,8 +598,9 @@ For Starters, this database is JSON Based Local Database so it is important that
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='equipment-information-equipment-query-by-name'>Equipment Query By Name</h2>
-<p>This Table allows you to configure the type of language as a point of reference in name detection
-<aside class="notice">Note that only Multilingual can support Auto query by whatever language it has been assigned</aside></p>
+<p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
+
+<aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 <pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipment</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getEquipment } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'Quadruple 130mm (Mle 1932)'</span><span class="p">))</span>
@@ -609,7 +613,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 </code></pre>
 <table><thead>
 <tr>
-<th>Languages</th>
+<th>Language</th>
 <th>Method</th>
 <th>Alternative Method</th>
 </tr>
@@ -640,16 +644,16 @@ For Starters, this database is JSON Based Local Database so it is important that
 <td>getEquipmentByNameKr</td>
 </tr>
 </tbody></table>
-<h1 id='sorting-information'>Sorting Information</h1>
+<h1 id='sorting-information'>Sorting Information</h1><h2 id='sorting-information-return-value'>Return Value</h2>
 <blockquote>
-<p>The Resultant JSON is structured like this:</p>
+<p>The payload when fetching results:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"Same format as the result in ship information but placed in an Array"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This Section contains all the Ships/Equipment being sorted in an array according to the relevant functions indicated by the developers.</p>
-<h2 id='sorting-information-sorting-ships'>Sorting Ships</h2><h3 id='sorting-information-sorting-ships-sorting-ships-by-id-language'>Sorting Ships By ID/Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<p>This section contains all the ships and equipment being sorted into an Array according to the functions indicated by the libraries.</p>
+<h2 id='sorting-information-sorting-ships'>Sorting Ships</h2><h3 id='sorting-information-sorting-ships-sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getAllShips } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShips</span><span class="p">)</span>
 
@@ -689,7 +693,7 @@ For Starters, this database is JSON Based Local Database so it is important that
 <td>getAllShipsByKoreanName</td>
 </tr>
 </tbody></table>
-<h3 id='sorting-information-sorting-ships-filter-ships-by-faction-nationality'>Filter ships by Faction/Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h3 id='sorting-information-sorting-ships-filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">;</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">;</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">;</span>
@@ -744,15 +748,15 @@ For Starters, this database is JSON Based Local Database so it is important that
 </tbody></table>
 <h1 id='voiceline-information'>Voiceline Information</h1>
 <aside class="notice">
-This Section is Work In Progress, do not refer to this page until further notice
+This section is currently undergoing construction.
 </aside>
-<h2 id='voiceline-information-resulting-information'>Resulting Information</h2>
+<h2 id='voiceline-information-return-value'>Return Value</h2>
 <blockquote>
-<p>The Resultant JSON is structured like this:</p>
+<p>The return value when fetched:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">  </span><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
   </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
-</span></code></pre><h3 id='voiceline-information-resulting-information-voiceline-information'>Voiceline Information</h3>
+</span></code></pre><h3 id='voiceline-information-return-value-voiceline-information'>Voiceline Information</h3>
 <div class="center-column"></div>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event (touch etc) name"</span><span class="p">,</span><span class="w">
@@ -763,23 +767,23 @@ This Section is Work In Progress, do not refer to this page until further notice
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='chapter-information'>Chapter Information</h1>
 <aside class="notice">
-This Section is Work In Progress, do not refer to this page until further notice
+This section is currently undergoing construction.
 </aside>
-<h2 id='chapter-information-resulting-information'>Resulting Information</h2>
+<h2 id='chapter-information-return-value'>Return Value</h2>
 <blockquote>
-<p>The Resultant JSON is structured like this:</p>
+<p>The payload of the information is structured as:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
-For Support and Contribution, Do chat with us in our Discord Server at the link below
+For contributions, questions, or supports of our libraries: please join our Discord server and ask away!
 </aside>
 
 <p><a href="https://discord.gg/aAEdys8"><img src="https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2" alt="Widget" /></a></p>
 
 <p>Discord Link: https://discord.gg/aAEdys8</p>
 <h2 id='support-server-credits'>Credits</h2>
-<p>Data is obtained from the official <a href="https://azurlane.koumakan.jp/">Azur Lane Wiki</a> with prior consultation before collecting data</p>
+<p>Data is being obtained by the official <a href="https://azurlane.koumakan.jp/">wiki</a> with prior permission before fetching data.</p>
 
       </div>
       <div class="dark-box">
