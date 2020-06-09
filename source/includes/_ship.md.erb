@@ -170,19 +170,19 @@ The table below allows you to configure the type of language as pointed of refer
 
 ```javascript
 const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getShipById('115'))
+console.log(azurlane.getShip('115'))
 ```
 ```python
 # sid stands for "ship id" since id is a reserved function name in Python
-api.getShipById(sid=115)
-api.getShipById(sid="115")
+api.getShip(sid=115)
+api.getShip(sid="115")
 ```
 ```kotlin
 /* Use methods from Atago class */
 Atago.getShipById("atago")
 ```
 
-<aside class="warning">Note that the function "getShips" will remove support for ship ids because there are different type of IDs to cater and previously, we relied on the 3 digit aspect of the ID but made it so it was colliding with names and have a bigger impact when fetching results.</aside>
+<aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
 
 This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.
 
@@ -192,3 +192,10 @@ This is the different types of IDs avaliable to people to select, have a look at
 | Unreleased/Retrofitted Ships | "3005"      |
 | Research Ships               | "Plan001"   |
 | Collabouration Ships         | "Collab001" |
+
+There are 2 ways to implement Quary by ID. We highly recommended to use getShip as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to getShipById if you are going to only Query by ID as getShip will default to query by Name first before query by ID
+
+| Types       |
+|-------------|
+| getShip     |
+| getShipById |
