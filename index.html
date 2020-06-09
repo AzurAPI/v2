@@ -520,14 +520,14 @@ This page is updated frequently according of our packages, please refer to this 
 </tr>
 </tbody></table>
 <h2 id='ship-information-query-by-id'>Query by ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipById</span><span class="p">(</span><span class="s1">'115'</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'115'</span><span class="p">))</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="c"># sid stands for "ship id" since id is a reserved function name in Python</span>
-<span class="n">api</span><span class="o">.</span><span class="n">getShipById</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">getShipById</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
 </code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
 <span class="n">Atago</span><span class="p">.</span><span class="n">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
 </code></pre>
-<aside class="warning">Note that the function "getShips" will remove support for ship ids because there are different type of IDs to cater and previously, we relied on the 3 digit aspect of the ID but made it so it was colliding with names and have a bigger impact when fetching results.</aside>
+<aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
 
 <p>This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.</p>
 
@@ -552,6 +552,21 @@ This page is updated frequently according of our packages, please refer to this 
 <tr>
 <td>Collabouration Ships</td>
 <td>&quot;Collab001&quot;</td>
+</tr>
+</tbody></table>
+
+<p>There are 2 ways to implement Quary by ID. We highly recommended to use getShip as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to getShipById if you are going to only Query by ID as getShip will default to query by Name first before query by ID</p>
+
+<table><thead>
+<tr>
+<th>Types</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getShip</td>
+</tr>
+<tr>
+<td>getShipById</td>
 </tr>
 </tbody></table>
 <h1 id='equipment-information'>Equipment Information</h1>
