@@ -202,7 +202,7 @@
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;,&quot;python&quot;,&quot;kotlin&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;,&quot;python&quot;,&quot;csharp&quot;,&quot;kotlin&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +212,10 @@
     <div class="toc-wrapper">
       <img src="images/logo-621daba9.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="kotlin">kotlin</a>
+              <a href="#" data-language-name="javascript">Javascript</a>
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="csharp">C#</a>
+              <a href="#" data-language-name="kotlin">Kotlin</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -271,6 +272,14 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#voiceline-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#barrage-information" class="toc-h1 toc-link" data-title="Barrage Information">Barrage Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#barrage-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                   </li>
               </ul>
           </li>
@@ -780,6 +789,37 @@ This section is currently undergoing construction.
     </span><span class="s2">"jp?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in japanese"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio url, file type = audio/ogg"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='barrage-information'>Barrage Information</h1>
+<aside class="notice">
+This section is currently undergoing construction.
+</aside>
+<h2 id='barrage-information-return-value'>Return Value</h2>
+<blockquote>
+<p>The payload of the information is structured as:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Array of Ships Names"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"hull"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rounds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="err">//</span><span class="w"> </span><span class="err">Refer</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">Rounds</span><span class="w"> </span><span class="err">Data</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">Array</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span></code></pre><h3 id='barrage-information-return-value-rounds-data'>Rounds Data</h3>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dmgL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dmgM"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dmgH"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='chapter-information'>Chapter Information</h1>
 <aside class="notice">
 This section is currently undergoing construction.
@@ -788,7 +828,89 @@ This section is currently undergoing construction.
 <blockquote>
 <p>The payload of the information is structured as:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
+<pre class="highlight json tab-json"><code><span class="s2">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"normal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unlockRequirements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"requiredLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"clearRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"cube"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"3-StarRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"enemyLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"mobLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bossLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"boss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"baseXP"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"smallFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"mediumFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"largeFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"bossFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"requiredBattles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bossKillsToClear"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"starConditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"String in Array"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"airSupremacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"actual"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"suggestedLv1"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"suggestedLv2"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"mapDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"String in Array"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"equipmentBlueprintDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"shipDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"String in Array"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"nodeMap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://azurlane.koumakan.jp/w/images/6/67/1-1.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="err">//</span><span class="w"> </span><span class="err">First</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">X</span><span class="w"> </span><span class="err">Axis</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">string</span><span class="w">
+              </span><span class="err">//</span><span class="w"> </span><span class="err">Second</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">Y</span><span class="w"> </span><span class="err">Axis</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">String</span><span class="w">
+                </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Fleet spawn"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Sea"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Sea"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Sea"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Sea"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Enemy spawn"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Boss spawn"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For contributions, questions, or supports of our libraries: please join our Discord server and ask away!
@@ -803,9 +925,10 @@ For contributions, questions, or supports of our libraries: please join our Disc
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="kotlin">kotlin</a>
+                <a href="#" data-language-name="javascript">Javascript</a>
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="csharp">C#</a>
+                <a href="#" data-language-name="kotlin">Kotlin</a>
           </div>
       </div>
     </div>
