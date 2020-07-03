@@ -2,9 +2,10 @@
 title: Manual
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - javascript
-  - python
-  - kotlin
+  - javascript: Javascript
+  - python: Python
+  - csharp: C#
+  - kotlin: Kotlin
 
 
 toc_footers:
@@ -17,10 +18,12 @@ includes:
   - equipment
   - sort
   - Voicelines
+  - Barrage
   - Chapter
   - support
 
 search: true
+
 ---
 
 # Introduction

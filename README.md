@@ -4,6 +4,7 @@
 
 - [NodeJS Library](https://www.npmjs.com/package/@azurapi/azurapi)
 - [Python Library](https://github.com/AzurAPI/azurapi-py)
+- [C# Library](Coming Soon)
 - [Kotlin Library](https://github.com/AzurAPI/AzurApi-Kotlin)
 
 ### Concept
