@@ -91,7 +91,12 @@ under the License.
           <% current_page.data.toc_footers.each do |footer| %>
             <li><%= footer %></li>
           <% end %>
-          <%= image_tag "9c2.gif", class: 'extra' %>
+          <%= image_tag "9c2.gif", class: 'extra', id: 'dancer', alt:'Come back!' %>
+          <script>
+            let dancer = document.getElementById('dancer');
+            if(localStorage&&localStorage.hideDancer)dancer.src = "/";
+            dancer.onclick = () =>dancer.src=!(localStorage||{}).hideDancer=!((localStorage||{}).hideDancer)?"9c2.gif":"/";
+          </script>
         </ul>
       <% end %>
     </div>
