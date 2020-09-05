@@ -8,7 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
             <title>Manual</title>
 
-            <style>
+            <style media="screen">
               .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .gh {
@@ -43,7 +43,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .cd {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
 }
 .highlight .err {
@@ -127,7 +127,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s {
+.highlight .s, .highlight .sa, .highlight .dl {
   color: #e6db74;
 }
 .highlight .na {
@@ -142,7 +142,7 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlight .nf, .highlight .fm {
   color: #a6e22e;
 }
 .highlight .vc {
@@ -163,7 +163,7 @@
 .highlight .vi {
   color: #ffffff;
 }
-.highlight .nv {
+.highlight .nv, .highlight .vm {
   color: #ffffff;
 }
 .highlight .w {
@@ -197,20 +197,107 @@
   color: #f92672;
 }
             </style>
-            <link href="stylesheets/screen-a0b4c94a.css" rel="stylesheet" media="screen" />
-            <link href="stylesheets/print-44fdfbe8.css" rel="stylesheet" media="print" />
-              <script src="javascripts/all-c5541673.js"></script>
+            <style media="print">
+              * {
+                -webkit-transition:none!important;
+                transition:none!important;
+              }
+              .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+            </style>
+            <link href="stylesheets/screen-84a87dd6.css" rel="stylesheet" media="screen" />
+            <link href="stylesheets/print-fe442d9b.css" rel="stylesheet" media="print" />
+              <script src="javascripts/all-e9bde216.js"></script>
+
+            <script>
+              $(function() { setupCodeCopy(); });
+            </script>
           </head>
 
           <body class="index" data-languages="[&quot;javascript&quot;,&quot;python&quot;,&quot;csharp&quot;,&quot;kotlin&quot;]">
             <a href="#" id="nav-button">
               <span>
                 NAV
-                <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+                <img src="images/navbar-cad8cdcb.png" alt="" />
               </span>
             </a>
             <div class="toc-wrapper">
-              <img src="images/logo-621daba9.png" class="logo" alt="Logo" />
+              <img src="images/logo-621daba9.png" class="logo" alt="" />
                 <div class="lang-selector">
                       <a href="#" data-language-name="javascript">Javascript</a>
                       <a href="#" data-language-name="python">Python</a>
@@ -232,13 +319,13 @@
                     <a href="#ship-information" class="toc-h1 toc-link" data-title="Ship Information">Ship Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#ship-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                           <li>
-                            <a href="#ship-information-query-by-name" class="toc-h2 toc-link" data-title="Query by name">Query by name</a>
+                            <a href="#query-by-name" class="toc-h2 toc-link" data-title="Query by name">Query by name</a>
                           </li>
                           <li>
-                            <a href="#ship-information-query-by-id" class="toc-h2 toc-link" data-title="Query by ID">Query by ID</a>
+                            <a href="#query-by-id" class="toc-h2 toc-link" data-title="Query by ID">Query by ID</a>
                           </li>
                       </ul>
                   </li>
@@ -246,10 +333,10 @@
                     <a href="#equipment-information" class="toc-h1 toc-link" data-title="Equipment Information">Equipment Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#equipment-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                           <li>
-                            <a href="#equipment-information-equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
+                            <a href="#equipment-query-by-name" class="toc-h2 toc-link" data-title="Equipment Query By Name">Equipment Query By Name</a>
                           </li>
                       </ul>
                   </li>
@@ -257,13 +344,13 @@
                     <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#sorting-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                           <li>
-                            <a href="#sorting-information-sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
+                            <a href="#sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
                           </li>
                           <li>
-                            <a href="#sorting-information-sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
+                            <a href="#sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
                           </li>
                       </ul>
                   </li>
@@ -271,7 +358,7 @@
                     <a href="#voiceline-information" class="toc-h1 toc-link" data-title="Voiceline Information">Voiceline Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#voiceline-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                       </ul>
                   </li>
@@ -279,7 +366,7 @@
                     <a href="#barrage-information" class="toc-h1 toc-link" data-title="Barrage Information">Barrage Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#barrage-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                       </ul>
                   </li>
@@ -287,7 +374,7 @@
                     <a href="#chapter-information" class="toc-h1 toc-link" data-title="Chapter Information">Chapter Information</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#chapter-information-return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
+                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
                           </li>
                       </ul>
                   </li>
@@ -295,7 +382,7 @@
                     <a href="#support-server" class="toc-h1 toc-link" data-title="Support Server">Support Server</a>
                       <ul class="toc-list-h2">
                           <li>
-                            <a href="#support-server-credits" class="toc-h2 toc-link" data-title="Credits">Credits</a>
+                            <a href="#credits" class="toc-h2 toc-link" data-title="Credits">Credits</a>
                           </li>
                       </ul>
                   </li>
@@ -306,7 +393,7 @@
                   <img src="images/9c2-8536c5e9.gif" class="extra" id="dancer" alt="Come back!" />
                   <script>
                     let dancer = document.getElementById('dancer');
-                    if (localStorage && localStorage.hideDancer) 
+                    if (localStorage && localStorage.hideDancer)
                       dancer.src = "/";
                     dancer.onclick = () => {
                       dancer.src = !(localStorage || {}).hideDancer = !((localStorage || {}).hideDancer)
@@ -323,30 +410,30 @@
 <blockquote>
 <p>To install a library, please open your project in a terminal and use the following commands:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="p">@</span><span class="nd">azurapi</span><span class="sr">/azurap</span><span class="err">i
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="p">@</span><span class="nd">azurapi</span><span class="sr">/azurap</span><span class="err">i
 </span><span class="c1">//or</span>
 <span class="nx">yarn</span> <span class="nx">add</span> <span class="p">@</span><span class="nd">azurapi</span><span class="sr">/azurap</span><span class="err">i
-</span></code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="c1">//maven
-</span><span class="p">&lt;</span><span class="n">repositories</span><span class="p">&gt;</span>
+</span></code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="c1">//maven</span>
+<span class="p">&lt;</span><span class="n">repositories</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="n">repository</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="n">id</span><span class="p">&gt;</span><span class="n">jitpack</span><span class="p">.</span><span class="n">io</span><span class="p">&lt;/</span><span class="n">id</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="n">url</span><span class="p">&gt;</span><span class="n">https</span><span class="p">:</span><span class="c1">//jitpack.io&lt;/url&gt;
-</span>    <span class="p">&lt;/</span><span class="n">repository</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="n">url</span><span class="p">&gt;</span><span class="n">https</span><span class="p">:</span><span class="c1">//jitpack.io&lt;/url&gt;</span>
+    <span class="p">&lt;/</span><span class="n">repository</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="n">repositories</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="n">dependency</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="n">groupId</span><span class="p">&gt;</span><span class="n">com</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">AzurAPI</span><span class="p">&lt;/</span><span class="n">groupId</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="n">artifactId</span><span class="p">&gt;</span><span class="n">AzurApi</span><span class="p">-</span><span class="n">Kotlin</span><span class="p">&lt;/</span><span class="n">artifactId</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="n">version</span><span class="p">&gt;</span><span class="n">Tag</span><span class="p">&lt;/</span><span class="n">version</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">groupId</span><span class="p">&gt;</span><span class="n">com</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="nc">AzurAPI</span><span class="p">&lt;</span><span class="err">/group</span><span class="nc">Id</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">artifactId</span><span class="p">&gt;</span><span class="nc">AzurApi-Kotlin</span><span class="p">&lt;</span><span class="err">/artifact</span><span class="nc">Id</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">version</span><span class="p">&gt;</span><span class="nc">Tag</span><span class="p">&lt;</span><span class="err">/version</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="n">dependency</span><span class="p">&gt;</span>
-<span class="c1">//gradle
-</span><span class="n">repositories</span> <span class="p">{</span>
-    <span class="n">maven</span><span class="p">(</span><span class="n">url</span> <span class="p">=</span> <span class="s">"https://jitpack.io"</span><span class="p">)</span>
+<span class="c1">//gradle</span>
+<span class="nf">repositories</span> <span class="p">{</span>
+    <span class="nf">maven</span><span class="p">(</span><span class="n">url</span> <span class="p">=</span> <span class="s">"https://jitpack.io"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="n">dependencies</span> <span class="p">{</span>
-    <span class="n">implementation</span><span class="p">(</span><span class="s">"com.github.AzurAPI:AzurApi-Kotlin:Tag"</span><span class="p">)</span>
+<span class="nf">dependencies</span> <span class="p">{</span>
+    <span class="nf">implementation</span><span class="p">(</span><span class="s">"com.github.AzurAPI:AzurApi-Kotlin:Tag"</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">azurlane</span>
-</code></pre>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">azurlane</span>
+</code></pre></div>
 <p>Welcome to AzurAPI!
 <aside class="notice">
 This page is updated frequently according of our packages, please refer to this page to be keep up to date with the latest version of the libraries we&#39;ve made.
@@ -359,16 +446,16 @@ This page is updated frequently according of our packages, please refer to this 
 <p><a href="https://nodei.co/npm/@azurapi/azurapi/"><img src="https://nodei.co/npm/@azurapi/azurapi.png?mini=true" alt="NPM" /></a>
 <a href="https://badge.fury.io/py/azurlane"><img src="https://badge.fury.io/py/azurlane.svg" alt="PyPI version" /></a>
 <a href="https://jitpack.io/#AzurAPI/AzurApi-Kotlin"><img src="https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square" alt="Kotlin Version" /></a></p>
-<h1 id='updating-the-database'>Updating the database</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
+<h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">AzurAPI</span><span class="p">()</span>
 
-<span class="n">api</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="p">{</span> <span class="nx">checkForNewUpdate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@azurapi/azurapi"</span><span class="p">)</span> <span class="c1">//es5</span>
+<span class="n">api</span><span class="p">.</span><span class="n">updater</span><span class="p">.</span><span class="n">update</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">checkForNewUpdate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@azurapi/azurapi</span><span class="dl">"</span><span class="p">)</span> <span class="c1">//es5</span>
 <span class="nx">checkForNewUpdate</span><span class="p">()</span>
-</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">oldDate</span> <span class="p">=</span> <span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span>
-<span class="n">Atago</span><span class="p">.</span><span class="n">reloadDatabase</span><span class="p">()</span>
-<span class="n">expect</span><span class="p">(</span><span class="n">Atago</span><span class="p">.</span><span class="n">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span> <span class="p">&gt;</span> <span class="n">oldDate</span><span class="p">).</span><span class="n">toBe</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</code></pre>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">oldDate</span> <span class="p">=</span> <span class="nc">Atago</span><span class="p">.</span><span class="nf">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span>
+<span class="nc">Atago</span><span class="p">.</span><span class="nf">reloadDatabase</span><span class="p">()</span>
+<span class="nf">expect</span><span class="p">(</span><span class="nc">Atago</span><span class="p">.</span><span class="nf">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span> <span class="p">&gt;</span> <span class="n">oldDate</span><span class="p">).</span><span class="nf">toBe</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</code></pre></div>
 <p>We&#39;ll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.</p>
 
 <p>Alternatively, you can host your own service by downloading or fetching the file that we&#39;ve extracted in the table below if you don&#39;t need to use the functions we have included.</p>
@@ -410,126 +497,126 @@ This page is updated frequently according of our packages, please refer to this 
 <aside class="precaution">Some servers may consider some skins as NSFW content, if you are delivering a bot for a specific Discord server, please discuss how this should be implemented before designing</aside>
 
 <p>This section contains the results and functions developers need to use for fetching ship information. The name of the ship is implemented in game are provided in the payload returned on the right. But, developers should be able to provide their own error handling for misspelt names.</p>
-<h2 id='ship-information-return-value'>Return Value</h2>
+<h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The return value when fetched:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"hullType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"level120"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level100"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"baseStats"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level100Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level120Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hullType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"stars"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"level120"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"level100"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"baseStats"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"level100Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"level120Retrofit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Stats"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="p">,</span><span class="w">
-    </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="p">,</span><span class="w">
-    </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="w">
+  </span><span class="nl">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="p">,</span><span class="w">
+    </span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="p">,</span><span class="w">
+    </span><span class="mi">3</span><span class="err">:</span><span class="w"> </span><span class="s2">"Refer to Slot Table"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"enhanceValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"scrapValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"medal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"enhanceValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="nl">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="nl">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="nl">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"scrapValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="nl">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w"> </span><span class="nl">"medal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"Refer to object format for Skill"</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Same</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Rest</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Skills</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">],</span><span class="w">
 
-  </span><span class="s2">"limitBreaks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"limitBreaks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Each</span><span class="w"> </span><span class="err">Limit</span><span class="w"> </span><span class="err">Break</span><span class="w"> </span><span class="err">will</span><span class="w"> </span><span class="err">have</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">upgrade</span><span class="w"> </span><span class="err">stats</span><span class="p">,</span><span class="w">
     </span><span class="err">first</span><span class="w"> </span><span class="err">layer</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">breaks</span><span class="p">,</span><span class="w"> </span><span class="err">second</span><span class="w"> </span><span class="err">layer</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">bonus</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"fleetTech"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"statsBonus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w"> </span><span class="s2">"maxLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"techPoints"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s2">"maxLimitBreak"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="s2">"maxLevel"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">63</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"fleetTech"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"statsBonus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"collection"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w"> </span><span class="nl">"maxLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"techPoints"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"collection"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="nl">"maxLimitBreak"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="nl">"maxLevel"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">63</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"construction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"constructionTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"availableIn"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"light"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"heavy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"limited"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"construction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"constructionTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"availableIn"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"light"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="nl">"heavy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="nl">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="nl">"limited"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="p">,</span><span class="w"> </span><span class="nl">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boolean"</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"gallery"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"gallery"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">Gallery</span><span class="w"> </span><span class="err">Images</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">following</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">*/</span><span class="w">
-    </span><span class="p">{</span><span class="w"> </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"misc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"pixiv"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"voice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="w">
+  </span><span class="nl">"misc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"web"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pixiv"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"voice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Refer to object format for Artist"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"skins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"background"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"chibi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"skins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"background"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"chibi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
     </span><span class="err">/*</span><span class="w"> </span><span class="err">Same</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">rest</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">skins</span><span class="w"> </span><span class="err">*/</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-return-value-artist-data'>Artist Data</h3>
+</span></code></pre></div><h3 id='artist-data'>Artist Data</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-return-value-slot-data'>Slot Data</h3>
+</span></code></pre></div><h3 id='slot-data'>Slot Data</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"minEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"maxEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"minEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"maxEfficiency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-return-value-ship-statistics'>Ship Statistics</h3>
+</span></code></pre></div><h3 id='ship-statistics'>Ship Statistics</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"health"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"armor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"luck"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"evasion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"speed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"antiair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"oilConsumption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accuracy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"antisubmarineWarfare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"health"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"armor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"luck"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"firepower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"torpedo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"evasion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"speed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"antiair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"aviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"oilConsumption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"accuracy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"antisubmarineWarfare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
 
     </span><span class="err">&lt;!--</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">Submarines</span><span class="w"> </span><span class="err">--&gt;</span><span class="w">
-    </span><span class="s2">"oxygen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ammunition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"huntingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+    </span><span class="nl">"oxygen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ammunition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"huntingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='ship-information-return-value-skill-data'>Skill Data</h3>
+</span></code></pre></div><h3 id='skill-data'>Skill Data</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='ship-information-query-by-name'>Query by name</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+</span></code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getShip } = require('@azurapi/azurapi') //ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'Z23'</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="dl">'</span><span class="s1">Z23</span><span class="dl">'</span><span class="p">))</span>
 
 <span class="c1">//Alternative</span>
-<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipByEnglishName</span><span class="p">(</span><span class="s1">'Z23'</span><span class="p">))</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
-</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
-<span class="n">Atago</span><span class="p">.</span><span class="n">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
-</code></pre>
+<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipByEnglishName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Z23</span><span class="dl">'</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
+<span class="nc">Atago</span><span class="p">.</span><span class="nf">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
+</code></pre></div>
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
@@ -572,14 +659,14 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='ship-information-query-by-id'>Query by ID</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="s1">'115'</span><span class="p">))</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="c"># sid stands for "ship id" since id is a reserved function name in Python</span>
-<span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
-</code></pre><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
-<span class="n">Atago</span><span class="p">.</span><span class="n">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
-</code></pre>
+<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="dl">'</span><span class="s1">115</span><span class="dl">'</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># sid stands for "ship id" since id is a reserved function name in Python
+</span><span class="n">api</span><span class="p">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
+<span class="nc">Atago</span><span class="p">.</span><span class="nf">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
+</code></pre></div>
 <aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
 
 <p>This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.</p>
@@ -624,61 +711,61 @@ This page is updated frequently according of our packages, please refer to this 
 </tbody></table>
 <h1 id='equipment-information'>Equipment Information</h1>
 <p>Same with the ships API, this sections contains all the functions and results that developers should use for fetching Equipment.</p>
-<h2 id='equipment-information-return-value'>Return Value</h2>
+<h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The body when fetching the result returns:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"wikiUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"kr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"focus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"focus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w"> </span><span class="p">},</span><span class="w">
 
-  </span><span class="s2">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"destroyer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"lightCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"heavyCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"monitor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"largeCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"battleship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"battlecruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"aviationBattleship"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"aircraftCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"lightCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"repairShip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submarine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submarineCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"destroyer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lightCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"heavyCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"monitor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"largeCruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"battleship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"battlecruiser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"aviationBattleship"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"aircraftCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lightCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"repairShip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"submarine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"submarineCarrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"misc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"obtainedFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"animation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+  </span><span class="nl">"misc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"obtainedFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"animation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"tiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"T0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"tier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w"> </span><span class="s2">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"tiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"T0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"tier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w"> </span><span class="nl">"stars"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">],</span><span class="w"> </span><span class="nl">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">Object</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='equipment-information-equipment-query-by-name'>Equipment Query By Name</h2>
+</span></code></pre></div><h2 id='equipment-query-by-name'>Equipment Query By Name</h2>
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
-<pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getEquipment</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getEquipment</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getEquipment } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipment</span><span class="p">(</span><span class="s1">'Quadruple 130mm (Mle 1932)'</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipment</span><span class="p">(</span><span class="dl">'</span><span class="s1">Quadruple 130mm (Mle 1932)</span><span class="dl">'</span><span class="p">))</span>
 
 <span class="c1">//Alternative</span>
-<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipmentByEnglishName</span><span class="p">(</span><span class="s1">'Quadruple 130mm (Mle 1932)'</span><span class="p">))</span>
+<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipmentByEnglishName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Quadruple 130mm (Mle 1932)</span><span class="dl">'</span><span class="p">))</span>
 
-</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getEquipment</span><span class="p">(</span><span class="s">'Quadruple 130mm (Mle 1932)'</span><span class="p">)</span>
-</code></pre>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getEquipment</span><span class="p">(</span><span class="s">'Quadruple 130mm (Mle 1932)'</span><span class="p">)</span>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Language</th>
@@ -712,24 +799,24 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getEquipmentByNameKr</td>
 </tr>
 </tbody></table>
-<h1 id='sorting-information'>Sorting Information</h1><h2 id='sorting-information-return-value'>Return Value</h2>
+<h1 id='sorting-information'>Sorting Information</h1><h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The payload when fetching results:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"Same format as the result in ship information but placed in an Array"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This section contains all the ships and equipment being sorted into an Array according to the functions indicated by the libraries.</p>
-<h2 id='sorting-information-sorting-ships'>Sorting Ships</h2><h3 id='sorting-information-sorting-ships-sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getAllShips } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShips</span><span class="p">)</span>
 
 <span class="c1">//Alternative</span>
-<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShips</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getAllShips</span><span class="p">()</span>
-</code></pre>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getAllShips</span><span class="p">()</span>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Type</th>
@@ -761,16 +848,16 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getAllShipsByKoreanName</td>
 </tr>
 </tbody></table>
-<h3 id='sorting-information-sorting-ships-filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span>
+<h3 id='filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">;</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">;</span>
 <span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">;</span>
 <span class="c1">//or</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllShipsFromNation</span><span class="p">,</span> <span class="nx">getAllShipsFromNationality</span><span class="p">,</span> <span class="nx">getAllShipsFromFaction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">getAllShipsFromNation</span><span class="p">,</span> <span class="nx">getAllShipsFromNationality</span><span class="p">,</span> <span class="nx">getAllShipsFromFaction</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNation</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNationality</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromFaction</span><span class="p">)</span>
-</code></pre>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Type</th>
@@ -790,15 +877,15 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getAllShipsFromFaction</td>
 </tr>
 </tbody></table>
-<h2 id='sorting-information-sorting-equipment'>Sorting Equipment</h2><h3 id='sorting-information-sorting-equipment-sort-equipment-by-name'>Sort Equipment by Name</h3><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@azurapi/azurapi'</span> <span class="c1">//ES6</span>
+<h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
 <span class="c1">//const { getAllEquipments  } = require('@azurapi/azurapi') ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllEquipments</span><span class="p">)</span>
 
 <span class="c1">//Alternative</span>
-<span class="kr">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@azurapi/azurapi'</span><span class="p">)</span> <span class="c1">//ES5</span>
+<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllEquipments</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="n">api</span><span class="o">.</span><span class="n">getAllEquipments</span>
-</code></pre>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getAllEquipments</span>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Languages</th>
@@ -818,121 +905,121 @@ This page is updated frequently according of our packages, please refer to this 
 <aside class="notice">
 This section is currently undergoing construction.
 </aside>
-<h2 id='voiceline-information-return-value'>Return Value</h2>
+<h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The return value when fetched:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">  </span><span class="s2">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
-  </span><span class="s2">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
-</span></code></pre><h3 id='voiceline-information-return-value-voiceline-information'>Voiceline Information</h3>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">  </span><span class="nl">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
+  </span><span class="nl">"[Skin Name]"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check Voiceline Information"</span><span class="err">;</span><span class="w">
+</span></code></pre></div><h3 id='voiceline-information-2'>Voiceline Information</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event (touch etc) name"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in english"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"zh?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in chinese"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"jp?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in japanese"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio url, file type = audio/ogg"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event (touch etc) name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in english"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"zh?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in chinese"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jp?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line in japanese"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"en?"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Audio url, file type = audio/ogg"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='barrage-information'>Barrage Information</h1>
+</span></code></pre></div><h1 id='barrage-information'>Barrage Information</h1>
 <aside class="notice">
 This section is currently undergoing construction.
 </aside>
-<h2 id='barrage-information-return-value'>Return Value</h2>
+<h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The payload of the information is structured as:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL Link"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="s2">"Array of Ships Names"</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"hull"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rounds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"hull"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DD"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rounds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="err">//</span><span class="w"> </span><span class="err">Refer</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">Rounds</span><span class="w"> </span><span class="err">Data</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">Array</span><span class="w">
       </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-</span></code></pre><h3 id='barrage-information-return-value-rounds-data'>Rounds Data</h3>
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre></div><h3 id='rounds-data'>Rounds Data</h3>
 <div class="center-column"></div>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"dmgL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"dmgM"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"dmgH"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dmgL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dmgM"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dmgH"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='chapter-information'>Chapter Information</h1>
+</span></code></pre></div><h1 id='chapter-information'>Chapter Information</h1>
 <aside class="notice">
 This section is currently undergoing construction.
 </aside>
-<h2 id='chapter-information-return-value'>Return Value</h2>
+<h2 id='return-value'>Return Value</h2>
 <blockquote>
 <p>The payload of the information is structured as:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="s2">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"jp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"normal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"unlockRequirements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"requiredLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+    </span><span class="nl">"normal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"unlockRequirements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"requiredLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"clearRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"cube"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="w">
+        </span><span class="nl">"clearRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"cube"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"coin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"oil"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"3-StarRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"3-StarRewards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+                </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number or null"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
+                </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String or Null"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"enemyLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"mobLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bossLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"boss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+        </span><span class="nl">"enemyLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"mobLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bossLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"boss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"baseXP"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"smallFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"mediumFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"largeFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bossFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
+        </span><span class="nl">"baseXP"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"smallFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"mediumFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"largeFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bossFleet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"requiredBattles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"bossKillsToClear"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"starConditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"requiredBattles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"bossKillsToClear"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"starConditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="s2">"String in Array"</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"airSupremacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"actual"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"suggestedLv1"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"suggestedLv2"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+        </span><span class="nl">"airSupremacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"actual"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"suggestedLv1"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"suggestedLv2"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"mapDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"mapDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="s2">"String in Array"</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"equipmentBlueprintDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-        </span><span class="s2">"shipDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"equipmentBlueprintDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"shipDrops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="s2">"String in Array"</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"nodeMap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://azurlane.koumakan.jp/w/images/6/67/1-1.png"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"nodeMap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://azurlane.koumakan.jp/w/images/6/67/1-1.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="err">//</span><span class="w"> </span><span class="err">First</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">X</span><span class="w"> </span><span class="err">Axis</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">string</span><span class="w">
               </span><span class="err">//</span><span class="w"> </span><span class="err">Second</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">Y</span><span class="w"> </span><span class="err">Axis</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">String</span><span class="w">
                 </span><span class="p">[</span><span class="w">
@@ -945,25 +1032,25 @@ This section is currently undergoing construction.
                     </span><span class="s2">"Boss spawn"</span><span class="w">
                 </span><span class="p">]</span><span class="w">
             </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="nl">"nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="w">
+                    </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type in String"</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='support-server'>Support Server</h1>
+</span></code></pre></div><h1 id='support-server'>Support Server</h1>
 <aside class="notice">
 For contributions, questions, or supports of our libraries: please join our Discord server and ask away!
 </aside>
 
-<p><a href="https://discord.gg/aAEdys8"><img src="https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2" alt="Widget" /></a></p>
+<p><a href="https://discord.gg/aAEdys8"><img src="https://discordapp.com/api/guilds/648206344729526272/widget.png?style=banner2" alt="" /></a></p>
 
 <p>Discord Link: https://discord.gg/aAEdys8</p>
-<h2 id='support-server-credits'>Credits</h2>
+<h2 id='credits'>Credits</h2>
 <p>Data is being obtained by the official <a href="https://azurlane.koumakan.jp/">wiki</a> with prior permission before fetching data.</p>
 
               </div>
