@@ -15,7 +15,8 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-;(function () {
+;
+(function() {
   'use strict';
 
   var languages = [];
@@ -30,9 +31,15 @@ under the License.
 
     $(".lang-selector a").removeClass('active');
     $(".lang-selector a[data-language-name='" + language + "']").addClass('active');
-    for (var i=0; i < languages.length; i++) {
+    for (var i = 0; i < languages.length; i++) {
       $(".highlight.tab-" + languages[i]).hide();
       $(".lang-specific." + languages[i]).hide();
+
+      $('.highlight.tab-' + languages[i]).each(function(i, obj) {
+        if ($(this).parent().prev().hasClass('center-column')) {
+          $(this).show();
+        }
+      });
     }
     $(".highlight.tab-" + language).show();
     $(".lang-specific." + language).show();
@@ -59,7 +66,7 @@ under the License.
       return {};
     }
 
-    return str.split('&').reduce(function (ret, param) {
+    return str.split('&').reduce(function(ret, param) {
       var parts = param.replace(/\+/g, ' ').split('=');
       var key = parts[0];
       var val = parts[1];
@@ -82,11 +89,11 @@ under the License.
   };
 
   function stringifyURL(obj) {
-    return obj ? Object.keys(obj).sort().map(function (key) {
+    return obj ? Object.keys(obj).sort().map(function(key) {
       var val = obj[key];
 
       if (Array.isArray(val)) {
-        return val.sort().map(function (val2) {
+        return val.sort().map(function(val2) {
           return encodeURIComponent(key) + '=' + encodeURIComponent(val2);
         }).join('&');
       }
@@ -121,7 +128,9 @@ under the License.
 
   // if a button is clicked, add the state to the history
   function pushURL(language) {
-    if (!history) { return; }
+    if (!history) {
+      return;
+    }
     var hash = window.location.hash;
     if (hash) {
       hash = hash.replace(/^#+/, '');
