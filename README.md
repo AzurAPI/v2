@@ -15,7 +15,7 @@
 - You can update the dataset manually to make sure nothing suddenly breaks!
 - [Setup](https://github.com/AzurAPI/azurapi-js-setup) will be the one obtaining the data from
   - [Wiki](https://azurlane.koumakan.jp)
-  - _[Extracted Lua](https://github.com/nobbyfix/AzurLaneSource)_ (Working on it!)
+  - _Extracted Lua_ (Working on it!)
 
 ### Support or Error Report
 
