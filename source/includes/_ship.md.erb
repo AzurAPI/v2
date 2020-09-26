@@ -6,84 +6,108 @@ This section contains the results and functions developers need to use for fetch
 ## Return Value
 > The return value when fetched:
 
-```json
-{
-  "wikiUrl": "String",
-  "id": "String",
-  "names": { "code": "String","en": "String", "code": "String", "cn": "String", "jp": "String", "kr": "String" },
-  "class": "String",
-  "nationality": "String",
-  "hullType": "String",
-  "thumbnail": "String",
-  "rarity": "String",
-  "stars": { "stars": "String", "value": "Number" },
+```ts
+class Ship {
+    wikiUrl: string;    // An valid, full url to its wiki page
+    id: string;         // ID of ship, provided by the wiki (not in game id)
+    names: {            // Ship's name
+        code: string;
+        en: string;
+        cn?: string;
+        jp?: string;
+        kr?: string;
+    };
+    class: string;      // Ship's class
+    nationality: string;// Ship's nationality
+    hullType: string;   // Ship type (Destroyer etc)
+    thumbnail: string;  // A thumbnail ideal for small places
+    rarity: string;     // Super Rare, hopefully
+    stars: {
+        stars: string;      // i.e. ★★☆☆☆
+        value: number;      // i.e. 2
+    };
 
-  /* Retrofitted ships
-  "retrofit": Boolean,
-  "retrofitId": "String",
-  "retrofitProjects": {
-     "Project Code (A-Z)": {
-        "name": "String",
-        "attributes": [
-          "Object Format"
-        ],
-        "materials": ["String in Array"],
-        "coins": Number,
-        "level": Number,
-        "levelBreakLevel": Number,
-        "levelBreakStars": "String",
-        "recurrence": Number,
-        "require": ["Object in Array"]
-     }
-  },
-  "retrofit_hullType": "String",
-
-  "stats": {
-    "level120": "Refer to object format for Stats",
-    "level100": "Refer to object format for Stats",
-    "baseStats": "Refer to object format for Stats",
-    "level100Retrofit": "Refer to object format for Stats",
-    "level120Retrofit": "Refer to object format for Stats"
-  },
-  "slots": {
-    1: "Refer to Slot Table",
-    2: "Refer to Slot Table",
-    3: "Refer to Slot Table"
-  },
-  "enhanceValue": { "firepower": "Number", "torpedo": "Number", "aviation": "Number", "reload": "Number" },
-  "scrapValue": { "coin": "Number", "oil": "Number", "medal": "Number" },
-  "skills": [
-    "Refer to object format for Skill"
-    /* Same Format for the Rest of the Skills */
-  ],
-
-  "limitBreaks": [
-    /* Each Limit Break will have an array of upgrade stats,
-    first layer = breaks, second layer = bonus */
-  ],
-  "fleetTech": {
-    "statsBonus": { "collection": [Object], "maxLevel": [Object] },
-    "techPoints": { "collection": Number, "maxLimitBreak": Number, "maxLevel": Number, "total": Number }
-  },
-  "construction": {
-    "constructionTime": "String",
-    "availableIn": { "light": "Boolean", "heavy": "Boolean", "aviation": "Boolean", "limited": "Boolean", "exchange": "Boolean" }
-  },
-  "gallery": [
-    /* Array of Gallery Images in the following Format */
-    { "description": "String", "url": "String" }
-  ],
-  "misc": {
-    "artist": "Refer to object format for Misc",
-    "web": "Refer to object format for Misc",
-    "pixiv": "Refer to object format for Misc",
-    "twitter": "Refer to object format for Misc",
-    "voice": "Refer to object format for Misc"
-  },
-  "skins": [
-    { "name": "String", "image": "String", "background": "String", "chibi": "String", "info": [Object] }
-    /* Same Format for the rest of the skins */
-  ]
+ //Retrofitted ships
+  retrofit: Boolean;
+  retrofitId: String;
+  retrofitProjects: {
+     Project Code (A-Z): {
+        name: String,
+        attributes: [
+          "\"Health\" +45"
+        ];
+        materials: [
+          "2x \"DestroyerT1BP\""
+        ];
+        coins: Number;
+        level: Number;
+        levelBreakLevel: Number;
+        levelBreakStars: "★★☆☆☆";
+        recurrence: Number;
+        require: [
+          "Required Projects",
+          "A"
+        ]
+     }, "B": {...}
+  };
+  retrofit_hullType: String;
+    stats: {
+        baseStats: Stats;
+        level100: Stats;
+        level120: Stats;
+        level100Retrofit?: Stats;
+        level120Retrofit?: Stats;
+    };
+    slots: {
+        1: Slot;
+        2: Slot;
+        3: Slot;
+    };
+    enhanceValue: object;// mapped by [key = "stat type", value = "enhance value"]
+    scrapValue: {
+        coin: number;
+        oil: number;
+        medal: number;
+    };
+    skills: Array<Skill>;
+    limitBreaks: Array<Array<string>>;      // first layer = breaks, second layer = bonus
+    fleetTech: {                            // fleet tech stuff
+        statsBonus: {
+            collection: {                   // on collection
+                applicable: Array<string>;  // applicable ship types (i.e. Destroyer)
+                stat: string;               // name of stat to enhance
+                bonus: string;              // human-readable version of how much to enhance
+            };
+            maxLevel: {                     // on reaching max-level
+                applicable: Array<string>;
+                stat: string;
+                bonus: string;
+            };
+        };
+        techPoints: {
+            collection: number;
+            maxLimitBreak: number;
+            maxLevel: number;
+            total: number;
+        };
+    };
+    construction: {
+        constructionTime: string;
+        availableIn: {
+            light: Boolean;
+            heavy: Boolean;
+            aviation: Boolean;
+            limited: Boolean;
+            exchange: Boolean;
+        };
+    };
+    misc: {
+        artist: string;
+        web?: Artist;
+        pixiv?: Artist;
+        twitter?: Artist;
+        voice?: Artist;
+    };
 }
 ```
 
@@ -91,10 +115,10 @@ This section contains the results and functions developers need to use for fetch
 
 <div class="center-column"></div>
 
-```json
-{
-    "name": "String",
-    "url": "String"
+```ts
+class Artist {
+    name: string;
+    url: string;
 }
 ```
 
@@ -103,11 +127,11 @@ This section contains the results and functions developers need to use for fetch
 
 <div class="center-column"></div>
 
-```json
-{
-    "type": "String",
-    "minEfficiency": "Number",
-    "maxEfficiency": "Number"
+```ts
+class Slot {
+    type: string;
+    minEfficiency: number;  // in percentage
+    maxEfficiency: number;  // in percentage
 }
 ```
 
@@ -115,43 +139,46 @@ This section contains the results and functions developers need to use for fetch
 
 <div class="center-column"></div>
 
-```json
+```ts
 {
-    "health": "String",
-    "armor": "String",
-    "reload": "String",
-    "luck": "String",
-    "firepower": "String",
-    "torpedo": "String",
-    "evasion": "String",
-    "speed": "String",
-    "antiair": "String",
-    "aviation": "String",
-    "oilConsumption": "String",
-    "accuracy": "String",
-    "antisubmarineWarfare": "String",
-
-    <!-- For Submarines -->
-    "oxygen": "String",
-    "ammunition": "String",
-    "huntingRange": "String"
+  class Stats {
+      health: string;
+      armor: string;
+      reload: string;
+      luck: string;
+      firepower: string;
+      torpedo: string;
+      evasion: string;
+      speed: string;
+      antiair: string;
+      aviation: string;
+      oilConsumption: string;
+      accuracy: string;
+      antisubmarineWarfare: string;
+      // For submarines
+      oxygen?: string;
+      ammunition?: string;
+      huntingRange?: Array<Array<string>>; // hunting range represented by 2d array
+  }
 }
 ```
 ### Skill Data
 
 <div class="center-column"></div>
 
-```json
+```ts
 {
-    "icon": "String",
-    "names": {
-      "en": "string",
-      "cn": "string",
-      "jp": "string",
-      "kr": "string"
-    }
-    "description": "string",
-    "color": "string"
+  class Skill {
+      icon: string;       // url
+      names: {
+          en?: string;
+          cn?: string;
+          jp?: string;
+          kr?: string;
+      };
+      description: string;
+      color: string;      // descriptive color name (not hex code)
+  }
 }
 ```
 
