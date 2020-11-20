@@ -2,7 +2,8 @@ name: Deploy
 
 on:
   push:
-    branches: [ 'setup' ]
+    branches:
+      - setup  # Set a branch to deploy
 
 jobs:
   deploy:
