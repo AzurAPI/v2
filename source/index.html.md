@@ -59,6 +59,9 @@ dependencies {
 ```python
 pip install azurlane
 ```
+```csharp
+// refer to https://www.nuget.org/packages/AzurAPINet/
+```
 Welcome to AzurAPI!
 <aside class="notice">
 This page is updated frequently according of our packages, please refer to this page to be keep up to date with the latest version of the libraries we've made.

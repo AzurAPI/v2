@@ -5,21 +5,28 @@ This section is currently undergoing construction.
 ## Return Value
 > The return value when fetched:
 
-```json
-  "Default": "Check Voiceline Information";
-  "[Skin Name]": "Check Voiceline Information";
+```ts
+{
+  class Ship {
+    Default: Array<Line>;
+    [Skin Name]: Array<Line>;
+    ...
+  }
+}
 ```
 
 ###Voiceline Information
 
 <div class="center-column"></div>
 
-```json
+```ts
 {
-    "event": "Event (touch etc) name",
-    "en?": "Line in english",
-    "zh?": "Line in chinese",
-    "jp?": "Line in japanese",
-    "en?": "Audio url, file type = audio/ogg"
+  class Line {
+      event: string;  // the event (touch etc) name
+      en?: string;    // the line in english
+      zh?: string;    // the line in chinese
+      jp?: string;    // the line in japanese
+      audio?: string; // the line's audio url, file type = "audio/ogg"
+  }
 }
 ```

@@ -25,6 +25,9 @@ console.log(azurlane.getAllShips)
 ```python
 api.getAllShips()
 ```
+```csharp
+var ships = client.getAllShips();
+```
 
 | Type      | Method                    |
 |-----------|---------------------------|
@@ -68,6 +71,9 @@ console.log(azurlane.getAllEquipments)
 ```
 ```python
 api.getAllEquipments
+```
+```csharp
+var equipments = client.GetAllEquipments();
 ```
 | Languages | Method                    |
 |-----------|---------------------------|

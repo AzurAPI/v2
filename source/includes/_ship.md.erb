@@ -200,6 +200,10 @@ api.getShipByNameEn(ship="Enterprise")
 /* Use methods from Atago class */
 Atago.getShipByName("atago")
 ```
+```csharp
+var ship = client.getShip("Z23");
+```
+
 The table below allows you to configure the type of language as pointed of reference in name detection.
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
@@ -228,6 +232,9 @@ api.getShip(sid="115")
 ```kotlin
 /* Use methods from Atago class */
 Atago.getShipById("atago")
+```
+```csharp
+client.getShipById("Z23");
 ```
 
 <aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
