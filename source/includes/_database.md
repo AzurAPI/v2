@@ -1,30 +1,15 @@
 # Updating the database
 ```python
-from azurlane.azurapi import AzurAPI
-api = AzurAPI()
 
-api.updater.update()
 ```
 ```javascript
-const { checkForNewUpdate } = require("@azurapi/azurapi") //es5
-checkForNewUpdate()
+
 ```
 ```kotlin
-val oldDate = Atago.getVersion().lastUpdatedApi
-Atago.reloadDatabase()
-expect(Atago.getVersion().lastUpdatedApi > oldDate).toBe(true)
+
 ```
 ```csharp
-// dotnet add package AzurAPINet
-using Jan0660.AzurAPINet;
-var client = new AzurAPIClient(new AzurAPIClientOptions());
-// check for update
-var isUpdateAvailable = await client.DatabaseUpdateAvailableAsync();
-// reload/update cached data
-await client.ReloadCachedAsync();
 
-// reload cached data to update it
-await client.ReloadEverythingAsync();
 ```
 We'll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.
 

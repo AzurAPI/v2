@@ -185,23 +185,16 @@ class Slot {
 ## Query by name
 
 ```javascript
-import { getShip } from '@azurapi/azurapi' //ES6
-//const { getShip } = require('@azurapi/azurapi') //ES5
-console.log(getShip('Z23'))
 
-//Alternative
-const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getShipByEnglishName('Z23'))
 ```
 ```python
-api.getShipByNameEn(ship="Enterprise")
+
 ```
 ```kotlin
-/* Use methods from Atago class */
-Atago.getShipByName("atago")
+
 ```
 ```csharp
-var ship = client.getShip("Z23");
+
 ```
 
 The table below allows you to configure the type of language as pointed of reference in name detection.
@@ -221,20 +214,16 @@ The table below allows you to configure the type of language as pointed of refer
 ## Query by ID
 
 ```javascript
-const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getShip('115'))
+
 ```
 ```python
-# sid stands for "ship id" since id is a reserved function name in Python
-api.getShip(sid=115)
-api.getShip(sid="115")
+
 ```
 ```kotlin
-/* Use methods from Atago class */
-Atago.getShipById("atago")
+
 ```
 ```csharp
-client.getShipById("Z23");
+
 ```
 
 <aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>

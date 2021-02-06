@@ -14,19 +14,13 @@ This section contains all the ships and equipment being sorted into an Array acc
 
 ### Sorting Ships By ID or Language
 ```javascript
-import { getAllShips } from '@azurapi/azurapi' //ES6
-//const { getAllShips } = require('@azurapi/azurapi') ES5
-console.log(getAllShips)
 
-//Alternative
-const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getAllShips)
 ```
 ```python
-api.getAllShips()
+
 ```
 ```csharp
-var ships = client.getAllShips();
+
 ```
 
 | Type      | Method                    |
@@ -40,15 +34,7 @@ var ships = client.getAllShips();
 
 ### Filter ships by Faction or Nationality
 ```javascript
-const azurlane = require('@azurapi/azurapi')
-azurlane.getAllShipsFromNation;
-azurlane.getAllShipsFromNationality;
-azurlane.getAllShipsFromFaction;
-//or
-import { getAllShipsFromNation, getAllShipsFromNationality, getAllShipsFromFaction } from '@azurapi/azurapi'
-console.log(getAllShipsFromNation)
-console.log(getAllShipsFromNationality)
-console.log(getAllShipsFromFaction)
+
 ```
 
 | Type        | Method                    |
@@ -61,19 +47,13 @@ console.log(getAllShipsFromFaction)
 
 ### Sort Equipment by Name
 ```javascript
-import { getAllEquipments  } from '@azurapi/azurapi' //ES6
-//const { getAllEquipments  } = require('@azurapi/azurapi') ES5
-console.log(getAllEquipments)
 
-//Alternative
-const azurlane = require('@azurapi/azurapi') //ES5
-console.log(azurlane.getAllEquipments)
 ```
 ```python
-api.getAllEquipments
+
 ```
 ```csharp
-var equipments = client.GetAllEquipments();
+
 ```
 | Languages | Method                    |
 |-----------|---------------------------|
