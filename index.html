@@ -432,25 +432,10 @@ This page is updated frequently according of our packages, please refer to this 
 <p><a href="https://nodei.co/npm/@azurapi/azurapi/"><img src="https://nodei.co/npm/@azurapi/azurapi.png?mini=true" alt="NPM" /></a>
 <a href="https://badge.fury.io/py/azurlane"><img src="https://badge.fury.io/py/azurlane.svg" alt="PyPI version" /></a>
 <a href="https://jitpack.io/#AzurAPI/AzurApi-Kotlin"><img src="https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square" alt="Kotlin Version" /></a></p>
-<h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">azurlane.azurapi</span> <span class="kn">import</span> <span class="n">AzurAPI</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">AzurAPI</span><span class="p">()</span>
-
-<span class="n">api</span><span class="p">.</span><span class="n">updater</span><span class="p">.</span><span class="n">update</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">checkForNewUpdate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@azurapi/azurapi</span><span class="dl">"</span><span class="p">)</span> <span class="c1">//es5</span>
-<span class="nx">checkForNewUpdate</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="kd">val</span> <span class="py">oldDate</span> <span class="p">=</span> <span class="nc">Atago</span><span class="p">.</span><span class="nf">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span>
-<span class="nc">Atago</span><span class="p">.</span><span class="nf">reloadDatabase</span><span class="p">()</span>
-<span class="nf">expect</span><span class="p">(</span><span class="nc">Atago</span><span class="p">.</span><span class="nf">getVersion</span><span class="p">().</span><span class="n">lastUpdatedApi</span> <span class="p">&gt;</span> <span class="n">oldDate</span><span class="p">).</span><span class="nf">toBe</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="c1">// dotnet add package AzurAPINet</span>
-<span class="k">using</span> <span class="nn">Jan0660.AzurAPINet</span><span class="p">;</span>
-<span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AzurAPIClient</span><span class="p">(</span><span class="k">new</span> <span class="nf">AzurAPIClientOptions</span><span class="p">());</span>
-<span class="c1">// check for update</span>
-<span class="kt">var</span> <span class="n">isUpdateAvailable</span> <span class="p">=</span> <span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="nf">DatabaseUpdateAvailableAsync</span><span class="p">();</span>
-<span class="c1">// reload/update cached data</span>
-<span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="nf">ReloadCachedAsync</span><span class="p">();</span>
-
-<span class="c1">// reload cached data to update it</span>
-<span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="nf">ReloadEverythingAsync</span><span class="p">();</span>
+<h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <p>We&#39;ll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.</p>
 
@@ -650,17 +635,10 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getShip</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getShip } = require('@azurapi/azurapi') //ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getShip</span><span class="p">(</span><span class="dl">'</span><span class="s1">Z23</span><span class="dl">'</span><span class="p">))</span>
-
-<span class="c1">//Alternative</span>
-<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShipByEnglishName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Z23</span><span class="dl">'</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getShipByNameEn</span><span class="p">(</span><span class="n">ship</span><span class="o">=</span><span class="s">"Enterprise"</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
-<span class="nc">Atago</span><span class="p">.</span><span class="nf">getShipByName</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">ship</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">getShip</span><span class="p">(</span><span class="s">"Z23"</span><span class="p">);</span>
+</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
@@ -704,14 +682,10 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getShipByNameCn</td>
 </tr>
 </tbody></table>
-<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getShip</span><span class="p">(</span><span class="dl">'</span><span class="s1">115</span><span class="dl">'</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># sid stands for "ship id" since id is a reserved function name in Python
-</span><span class="n">api</span><span class="p">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="mi">115</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">getShip</span><span class="p">(</span><span class="n">sid</span><span class="o">=</span><span class="s">"115"</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code><span class="cm">/* Use methods from Atago class */</span>
-<span class="nc">Atago</span><span class="p">.</span><span class="nf">getShipById</span><span class="p">(</span><span class="s">"atago"</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="n">client</span><span class="p">.</span><span class="nf">getShipById</span><span class="p">(</span><span class="s">"Z23"</span><span class="p">);</span>
+<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
 
@@ -802,16 +776,9 @@ This page is updated frequently according of our packages, please refer to this 
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getEquipment</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getEquipment } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getEquipment</span><span class="p">(</span><span class="dl">'</span><span class="s1">Quadruple 130mm (Mle 1932)</span><span class="dl">'</span><span class="p">))</span>
-
-<span class="c1">//Alternative</span>
-<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getEquipmentByEnglishName</span><span class="p">(</span><span class="dl">'</span><span class="s1">Quadruple 130mm (Mle 1932)</span><span class="dl">'</span><span class="p">))</span>
-
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getEquipment</span><span class="p">(</span><span class="s">'Quadruple 130mm (Mle 1932)'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">equipment</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">getEquipment</span><span class="p">(</span><span class="err">'</span><span class="n">Quadruple</span> <span class="m">130</span><span class="nf">mm</span> <span class="p">(</span><span class="n">Mle</span> <span class="m">1932</span><span class="p">)</span><span class="err">'</span><span class="p">)</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <table><thead>
 <tr>
@@ -855,15 +822,9 @@ This page is updated frequently according of our packages, please refer to this 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This section contains all the ships and equipment being sorted into an Array according to the functions indicated by the libraries.</p>
-<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getAllShips</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getAllShips } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShips</span><span class="p">)</span>
-
-<span class="c1">//Alternative</span>
-<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShips</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getAllShips</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">ships</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">getAllShips</span><span class="p">();</span>
+<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <table><thead>
 <tr>
@@ -896,15 +857,7 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getAllShipsByKoreanName</td>
 </tr>
 </tbody></table>
-<h3 id='filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNation</span><span class="p">;</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromNationality</span><span class="p">;</span>
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllShipsFromFaction</span><span class="p">;</span>
-<span class="c1">//or</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">getAllShipsFromNation</span><span class="p">,</span> <span class="nx">getAllShipsFromNationality</span><span class="p">,</span> <span class="nx">getAllShipsFromFaction</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNation</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromNationality</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllShipsFromFaction</span><span class="p">)</span>
+<h3 id='filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
 </code></pre></div>
 <table><thead>
 <tr>
@@ -925,15 +878,9 @@ This page is updated frequently according of our packages, please refer to this 
 <td>getAllShipsFromFaction</td>
 </tr>
 </tbody></table>
-<h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getAllEquipments</span>  <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span> <span class="c1">//ES6</span>
-<span class="c1">//const { getAllEquipments  } = require('@azurapi/azurapi') ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getAllEquipments</span><span class="p">)</span>
-
-<span class="c1">//Alternative</span>
-<span class="kd">const</span> <span class="nx">azurlane</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//ES5</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">azurlane</span><span class="p">.</span><span class="nx">getAllEquipments</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">api</span><span class="p">.</span><span class="n">getAllEquipments</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">equipments</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">GetAllEquipments</span><span class="p">();</span>
+<h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
 <table><thead>
 <tr>
