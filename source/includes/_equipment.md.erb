@@ -49,7 +49,9 @@ The table below allows you to configure the type of language as pointed of refer
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
 ```javascript
+azurlane.equipment.name(`<String>`) // Get equipment by name in any language
 
+azurlane.equipment.name(`<String>`,`< en || jp || cn >`) // Get equipment by name in specified language
 ```
 ```python
 
@@ -60,8 +62,4 @@ The table below allows you to configure the type of language as pointed of refer
 
 | Language       | Method                     | Alternative Method   |
 |----------------|----------------------------|----------------------|
-| Multilingual   | getEquipment               | getEquipmentByName   |
-| English        | getEquipmentByEnglishName  | getEquipmentByNameEn |
-| Japanese       | getEquipmentByJapaneseName | getEquipmentByNameJp |
-| Chinese        | getEquipmentByChineseName  | getEquipmentByNameCn |
-| Korean         | getEquipmentByKoreanName   | getEquipmentByNameKr |
+| Multilingual   | equipment.name             |                      |
