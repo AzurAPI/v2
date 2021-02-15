@@ -635,7 +635,11 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
+
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in any language</span>
+
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || cn || jp || kr &gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in a specific language only</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
@@ -653,42 +657,22 @@ This page is updated frequently according of our packages, please refer to this 
 </thead><tbody>
 <tr>
 <td>Multifunction</td>
-<td>getShip</td>
+<td>ship.get</td>
 <td></td>
 </tr>
 <tr>
 <td>Multilingual</td>
-<td>getShipByName</td>
+<td>ship.name</td>
 <td></td>
 </tr>
-<tr>
-<td>English</td>
-<td>getShipByEnglishName</td>
-<td>getShipByNameEn</td>
-</tr>
-<tr>
-<td>Japanese</td>
-<td>getShipByJapaneseName</td>
-<td>getShipByNameKr</td>
-</tr>
-<tr>
-<td>Chinese</td>
-<td>getShipByChineseName</td>
-<td>getShipByNameJp</td>
-</tr>
-<tr>
-<td>Korean</td>
-<td>getShipByKoreanName</td>
-<td>getShipByNameCn</td>
-</tr>
 </tbody></table>
-<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
+
+<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship using ID</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
-<aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
-
 <p>This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.</p>
 
 <table><thead>
@@ -715,7 +699,7 @@ This page is updated frequently according of our packages, please refer to this 
 </tr>
 </tbody></table>
 
-<p>There are 2 ways to implement Quary by ID. We highly recommended to use getShip as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to getShipById if you are going to only Query by ID as getShip will default to query by Name first before query by ID</p>
+<p>There are 2 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID</p>
 
 <table><thead>
 <tr>
@@ -723,10 +707,10 @@ This page is updated frequently according of our packages, please refer to this 
 </tr>
 </thead><tbody>
 <tr>
-<td>getShip</td>
+<td>ship.get</td>
 </tr>
 <tr>
-<td>getShipById</td>
+<td>ship.id</td>
 </tr>
 </tbody></table>
 <h1 id='equipment-information'>Equipment Information</h1>
