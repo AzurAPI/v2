@@ -185,7 +185,11 @@ class Slot {
 ## Query by name
 
 ```javascript
+azurlane.ship.get(`<String>`) // Get ship by ID or name in any language
 
+azurlane.ship.name(`<String>`) // Get ship by name in any language
+
+azurlane.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
 ```
 ```python
 
@@ -203,18 +207,16 @@ The table below allows you to configure the type of language as pointed of refer
 
 | Type          | Main Method           | Alternative  Method   |
 | ------------- | --------------------- | --------------------- |
-| Multifunction | getShip               |                       |
-| Multilingual  | getShipByName         |                       |
-| English       | getShipByEnglishName  | getShipByNameEn       |
-| Japanese      | getShipByJapaneseName | getShipByNameKr       |
-| Chinese       | getShipByChineseName  | getShipByNameJp       |
-| Korean        | getShipByKoreanName   | getShipByNameCn       |
+| Multifunction | ship.get              |                       |
+| Multilingual  | ship.name             |                       |
 
 
 ## Query by ID
 
 ```javascript
+azurlane.ship.get(`<String>`) // Get ship by ID or name in any language
 
+azurlane.ship.id(`<String>`) // Get ship using ID
 ```
 ```python
 
@@ -226,8 +228,6 @@ The table below allows you to configure the type of language as pointed of refer
 
 ```
 
-<aside class="warning">New Updates will reintroduce getShip with ID implementation</aside>
-
 This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.
 
 | Types                        | Examples    |
@@ -237,9 +237,9 @@ This is the different types of IDs avaliable to people to select, have a look at
 | Research Ships               | "Plan001"   |
 | Collabouration Ships         | "Collab001" |
 
-There are 2 ways to implement Quary by ID. We highly recommended to use getShip as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to getShipById if you are going to only Query by ID as getShip will default to query by Name first before query by ID
+There are 2 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID
 
 | Types       |
 |-------------|
-| getShip     |
-| getShipById |
+| ship.get    |
+| ship.id     |
