@@ -16,7 +16,6 @@ includes:
   - database
   - ship
   - equipment
-  - sort
   - Voicelines
   - Barrage
   - Chapter
