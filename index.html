@@ -333,20 +333,6 @@
                       </ul>
                   </li>
                   <li>
-                    <a href="#sorting-information" class="toc-h1 toc-link" data-title="Sorting Information">Sorting Information</a>
-                      <ul class="toc-list-h2">
-                          <li>
-                            <a href="#return-value" class="toc-h2 toc-link" data-title="Return Value">Return Value</a>
-                          </li>
-                          <li>
-                            <a href="#sorting-ships" class="toc-h2 toc-link" data-title="Sorting Ships">Sorting Ships</a>
-                          </li>
-                          <li>
-                            <a href="#sorting-equipment" class="toc-h2 toc-link" data-title="Sorting Equipment">Sorting Equipment</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
                     <a href="#voiceline-information" class="toc-h1 toc-link" data-title="Voiceline Information">Voiceline Information</a>
                       <ul class="toc-list-h2">
                           <li>
@@ -659,18 +645,15 @@ This page is updated frequently according of our packages, please refer to this 
 <tr>
 <th>Type</th>
 <th>Main Method</th>
-<th>Alternative  Method</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Multifunction</td>
 <td>ship.get</td>
-<td></td>
 </tr>
 <tr>
 <td>Multilingual</td>
 <td>ship.name</td>
-<td></td>
 </tr>
 </tbody></table>
 <h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
@@ -784,90 +767,6 @@ This page is updated frequently according of our packages, please refer to this 
 <td>Multilingual</td>
 <td>equipment.name</td>
 <td></td>
-</tr>
-</tbody></table>
-<h1 id='sorting-information'>Sorting Information</h1><h2 id='return-value'>Return Value</h2>
-<blockquote>
-<p>The payload when fetching results:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Same format as the result in ship information but placed in an Array"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This section contains all the ships and equipment being sorted into an Array according to the functions indicated by the libraries.</p>
-<h2 id='sorting-ships'>Sorting Ships</h2><h3 id='sorting-ships-by-id-or-language'>Sorting Ships By ID or Language</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Type</th>
-<th>Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Unfiltered</td>
-<td>getAllShips</td>
-</tr>
-<tr>
-<td>ID</td>
-<td>getAllShipsById</td>
-</tr>
-<tr>
-<td>English</td>
-<td>getAllShipsByEnglishName</td>
-</tr>
-<tr>
-<td>Japanese</td>
-<td>getAllShipsByJapaneseName</td>
-</tr>
-<tr>
-<td>Chinese</td>
-<td>getAllShipsByChineseName</td>
-</tr>
-<tr>
-<td>Korean</td>
-<td>getAllShipsByKoreanName</td>
-</tr>
-</tbody></table>
-<h3 id='filter-ships-by-faction-or-nationality'>Filter ships by Faction or Nationality</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Type</th>
-<th>Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Nation</td>
-<td>getAllShipsFromNation</td>
-</tr>
-<tr>
-<td>Nationality</td>
-<td>getAllShipsFromNationality</td>
-</tr>
-<tr>
-<td>Faction</td>
-<td>getAllShipsFromFaction</td>
-</tr>
-</tbody></table>
-<h2 id='sorting-equipment'>Sorting Equipment</h2><h3 id='sort-equipment-by-name'>Sort Equipment by Name</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Languages</th>
-<th>Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Unfiltered</td>
-<td>getAllEquipments</td>
-</tr>
-<tr>
-<td>Official</td>
-<td>getEquipmentByOfficialName</td>
 </tr>
 </tbody></table>
 <h1 id='voiceline-information'>Voiceline Information</h1>
