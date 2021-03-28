@@ -542,27 +542,24 @@ This page is updated frequently according of our packages, please refer to this 
     <span class="nl">voice</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
   <span class="p">};</span>
 <span class="p">}</span>
-</code></pre></div><h3 id='ship-name-data'>Ship Name Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipNames</span> <span class="o">=</span> <span class="p">{</span>            <span class="c1">// Ship's name</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipNames</span> <span class="o">=</span> <span class="p">{</span>            <span class="c1">// Ship's name</span>
   <span class="na">code</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">en</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">cn</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">jp</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">kr</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div><h3 id='ship-stats-data'>Ship Stats Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipStats</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipStats</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">baseStats</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
   <span class="nl">level100</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
   <span class="nl">level120</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
   <span class="nl">level100Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
   <span class="nl">level120Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div><h3 id='fleet-tech-data'>Fleet Tech Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">FleetTech</span> <span class="o">=</span> <span class="p">{</span>                            <span class="c1">// fleet tech stuff</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">FleetTech</span> <span class="o">=</span> <span class="p">{</span>                            <span class="c1">// fleet tech stuff</span>
   <span class="na">statsBonus</span><span class="p">:</span> <span class="p">{</span>
     <span class="nx">collection</span><span class="p">?:</span> <span class="nx">Bonus</span><span class="p">;</span>
     <span class="nl">maxLevel</span><span class="p">?:</span> <span class="nx">Bonus</span><span class="p">;</span>
@@ -583,11 +580,9 @@ This page is updated frequently according of our packages, please refer to this 
 <span class="p">};</span>
 </code></pre></div><h3 id='ship-statistics'>Ship Statistics</h3>
 <div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="p">{</span>
-  <span class="kd">class</span> <span class="nx">Stats</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Slot</span> <span class="p">{</span>
     <span class="p">[</span><span class="nx">k</span> <span class="k">in</span> <span class="nx">Stat</span><span class="p">]?:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div><h3 id='slot-statistics'>Slot Statistics</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Slot</span> <span class="o">=</span> <span class="p">{</span>
@@ -598,9 +593,8 @@ This page is updated frequently according of our packages, please refer to this 
 <span class="p">}</span>
 </code></pre></div><h3 id='skill-data'>Skill Data</h3>
 <div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="p">{</span>
-  <span class="kd">class</span> <span class="nx">Skill</span> <span class="p">{</span>
-      <span class="nl">icon</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>       <span class="c1">// url</span>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Skill</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">icon</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>       <span class="c1">// url</span>
       <span class="nl">names</span><span class="p">:</span> <span class="p">{</span>
           <span class="nx">en</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
           <span class="nl">cn</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
@@ -610,7 +604,6 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">description</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div><h3 id='skin-info-data'>Skin Info Data</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">SkinInfo</span> <span class="o">=</span> <span class="p">{</span>
