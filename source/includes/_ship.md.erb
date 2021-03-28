@@ -91,6 +91,39 @@ export type FleetTech = {                            // fleet tech stuff
     total: number;
   };
 };
+
+export type RetrofitProject = {
+  id: ProjectID;
+  grade: string;
+  attributes: string[];
+  materials: string[];
+  coins: number;
+  level: number;
+  levelBreakLevel: number;
+  levelBreakStars: string;
+  recurrence: number;
+  require: ProjectID[];
+}
+
+export interface Skin {
+  name: string;
+  chibi: Url;
+  image: Url;
+  cn?: Url; // censored
+  bg?: Url; // with background
+  nobg?: Url; // without background (only used internally)
+  background: Url; // scenery background
+  info: SkinInfo;
+}
+
+export type SkinInfo = {
+  enClient?: string;
+  cnClient?: string;
+  jpClient?: string;
+  cost?: number;
+  obtainedFrom: string;
+  live2dModel: boolean;
+};
 ```
 
 ### Bonus Data
@@ -146,38 +179,6 @@ export type Skill = {
   }
 ```
 
-### Skin Info Data
-
-<div class="center-column"></div>
-
-```ts
-export type SkinInfo = {
-  enClient?: string;
-  cnClient?: string;
-  jpClient?: string;
-  cost?: number;
-  obtainedFrom: string;
-  live2dModel: boolean;
-};
-```
-
-### Skin Data
-
-<div class="center-column"></div>
-
-```ts
-export interface Skin {
-  name: string;
-  chibi: Url;
-  image: Url;
-  cn?: Url; // censored
-  bg?: Url; // with background
-  nobg?: Url; // without background (only used internally)
-  background: Url; // scenery background
-  info: SkinInfo;
-}
-```
-
 ### Gallery Data
 
 <div class="center-column"></div>
@@ -206,25 +207,6 @@ export type Artist = {
 
 ```ts
 export type ProjectID = string;
-```
-
-### Retrofit Project Data
-
-<div class="center-column"></div>
-
-```ts
-export type RetrofitProject = {
-  id: ProjectID;
-  grade: string;
-  attributes: string[];
-  materials: string[];
-  coins: number;
-  level: number;
-  levelBreakLevel: number;
-  levelBreakStars: string;
-  recurrence: number;
-  require: ProjectID[];
-}
 ```
 
 ### Dev Level Data
