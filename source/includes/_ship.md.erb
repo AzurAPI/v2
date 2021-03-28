@@ -185,11 +185,9 @@ class Slot {
 ## Query by name
 
 ```javascript
-azurlane.ship.get(`<String>`) // Get ship by ID or name in any language
-
-azurlane.ship.name(`<String>`) // Get ship by name in any language
-
-azurlane.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
+client.ship.get(`<String>`) // Get ship by ID or name in any language
+client.ship.name(`<String>`) // Get ship by name in any language
+client.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
 ```
 ```python
 
@@ -205,18 +203,13 @@ The table below allows you to configure the type of language as pointed of refer
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
-| Type          | Main Method           |
-| ------------- | --------------------- |
-| Multifunction | ship.get              |
-| Multilingual  | ship.name             |
-
 
 ## Query by ID
 
 ```javascript
-azurlane.ship.get(`<String>`) // Get ship by ID or name in any language
+client.ship.get(`<String>`) // Get ship by ID or name in any language
 
-azurlane.ship.id(`<String>`) // Get ship using ID
+client.ship.id(`<String>`) // Get ship using ID
 ```
 ```python
 

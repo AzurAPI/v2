@@ -1,9 +1,29 @@
+# Using the Database
+In V1.0, we have overhualed the entire repository to make things simplier to access, especially in javascript which has been recoded in TS
+```python
+
+```
+```javascript
+// ES5
+const AzurAPI = require("@azurapi/azurapi");
+const client = new AzurAPI();
+// ES6 or TS
+import AzurAPI from '@azurapi/azurapi';
+const client = new AzurAPI();
+```
+```kotlin
+
+```
+```csharp
+
+```
 # Updating the database
 ```python
 
 ```
 ```javascript
-
+// Not Needed At the Moment, Auto Updated
+// Future Update will include option to disable auto update or set time for Autoupdate
 ```
 ```kotlin
 
