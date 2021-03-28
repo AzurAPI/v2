@@ -487,143 +487,114 @@ This page is updated frequently according of our packages, please refer to this 
 <blockquote>
 <p>The return value when fetched:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight typescript"><code><span class="kd">class</span> <span class="nx">Ship</span> <span class="p">{</span>
-    <span class="nl">wikiUrl</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>    <span class="c1">// An valid, full url to its wiki page</span>
-    <span class="nl">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>         <span class="c1">// ID of ship, provided by the wiki (not in game id)</span>
-    <span class="nl">names</span><span class="p">:</span> <span class="p">{</span>            <span class="c1">// Ship's name</span>
-        <span class="na">code</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">en</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">cn</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">jp</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">kr</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="nl">class</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// Ship's class</span>
-    <span class="nl">nationality</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span><span class="c1">// Ship's nationality</span>
-    <span class="nl">hullType</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>   <span class="c1">// Ship type (Destroyer etc)</span>
-    <span class="nl">thumbnail</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>  <span class="c1">// A thumbnail ideal for small places</span>
-    <span class="nl">rarity</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>     <span class="c1">// Super Rare, hopefully</span>
-    <span class="nl">stars</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">stars</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// i.e. ★★☆☆☆</span>
-        <span class="nl">value</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>      <span class="c1">// i.e. 2</span>
-    <span class="p">};</span>
-
- <span class="c1">//Retrofitted ships</span>
-  <span class="nl">retrofit</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-  <span class="nl">retrofitId</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
-  <span class="nl">retrofitProjects</span><span class="p">:</span> <span class="p">{</span>
-     <span class="nx">Project</span> <span class="nx">Code</span> <span class="p">(</span><span class="nx">A</span><span class="o">-</span><span class="nx">Z</span><span class="p">):</span> <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="na">attributes</span><span class="p">:</span> <span class="p">[</span>
-          <span class="dl">"</span><span class="se">\"</span><span class="s2">Health</span><span class="se">\"</span><span class="s2"> +45</span><span class="dl">"</span>
-        <span class="p">];</span>
-        <span class="nl">materials</span><span class="p">:</span> <span class="p">[</span>
-          <span class="dl">"</span><span class="s2">2x </span><span class="se">\"</span><span class="s2">DestroyerT1BP</span><span class="se">\"</span><span class="dl">"</span>
-        <span class="p">];</span>
-        <span class="nl">coins</span><span class="p">:</span> <span class="nb">Number</span><span class="p">;</span>
-        <span class="nl">level</span><span class="p">:</span> <span class="nb">Number</span><span class="p">;</span>
-        <span class="nl">levelBreakLevel</span><span class="p">:</span> <span class="nb">Number</span><span class="p">;</span>
-        <span class="nl">levelBreakStars</span><span class="p">:</span> <span class="dl">"</span><span class="s2">★★☆☆☆</span><span class="dl">"</span><span class="p">;</span>
-        <span class="nl">recurrence</span><span class="p">:</span> <span class="nb">Number</span><span class="p">;</span>
-        <span class="nl">require</span><span class="p">:</span> <span class="p">[</span>
-          <span class="dl">"</span><span class="s2">Required Projects</span><span class="dl">"</span><span class="p">,</span>
-          <span class="dl">"</span><span class="s2">A</span><span class="dl">"</span>
-        <span class="p">]</span>
-     <span class="p">},</span> <span class="dl">"</span><span class="s2">B</span><span class="dl">"</span><span class="p">:</span> <span class="p">{...}</span>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">Ship</span> <span class="p">{</span>
+  <span class="nl">wikiUrl</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>    <span class="c1">// An valid, full url to its wiki page</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="nx">ShipID</span><span class="p">;</span>         <span class="c1">// ID of ship, provided by the wiki (not in game id)</span>
+  <span class="nl">names</span><span class="p">:</span> <span class="nx">ShipNames</span><span class="p">;</span>
+  <span class="nl">thumbnail</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+  <span class="nl">hexagon</span><span class="p">:</span> <span class="p">[</span><span class="kr">number</span><span class="p">,</span> <span class="kr">number</span><span class="p">,</span> <span class="kr">number</span><span class="p">,</span> <span class="kr">number</span><span class="p">,</span> <span class="kr">number</span><span class="p">,</span> <span class="kr">number</span><span class="p">];</span>
+  <span class="nl">class</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// Ship's class</span>
+  <span class="nl">nationality</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span><span class="c1">// Ship's nationality</span>
+  <span class="nl">hullType</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>   <span class="c1">// Ship type (Destroyer etc)</span>
+  <span class="nl">rarity</span><span class="p">:</span> <span class="nx">Rarity</span><span class="p">;</span>     <span class="c1">// Super Rare, hopefully</span>
+  <span class="nl">stars</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">stars</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">value</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="p">};</span>
-  <span class="nl">retrofit_hullType</span><span class="p">:</span> <span class="nb">String</span><span class="p">;</span>
-    <span class="nl">stats</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">baseStats</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
-        <span class="nl">level100</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
-        <span class="nl">level120</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
-        <span class="nl">level100Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
-        <span class="nl">level120Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
+  <span class="nl">stats</span><span class="p">:</span> <span class="nx">ShipStats</span><span class="p">;</span>
+  <span class="nl">slots</span><span class="p">:</span> <span class="p">[</span><span class="nx">Slot</span><span class="p">,</span> <span class="nx">Slot</span><span class="p">,</span> <span class="nx">Slot</span><span class="p">];</span>
+  <span class="nl">enhanceValue</span><span class="p">:</span> <span class="p">{</span> <span class="na">firepower</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="na">torpedo</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="na">aviation</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="na">reload</span><span class="p">:</span> <span class="kr">number</span> <span class="p">};</span>
+  <span class="nl">scrapValue</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">coin</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">oil</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">medal</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="p">};</span>
+  <span class="nl">skills</span><span class="p">:</span> <span class="nx">Skill</span><span class="p">[];</span>
+  <span class="nl">skins</span><span class="p">:</span> <span class="nx">Skin</span><span class="p">[];</span>
+  <span class="nl">gallery</span><span class="p">:</span> <span class="nx">GalleryItem</span><span class="p">[];</span>
+  <span class="nl">limitBreaks</span><span class="p">:</span> <span class="nx">LimitBreak</span><span class="p">[];</span>      <span class="c1">// first layer = breaks, second layer = bonus</span>
+  <span class="nl">devLevels</span><span class="p">:</span> <span class="nx">DevLevel</span><span class="p">[]</span>
+  <span class="nx">fleetTech</span><span class="p">:</span> <span class="nx">FleetTech</span><span class="p">;</span>
+  <span class="nl">unreleased</span><span class="p">?:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">retrofit</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>                              <span class="c1">// if the ship is retrofittable</span>
+  <span class="nl">retrofitId</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>                             <span class="c1">// the id after retrofit</span>
+  <span class="nl">retrofitHullType</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>                       <span class="c1">// if the ship changes type</span>
+  <span class="nl">retrofitProjects</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="na">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="nx">RetrofitProject</span> <span class="p">};</span>
+  <span class="nl">construction</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">constructionTime</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+    <span class="nl">availableIn</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">light</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+      <span class="nl">heavy</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+      <span class="nl">aviation</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+      <span class="nl">limited</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+      <span class="nl">exchange</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
     <span class="p">};</span>
-    <span class="nl">slots</span><span class="p">:</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span> <span class="nx">Slot</span><span class="p">;</span>
-        <span class="mi">2</span><span class="p">:</span> <span class="nx">Slot</span><span class="p">;</span>
-        <span class="mi">3</span><span class="p">:</span> <span class="nx">Slot</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="nl">enhanceValue</span><span class="p">:</span> <span class="nx">object</span><span class="p">;</span><span class="c1">// mapped by [key = "stat type", value = "enhance value"]</span>
-    <span class="nl">scrapValue</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">coin</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-        <span class="nl">oil</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-        <span class="nl">medal</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="nl">skills</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">Skill</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="nl">limitBreaks</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Array</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;&gt;</span><span class="p">;</span>      <span class="c1">// first layer = breaks, second layer = bonus</span>
-    <span class="nl">fleetTech</span><span class="p">:</span> <span class="p">{</span>                            <span class="c1">// fleet tech stuff</span>
-        <span class="na">statsBonus</span><span class="p">:</span> <span class="p">{</span>
-            <span class="na">collection</span><span class="p">:</span> <span class="p">{</span>                   <span class="c1">// on collection</span>
-                <span class="na">applicable</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">;</span>  <span class="c1">// applicable ship types (i.e. Destroyer)</span>
-                <span class="nl">stat</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>               <span class="c1">// name of stat to enhance</span>
-                <span class="nl">bonus</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>              <span class="c1">// human-readable version of how much to enhance</span>
-            <span class="p">};</span>
-            <span class="nl">maxLevel</span><span class="p">:</span> <span class="p">{</span>                     <span class="c1">// on reaching max-level</span>
-                <span class="na">applicable</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">;</span>
-                <span class="nl">stat</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-                <span class="nl">bonus</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-            <span class="p">};</span>
-        <span class="p">};</span>
-        <span class="nl">techPoints</span><span class="p">:</span> <span class="p">{</span>
-            <span class="na">collection</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-            <span class="nl">maxLimitBreak</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-            <span class="nl">maxLevel</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-            <span class="nl">total</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-        <span class="p">};</span>
-    <span class="p">};</span>
-    <span class="nl">construction</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">constructionTime</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">availableIn</span><span class="p">:</span> <span class="p">{</span>
-            <span class="na">light</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-            <span class="nl">heavy</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-            <span class="nl">aviation</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-            <span class="nl">limited</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-            <span class="nl">exchange</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">;</span>
-        <span class="p">};</span>
-    <span class="p">};</span>
-    <span class="nl">misc</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">artist</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-        <span class="nl">web</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
-        <span class="nl">pixiv</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
-        <span class="nl">twitter</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
-        <span class="nl">voice</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
-    <span class="p">};</span>
+  <span class="p">};</span>
+  <span class="nl">obtainedFrom</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">obtainedFrom</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>       <span class="c1">// source, etc "Available in Medal Exchange for \"Medal\" 80."</span>
+    <span class="nl">fromMaps</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>    <span class="c1">// map ids, etc "1-1" "10-2"</span>
+  <span class="p">};</span>
+  <span class="nl">misc</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">artist</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
+    <span class="nl">web</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
+    <span class="nl">pixiv</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
+    <span class="nl">twitter</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
+    <span class="nl">voice</span><span class="p">?:</span> <span class="nx">Artist</span><span class="p">;</span>
+  <span class="p">};</span>
 <span class="p">}</span>
-</code></pre></div><h3 id='misc-data'>Misc Data</h3>
+</code></pre></div><h3 id='ship-name-data'>Ship Name Data</h3>
 <div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="kd">class</span> <span class="nx">Artist</span> <span class="p">{</span>
-    <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-    <span class="nl">url</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><h3 id='slot-data'>Slot Data</h3>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipNames</span> <span class="o">=</span> <span class="p">{</span>            <span class="c1">// Ship's name</span>
+  <span class="na">code</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">en</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">cn</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">jp</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">kr</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><h3 id='ship-stats-data'>Ship Stats Data</h3>
 <div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="kd">class</span> <span class="nx">Slot</span> <span class="p">{</span>
-    <span class="nl">type</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-    <span class="nl">minEfficiency</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>  <span class="c1">// in percentage</span>
-    <span class="nl">maxEfficiency</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>  <span class="c1">// in percentage</span>
-<span class="p">}</span>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ShipStats</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">baseStats</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
+  <span class="nl">level100</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
+  <span class="nl">level120</span><span class="p">:</span> <span class="nx">Stats</span><span class="p">;</span>
+  <span class="nl">level100Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
+  <span class="nl">level120Retrofit</span><span class="p">?:</span> <span class="nx">Stats</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><h3 id='fleet-tech-data'>Fleet Tech Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">FleetTech</span> <span class="o">=</span> <span class="p">{</span>                            <span class="c1">// fleet tech stuff</span>
+  <span class="na">statsBonus</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">collection</span><span class="p">?:</span> <span class="nx">Bonus</span><span class="p">;</span>
+    <span class="nl">maxLevel</span><span class="p">?:</span> <span class="nx">Bonus</span><span class="p">;</span>
+  <span class="p">};</span>
+  <span class="nl">techPoints</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">collection</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">maxLimitBreak</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">maxLevel</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">total</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div><h3 id='bonus-data'>Bonus Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Bonus</span> <span class="o">=</span> <span class="p">{</span>                  <span class="c1">// on collection</span>
+  <span class="na">applicable</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>  <span class="c1">// applicable ship types (i.e. Destroyer)</span>
+  <span class="nl">stat</span><span class="p">:</span> <span class="nx">Stat</span><span class="p">;</span>                 <span class="c1">// name of stat to enhance</span>
+  <span class="nl">bonus</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>              <span class="c1">// human-readable version of how much to enhance</span>
+<span class="p">};</span>
 </code></pre></div><h3 id='ship-statistics'>Ship Statistics</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="p">{</span>
   <span class="kd">class</span> <span class="nx">Stats</span> <span class="p">{</span>
-      <span class="nl">health</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">armor</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">reload</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">luck</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">firepower</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">torpedo</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">evasion</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">speed</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">antiair</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">aviation</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">oilConsumption</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">accuracy</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">antisubmarineWarfare</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="c1">// For submarines</span>
-      <span class="nl">oxygen</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">ammunition</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-      <span class="nl">huntingRange</span><span class="p">?:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Array</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;&gt;</span><span class="p">;</span> <span class="c1">// hunting range represented by 2d array</span>
+    <span class="p">[</span><span class="nx">k</span> <span class="k">in</span> <span class="nx">Stat</span><span class="p">]?:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='slot-statistics'>Slot Statistics</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Slot</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">kaiEfficiency</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">minEfficiency</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">maxEfficiency</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id='skill-data'>Skill Data</h3>
 <div class="center-column"></div>
@@ -639,6 +610,63 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">description</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='skin-info-data'>Skin Info Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">SkinInfo</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">enClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">cnClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">jpClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">cost</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">obtainedFrom</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">live2dModel</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><h3 id='skin-data'>Skin Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kr">interface</span> <span class="nx">Skin</span> <span class="p">{</span>
+  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">chibi</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+  <span class="nl">image</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+  <span class="nl">cn</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// censored</span>
+  <span class="nl">bg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// with background</span>
+  <span class="nl">nobg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// without background (only used internally)</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// scenery background</span>
+  <span class="nl">info</span><span class="p">:</span> <span class="nx">SkinInfo</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='gallery-data'>Gallery Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">GalleryItem</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">description</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>    <span class="c1">// self-explanatory</span>
+  <span class="nl">url</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>            <span class="c1">// the image url</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='artist-data'>Artist Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Artist</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">url</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='project-id'>Project ID</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ProjectID</span> <span class="o">=</span> <span class="kr">string</span><span class="p">;</span>
+</code></pre></div><h3 id='retrofit-project-data'>Retrofit Project Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">RetrofitProject</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">;</span>
+  <span class="nl">grade</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">attributes</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
+  <span class="nl">materials</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
+  <span class="nl">coins</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">level</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">levelBreakLevel</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">levelBreakStars</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">recurrence</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">require</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">[];</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='dev-level-data'>Dev Level Data</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">DevLevel</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">level</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">buffs</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
 <span class="p">}</span>
 </code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ships</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="cm">/*STRING (query)*/</span><span class="p">);</span> <span class="c1">// QUERY EVERYTHING</span>
