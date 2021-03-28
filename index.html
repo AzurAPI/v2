@@ -571,6 +571,39 @@ This page is updated frequently according of our packages, please refer to this 
     <span class="nl">total</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="p">};</span>
 <span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">RetrofitProject</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">;</span>
+  <span class="nl">grade</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">attributes</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
+  <span class="nl">materials</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
+  <span class="nl">coins</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">level</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">levelBreakLevel</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">levelBreakStars</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">recurrence</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">require</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">Skin</span> <span class="p">{</span>
+  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">chibi</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+  <span class="nl">image</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
+  <span class="nl">cn</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// censored</span>
+  <span class="nl">bg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// with background</span>
+  <span class="nl">nobg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// without background (only used internally)</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// scenery background</span>
+  <span class="nl">info</span><span class="p">:</span> <span class="nx">SkinInfo</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">SkinInfo</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">enClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">cnClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">jpClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">cost</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">obtainedFrom</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">live2dModel</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">};</span>
 </code></pre></div><h3 id='bonus-data'>Bonus Data</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">Bonus</span> <span class="o">=</span> <span class="p">{</span>                  <span class="c1">// on collection</span>
@@ -604,28 +637,6 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">description</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
-</code></pre></div><h3 id='skin-info-data'>Skin Info Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">SkinInfo</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">enClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">cnClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">jpClient</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">cost</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
-  <span class="nl">obtainedFrom</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">live2dModel</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div><h3 id='skin-data'>Skin Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kr">interface</span> <span class="nx">Skin</span> <span class="p">{</span>
-  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">chibi</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
-  <span class="nl">image</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span>
-  <span class="nl">cn</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// censored</span>
-  <span class="nl">bg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// with background</span>
-  <span class="nl">nobg</span><span class="p">?:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// without background (only used internally)</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="nx">Url</span><span class="p">;</span> <span class="c1">// scenery background</span>
-  <span class="nl">info</span><span class="p">:</span> <span class="nx">SkinInfo</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div><h3 id='gallery-data'>Gallery Data</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">GalleryItem</span> <span class="o">=</span> <span class="p">{</span>
@@ -641,20 +652,6 @@ This page is updated frequently according of our packages, please refer to this 
 </code></pre></div><h3 id='project-id'>Project ID</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">ProjectID</span> <span class="o">=</span> <span class="kr">string</span><span class="p">;</span>
-</code></pre></div><h3 id='retrofit-project-data'>Retrofit Project Data</h3>
-<div class="center-column"></div>
-<div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">RetrofitProject</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">id</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">;</span>
-  <span class="nl">grade</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">attributes</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
-  <span class="nl">materials</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
-  <span class="nl">coins</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-  <span class="nl">level</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-  <span class="nl">levelBreakLevel</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-  <span class="nl">levelBreakStars</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">recurrence</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-  <span class="nl">require</span><span class="p">:</span> <span class="nx">ProjectID</span><span class="p">[];</span>
-<span class="p">}</span>
 </code></pre></div><h3 id='dev-level-data'>Dev Level Data</h3>
 <div class="center-column"></div>
 <div class="highlight"><pre class="highlight typescript"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">DevLevel</span> <span class="o">=</span> <span class="p">{</span>
