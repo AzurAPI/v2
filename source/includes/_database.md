@@ -1,8 +1,6 @@
 # Using the Database
 In V1.0, we have overhualed the entire repository to make things simplier to access, especially in javascript which has been recoded in TS
-```python
 
-```
 ```javascript
 // ES5
 const AzurAPI = require("@azurapi/azurapi");
@@ -11,12 +9,7 @@ const client = new AzurAPI();
 import AzurAPI from '@azurapi/azurapi';
 const client = new AzurAPI();
 ```
-```kotlin
 
-```
-```csharp
-
-```
 # Updating the database
 ```python
 
