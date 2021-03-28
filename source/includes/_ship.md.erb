@@ -191,8 +191,6 @@ client.ship.name(`<String>`) // Get ship by name in any language
 client.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
 ```
 
-The table below allows you to configure the type of language as pointed of reference in name detection.
-
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 
 
@@ -222,9 +220,4 @@ This is the different types of IDs avaliable to people to select, have a look at
 | Research Ships               | "Plan001"   |
 | Collabouration Ships         | "Collab001" |
 
-There are 2 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID
-
-| Types       |
-|-------------|
-| ship.get    |
-| ship.id     |
+There are 3 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID
