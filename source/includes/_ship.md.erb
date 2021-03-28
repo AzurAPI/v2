@@ -62,13 +62,7 @@ export class Ship {
     voice?: Artist;
   };
 }
-```
 
-### Ship Name Data
-
-<div class="center-column"></div>
-
-```ts
 export type ShipNames = {            // Ship's name
   code: string;
   en: string;
@@ -76,12 +70,7 @@ export type ShipNames = {            // Ship's name
   jp: string;
   kr: string;
 };
-```
-### Ship Stats Data
 
-<div class="center-column"></div>
-
-```ts
 export type ShipStats = {
   baseStats: Stats;
   level100: Stats;
@@ -89,13 +78,7 @@ export type ShipStats = {
   level100Retrofit?: Stats;
   level120Retrofit?: Stats;
 };
-```
 
-### Fleet Tech Data
-
-<div class="center-column"></div>
-
-```ts
 export type FleetTech = {                            // fleet tech stuff
   statsBonus: {
     collection?: Bonus;
@@ -127,11 +110,9 @@ export type Bonus = {                  // on collection
 <div class="center-column"></div>
 
 ```ts
-{
-  class Stats {
+export type Slot {
     [k in Stat]?: string;
   }
-}
 ```
 
 ### Slot Statistics
@@ -152,8 +133,7 @@ export type Slot = {
 <div class="center-column"></div>
 
 ```ts
-{
-  class Skill {
+export type Skill = {
       icon: string;       // url
       names: {
           en?: string;
@@ -164,7 +144,6 @@ export type Slot = {
       description: string;
       color: string;      // descriptive color name (not hex code)
   }
-}
 ```
 
 ### Skin Info Data
