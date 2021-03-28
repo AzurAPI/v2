@@ -305,6 +305,9 @@
                     <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
                   </li>
                   <li>
+                    <a href="#using-the-database" class="toc-h1 toc-link" data-title="Using the Database">Using the Database</a>
+                  </li>
+                  <li>
                     <a href="#updating-the-database" class="toc-h1 toc-link" data-title="Updating the database">Updating the database</a>
                   </li>
                   <li>
@@ -425,8 +428,21 @@ This page is updated frequently according of our packages, please refer to this 
 <p><a href="https://nodei.co/npm/@azurapi/azurapi/"><img src="https://nodei.co/npm/@azurapi/azurapi.png?mini=true" alt="NPM" /></a>
 <a href="https://badge.fury.io/py/azurlane"><img src="https://badge.fury.io/py/azurlane.svg" alt="PyPI version" /></a>
 <a href="https://jitpack.io/#AzurAPI/AzurApi-Kotlin"><img src="https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square" alt="Kotlin Version" /></a></p>
-<h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+<h1 id='using-the-database'>Using the Database</h1>
+<p>In V1.0, we have overhualed the entire repository to make things simplier to access, especially in javascript which has been recoded in TS
+```python</p>
+<div class="highlight"><pre class="highlight plaintext"><code>```javascript
+// ES5
+const AzurAPI = require("@azurapi/azurapi");
+const client = new AzurAPI();
+// ES6 or TS
+import AzurAPI from '@azurapi/azurapi';
+const client = new AzurAPI();
+</code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
+</code></pre></div><h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Not Needed At the Moment, Auto Updated</span>
+<span class="c1">// Future Update will include option to disable auto update or set time for Autoupdate</span>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
 </code></pre></div>
@@ -628,11 +644,9 @@ This page is updated frequently according of our packages, please refer to this 
       <span class="nl">color</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>      <span class="c1">// descriptive color name (not hex code)</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
-
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in any language</span>
-
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || cn || jp || kr &gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in a specific language only</span>
+</code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in any language</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || cn || jp || kr &gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in a specific language only</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
@@ -640,25 +654,9 @@ This page is updated frequently according of our packages, please refer to this 
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
+<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
 
-<table><thead>
-<tr>
-<th>Type</th>
-<th>Main Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Multifunction</td>
-<td>ship.get</td>
-</tr>
-<tr>
-<td>Multilingual</td>
-<td>ship.name</td>
-</tr>
-</tbody></table>
-<h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
-
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship using ID</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship using ID</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
