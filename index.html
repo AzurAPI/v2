@@ -645,8 +645,6 @@ This page is updated frequently according of our packages, please refer to this 
 <span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in any language</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || cn || jp || kr &gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in a specific language only</span>
 </code></pre></div>
-<p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
-
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 <h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ships</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="cm">/*STRING (query)*/</span><span class="p">);</span> <span class="c1">// QUERY EVERYTHING</span>
@@ -681,20 +679,7 @@ This page is updated frequently according of our packages, please refer to this 
 </tr>
 </tbody></table>
 
-<p>There are 2 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID</p>
-
-<table><thead>
-<tr>
-<th>Types</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ship.get</td>
-</tr>
-<tr>
-<td>ship.id</td>
-</tr>
-</tbody></table>
+<p>There are 3 ways to implement Quary by ID. We highly recommended to use ship.get as it combines the use of ID and Ship Quary capabiility. But, it is highly recommanded to default back to ship.id if you are going to only Query by ID as getShip will default to query by Name first before query by ID</p>
 <h1 id='equipment-information'>Equipment Information</h1>
 <p>Same with the ships API, this sections contains all the functions and results that developers should use for fetching Equipment.</p>
 <h2 id='return-value'>Return Value</h2>
@@ -742,26 +727,11 @@ This page is updated frequently according of our packages, please refer to this 
 <p>The table below allows you to configure the type of language as pointed of reference in name detection.</p>
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">azurlane</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get equipment by name in any language</span>
-
-<span class="nx">azurlane</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || jp || cn &gt;`</span><span class="p">)</span> <span class="c1">// Get equipment by name in specified language</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`String`</span><span class="p">);</span> <span class="c1">// QUERY EVERYTHING</span>
+<span class="nx">client</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`String(ID)`</span><span class="p">);</span> <span class="c1">// GET Equipment BY ID</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Language</th>
-<th>Method</th>
-<th>Alternative Method</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Multilingual</td>
-<td>equipment.name</td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id='voiceline-information'>Voiceline Information</h1>
+</code></pre></div><h1 id='voiceline-information'>Voiceline Information</h1>
 <aside class="notice">
 This section is currently undergoing construction.
 </aside>
