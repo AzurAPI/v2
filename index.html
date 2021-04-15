@@ -417,7 +417,8 @@
     <span class="nf">implementation</span><span class="p">(</span><span class="s">"com.github.AzurAPI:AzurApi-Kotlin:Tag"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">azurlane</span>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="c1">// refer to https://www.nuget.org/packages/AzurAPINet/</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="c1">// dotnet add package AzurAPINet --version 2.0.0-preview1</span>
+<span class="c1">//  - refer to https://www.nuget.org/packages/AzurAPINet/</span>
 </code></pre></div>
 <p>Welcome to AzurAPI!
 <aside class="notice">
@@ -439,11 +440,25 @@ This page is updated frequently according of our packages, please refer to this 
 <span class="c1">// ES6 or TS</span>
 <span class="k">import</span> <span class="nx">AzurAPI</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@azurapi/azurapi</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AzurAPI</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">Jan0660.AzurAPINet</span><span class="p">;</span>
+
+<span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AzurAPIClient</span><span class="p">();</span>
+<span class="c1">// or for using Hiei (and C# 9)</span>
+<span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AzurAPIHieiClient</span><span class="p">(</span><span class="k">new</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">HieiUrl</span> <span class="p">=</span> <span class="s">"http://localhost:1024"</span><span class="p">,</span>
+    <span class="n">HieiPass</span> <span class="p">=</span> <span class="s">"password"</span>
+<span class="p">});</span>
 </code></pre></div><h1 id='updating-the-database'>Updating the database</h1><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Not Needed At the Moment, Auto Updated</span>
 <span class="c1">// Future Update will include option to disable auto update or set time for Autoupdate</span>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="c1">// asynchronously reload everything</span>
+<span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="nf">ReloadEverythingAsync</span><span class="p">();</span>
+<span class="c1">// + specific methods like ReloadEquipmentsAsync, ReloadShipsAsync...</span>
+
+<span class="c1">// update Hiei server</span>
+<span class="k">await</span> <span class="n">hieiClient</span><span class="p">.</span><span class="nf">HieiUpdateAsync</span><span class="p">();</span>
 </code></pre></div>
 <p>We&#39;ll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.</p>
 
@@ -662,10 +677,16 @@ This page is updated frequently according of our packages, please refer to this 
   <span class="nl">buffs</span><span class="p">:</span> <span class="kr">string</span><span class="p">[];</span>
 <span class="p">}</span>
 </code></pre></div><h2 id='raw-data'>Raw Data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ships</span><span class="p">.</span><span class="nx">raw</span><span class="p">();</span> <span class="c1">// RAW SHIP DATABASE IN JSON</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">ships</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">ship</span><span class="p">.</span><span class="n">all</span><span class="p">;</span> <span class="c1">// all ships</span>
 </code></pre></div><h2 id='query-by-name'>Query by name</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ships</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="cm">/*STRING (query)*/</span><span class="p">);</span> <span class="c1">// QUERY EVERYTHING</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in any language</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">,</span><span class="s2">`&lt; en || cn || jp || kr &gt;`</span><span class="p">)</span> <span class="c1">// Get ship by name in a specific language only</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="n">client</span><span class="p">.</span><span class="n">ship</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">"takao"</span><span class="p">);</span> <span class="c1">// Get ship by ID or name in any language</span>
+<span class="n">client</span><span class="p">.</span><span class="n">ship</span><span class="p">.</span><span class="nf">name</span><span class="p">(</span><span class="s">"takao"</span><span class="p">);</span> <span class="c1">// Get ship by name in any language</span>
+<span class="c1">// get ship by name in specific language</span>
+<span class="c1">// one of "en", "jp", "cn" or "kr"</span>
+<span class="n">client</span><span class="p">.</span><span class="n">ship</span><span class="p">.</span><span class="nf">name</span><span class="p">(</span><span class="s">"takao"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">);</span>
 </code></pre></div>
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
 <h2 id='query-by-id'>Query by ID</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship by ID or name in any language</span>
@@ -673,7 +694,7 @@ This page is updated frequently according of our packages, please refer to this 
 <span class="nx">client</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s2">`&lt;String&gt;`</span><span class="p">)</span> <span class="c1">// Get ship using ID</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight kotlin tab-kotlin"><code>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="n">client</span><span class="p">.</span><span class="n">ship</span><span class="p">.</span><span class="nf">id</span><span class="p">(</span><span class="s">"200"</span><span class="p">);</span>
 </code></pre></div>
 <p>This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.</p>
 
@@ -750,7 +771,11 @@ This page is updated frequently according of our packages, please refer to this 
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">client</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`String`</span><span class="p">);</span> <span class="c1">// QUERY EVERYTHING</span>
 <span class="nx">client</span><span class="p">.</span><span class="nx">equipment</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">`String(ID)`</span><span class="p">);</span> <span class="c1">// GET Equipment BY ID</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="n">client</span><span class="p">.</span><span class="n">equipment</span><span class="p">.</span><span class="nf">name</span><span class="p">(</span><span class="s">"Single 120mm Main Gun"</span><span class="p">);</span>
+
+<span class="c1">// get equipment by name in specific language</span>
+<span class="c1">// one of "en", "jp", "cn" or "kr"</span>
+<span class="n">client</span><span class="p">.</span><span class="n">equipment</span><span class="p">.</span><span class="nf">name</span><span class="p">(</span><span class="s">"Single 120mm Main Gun"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">);</span>
 </code></pre></div><h1 id='voiceline-information'>Voiceline Information</h1>
 <aside class="notice">
 This section is currently undergoing construction.
