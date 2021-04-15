@@ -9,6 +9,17 @@ const client = new AzurAPI();
 import AzurAPI from '@azurapi/azurapi';
 const client = new AzurAPI();
 ```
+```csharp
+using Jan0660.AzurAPINet;
+
+var client = new AzurAPIClient();
+// or for using Hiei (and C# 9)
+var client = new AzurAPIHieiClient(new()
+{
+    HieiUrl = "http://localhost:1024",
+    HieiPass = "password"
+});
+```
 
 # Updating the database
 ```python
@@ -22,7 +33,12 @@ const client = new AzurAPI();
 
 ```
 ```csharp
+// asynchronously reload everything
+await client.ReloadEverythingAsync();
+// + specific methods like ReloadEquipmentsAsync, ReloadShipsAsync...
 
+// update Hiei server
+await hieiClient.HieiUpdateAsync();
 ```
 We'll release updates accordingly when the wiki gets updated, please include the update function to update the database when needed changes are supplied.
 

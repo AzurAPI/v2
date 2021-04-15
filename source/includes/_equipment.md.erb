@@ -55,5 +55,9 @@ client.equipment.get(`String(ID)`); // GET Equipment BY ID
 
 ```
 ```csharp
+client.equipment.name("Single 120mm Main Gun");
 
+// get equipment by name in specific language
+// one of "en", "jp", "cn" or "kr"
+client.equipment.name("Single 120mm Main Gun", "en");
 ```

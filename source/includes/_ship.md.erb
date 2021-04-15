@@ -223,6 +223,9 @@ export type DevLevel = {
 ```javascript
 client.ships.raw(); // RAW SHIP DATABASE IN JSON
 ```
+```csharp
+var ships = client.ship.all; // all ships
+```
 ## Query by name
 
 ```javascript
@@ -230,6 +233,13 @@ client.ship.get(`<String>`) // Get ship by ID or name in any language
 client.ships.getAll(/*STRING (query)*/); // QUERY EVERYTHING
 client.ship.name(`<String>`) // Get ship by name in any language
 client.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
+```
+```csharp
+client.ship.get("takao"); // Get ship by ID or name in any language
+client.ship.name("takao"); // Get ship by name in any language
+// get ship by name in specific language
+// one of "en", "jp", "cn" or "kr"
+client.ship.name("takao", "en");
 ```
 
 <aside class="notice">Please note that only multilingual support auto queries by what language it was assigned to.</aside>
@@ -249,7 +259,7 @@ client.ship.id(`<String>`) // Get ship using ID
 
 ```
 ```csharp
-
+client.ship.id("200");
 ```
 
 This is the different types of IDs avaliable to people to select, have a look at this table and allow what your app needs.
