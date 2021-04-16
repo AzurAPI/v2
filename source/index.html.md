@@ -74,3 +74,4 @@ The documentation here states all functions avaliable to support you in developm
 [![NPM](https://nodei.co/npm/@azurapi/azurapi.png?mini=true)](https://nodei.co/npm/@azurapi/azurapi/)
 [![PyPI version](https://badge.fury.io/py/azurlane.svg)](https://badge.fury.io/py/azurlane)
 [![Kotlin Version](https://jitpack.io/v/AzurAPI/AzurApi-Kotlin.svg?style=flat-square)](https://jitpack.io/#AzurAPI/AzurApi-Kotlin)
+[![NuGet Preview Version](http://img.shields.io/nuget/vpre/AzurAPINet)](https://www.nuget.org/packages/AzurAPINet/)
