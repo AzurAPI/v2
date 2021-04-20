@@ -59,7 +59,7 @@ dependencies {
 pip install azurlane
 ```
 ```csharp
-// dotnet add package AzurAPINet --version 2.0.0-preview1
+// dotnet add package AzurAPINet --prerelease
 //  - refer to https://www.nuget.org/packages/AzurAPINet/
 ```
 Welcome to AzurAPI!
