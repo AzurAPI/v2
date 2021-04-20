@@ -3,7 +3,7 @@ In V1.0, we have overhualed the entire repository to make things simplier to acc
 
 ```javascript
 // ES5
-const AzurAPI = require("@azurapi/azurapi");
+const { AzurAPI } = require("@azurapi/azurapi");
 const client = new AzurAPI();
 // ES6 or TS
 import AzurAPI from '@azurapi/azurapi';
