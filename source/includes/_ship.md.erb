@@ -221,7 +221,7 @@ export type DevLevel = {
 ```
 ## Raw Data
 ```javascript
-client.ships.raw(); // RAW SHIP DATABASE IN JSON
+client.ships.raw; // RAW SHIP DATABASE IN JSON
 ```
 ```csharp
 var ships = client.ship.all; // all ships
@@ -229,10 +229,10 @@ var ships = client.ship.all; // all ships
 ## Query by name
 
 ```javascript
-client.ship.get(`<String>`) // Get ship by ID or name in any language
+client.ships.get(`<String>`) // Get ship by ID or name in any language
 client.ships.getAll(/*STRING (query)*/); // QUERY EVERYTHING
-client.ship.name(`<String>`) // Get ship by name in any language
-client.ship.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
+client.ships.name(`<String>`) // Get ship by name in any language
+client.ships.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
 ```
 ```csharp
 client.ship.get("takao"); // Get ship by ID or name in any language
@@ -248,9 +248,9 @@ client.ship.name("takao", "en");
 ## Query by ID
 
 ```javascript
-client.ship.get(`<String>`) // Get ship by ID or name in any language
+client.ships.get(`<String>`) // Get ship by ID or name in any language
 client.ships.getAll(/*STRING (query)*/); // QUERY EVERYTHING
-client.ship.id(`<String>`) // Get ship using ID
+client.ships.id(`<String>`) // Get ship using ID
 ```
 ```python
 
