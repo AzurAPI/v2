@@ -230,9 +230,14 @@ var ships = client.ship.all; // all ships
 
 ```javascript
 client.ships.get(`<String>`) // Get ship by ID or name in any language
-client.ships.getAll(/*STRING (query)*/); // QUERY EVERYTHING
+// `.get` can differentiate between two ships with the same name
+// by including the nationality abbreviation (i.e. HMS Enterprise and USS Enterprise)
+client.ships.get("${nationality abbreviation}${shipname}")
+
+client.ships.all(/*STRING (query)*/); // QUERY EVERYTHING
 client.ships.name(`<String>`) // Get ship by name in any language
 client.ships.name(`<String>`,`< en || cn || jp || kr >`) // Get ship by name in a specific language only
+
 ```
 ```csharp
 client.ship.get("takao"); // Get ship by ID or name in any language
